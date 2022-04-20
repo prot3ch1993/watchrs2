@@ -4,9 +4,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
-import Services from "./Components/Services";
-import Live from "./Components/Live";
-import FAQs from "./Components/FAQs";
+import ServiceLayout from "./Components/ServiceLayout";
+import LiveLayout from "./Components/LiveLayout";
+import FAQsLayout from "./Components/FAQsLayout";
 import "./index.css"
 import Team from "./Components/Team";
 import ContactUs from "./Components/ContactUs";
@@ -17,14 +17,13 @@ const App = ()=> {
     return (
         <div>
             <Navbar/>
-                <Hero/>
-                <Services/>
-                <Live/>
-                <FAQs/>
-                <Team/>
-                <ContactUs/>
-                <Footer/>
-            {/* <Header/> */}
+            <Hero/>
+            <ServiceLayout/>
+            <LiveLayout/>
+            <FAQsLayout/>
+            <Team/>
+            <ContactUs/>
+            <Footer/>
         </div>
     )
 }
