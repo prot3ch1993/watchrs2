@@ -2,30 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Services from "./Components/Services";
-import Live from "./Components/Live";
-import FAQs from "./Components/FAQs";
+import App from "./Components/App"
 import "./index.css"
-import Team from "./Components/Team";
-import ContactUs from "./Components/ContactUs";
-import Footer from "./Components/Footer";
+import {BrowserRouter} from "react-router-dom"
 
 
-const App = ()=> {
+const Index = ()=> {
     return (
-        <div>
-            <Navbar/>
-                <Hero/>
-                <Services/>
-                <Live/>
-                <FAQs/>
-                <Team/>
-                <ContactUs/>
-                <Footer/>
-            {/* <Header/> */}
-        </div>
+        <BrowserRouter>
+           <App />
+        </BrowserRouter>
     )
 }
-ReactDOM.render(<App/>, document.getElementById("root"))
+ReactDOM.render(<Index/>, document.getElementById("root"))
