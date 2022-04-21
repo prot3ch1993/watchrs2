@@ -21,6 +21,21 @@ const Footer = () =>{
             <p className='footerContent'><a data-bs-toggle="collapse" href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse2">Refund and Cancellation Policy</a></p>
             <p className='footerContent'><a data-bs-toggle="collapse" href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse3">Terms of Service</a></p>
             </div>
+            <div className="col-lg-3 col-12">
+                <p className="footerContent">
+                <br/>
+                    Use of this site and/or purchase of the
+                    solution constitutes accpetance of terms
+                    and Conditions, Refund and Cancellation
+                    Policy and PRivacy Policy.
+                    <br/>
+                    <br/>
+                    Third-party trademarks, trade names,<br/>
+                    product names and logos contained in this<br/>
+                    website are registered trademarks of their<br/>
+                    respective owners. <br/>
+                </p>
+            </div>
             <div className="col-12">
                 <p className="footerContent">copyright 2022. All rights reserved</p>
             </div>
