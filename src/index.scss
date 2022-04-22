@@ -12,6 +12,7 @@ body{
     background-position: right top;
     background-size: 100vh;
     overflow-x: hidden;
+    overflow-y:scroll;
     position: relative;
 }
 h1{
@@ -178,6 +179,11 @@ nav.colorChange{
         a{
             color: white;
         }
+
+        .nav-link.active {
+            background-color: inherit !important;
+            text-decoration: underline;
+          }
     }
 }
 
@@ -305,3 +311,13 @@ section.faqs{
 }
 
 
+//login form section
+.loginform {
+    height:100vh;
+
+    .footer{
+        position: fixed;
+        bottom:0;
+        width: 100vw;
+    }
+}

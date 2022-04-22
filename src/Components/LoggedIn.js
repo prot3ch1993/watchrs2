@@ -7,6 +7,8 @@ const LoggedIn = () => {
         <div className="row p-5">
             <div className="col-12 p-5 border">
                 <h1> LIVE </h1>
+
+                <iframe width="674" height="281" src="https://www.youtube.com/embed/9vuRbBZpb9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen controls="0"></iframe>
             </div>
 
             <div className="col-12 p-5 border">
