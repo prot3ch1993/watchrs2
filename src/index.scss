@@ -12,6 +12,7 @@ body{
     background-position: right top;
     background-size: 100vh;
     overflow-x: hidden;
+    position: relative;
 }
 h1{
     font-family: $headingFont;
@@ -183,7 +184,7 @@ nav.colorChange{
 
 // Hero Section
 .content{
-    height: 100vh;
+    height: 85vh;
 }
 img.hero{
     width: 105vh;
@@ -196,7 +197,7 @@ img.hero{
 
 // Services Section
 section.services{
-    padding-top: 15vh;
+    padding-top: 25vh;
     
 }
 .list{
@@ -272,12 +273,12 @@ section.live{
 
 // FAQs Section
 section.faqs{
+    padding-top: 17vh;
     h1{
         font-family: $headingFont;
         font-size: 8vh;
         font-weight: 900;
         margin: 0;
-        margin-top: 12vh;
         margin-bottom: 6vh;
         
         span{

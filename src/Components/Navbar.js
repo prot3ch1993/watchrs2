@@ -14,14 +14,14 @@ const Navbar = ()=> {
     window.addEventListener('scroll', changeNavbarColor);
     return(
         
-        <nav className={colorChange? "navbar fixed-top colorChange":"navbar"}>
+        <nav className={colorChange? "navbar fixed-top scrollspy-example colorChange":"navbar"} id="navbarWatchr" data-bs-spy="scroll" data-bs-target="#navbarWatchr" data-bs-offset="0" tabindex="0">
             <div className="container">
                 <h1 className="logoMain"><span><a href="/#">watchr</a></span></h1>
                 <nav className="nav">
-                    <a href="/#">Services</a>
-                    <a href="/#">FAQs</a>
-                    <a href="/#">About</a>
-                    <a href="/#">Contact</a>
+                    <a href="#scrollspyServices">Services</a>
+                    <a href="#scrollspyFAQs">FAQs</a>
+                    <a href="#scrollspyAbout">About</a>
+                    <a href="#scrollspyContact">Contact</a>
                     <Link to="/loginform">Account</Link>
                 </nav>
             </div>

@@ -9,6 +9,7 @@ body {
   background-position: right top;
   background-size: 100vh;
   overflow-x: hidden;
+  position: relative;
 }
 
 h1 {
@@ -195,7 +196,7 @@ nav.colorChange .nav a {
 }
 
 .content {
-  height: 100vh;
+  height: 85vh;
 }
 
 img.hero {
@@ -207,7 +208,7 @@ img.hero {
 }
 
 section.services {
-  padding-top: 15vh;
+  padding-top: 25vh;
 }
 
 .list {
@@ -284,12 +285,15 @@ section.live button.live p {
   margin-bottom: 0.5vh;
 }
 
+section.faqs {
+  padding-top: 17vh;
+}
+
 section.faqs h1 {
   font-family: Catamaran;
   font-size: 8vh;
   font-weight: 900;
   margin: 0;
-  margin-top: 12vh;
   margin-bottom: 6vh;
 }
 
