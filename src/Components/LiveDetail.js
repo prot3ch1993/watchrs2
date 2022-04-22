@@ -5,7 +5,7 @@ const LiveDetail = (props) => {
         <div className='col-xl-4'>
             <img src={props.img} alt="Live Images"/>
             <p className='contentWhite'>{props.p}</p>
-            <button className='live' data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button className='live' data-bs-toggle="modal" data-bs-target="#exampleModal"  id='scrollspyFAQs'>
                 <p>{props.button}</p>
             </button>
         </div>
