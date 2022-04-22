@@ -8,6 +8,7 @@ body {
   background-repeat: no-repeat;
   background-position: right top;
   background-size: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -86,6 +87,7 @@ p.contentWhite {
 span {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -176,6 +178,19 @@ nav.nav a {
   font-weight: 700;
   font-size: 2.3vh;
   margin-left: 7vh;
+  color: white;
+}
+
+nav.colorChange {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+}
+
+nav.colorChange h1.logoMain span {
+  background-image: none;
+  background-color: white;
+}
+
+nav.colorChange .nav a {
   color: white;
 }
 
@@ -281,6 +296,7 @@ section.faqs h1 {
 section.faqs h1 span {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
