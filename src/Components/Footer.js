@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () =>{
     return (
-        <div className="row">
+        <div className="row footer">
             <h1 className="logo col-12">watchr</h1>
         <div className="backgroundGradient row">
             <div className="col-md-3 col-12">

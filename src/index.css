@@ -9,6 +9,7 @@ body {
   background-position: right top;
   background-size: 100vh;
   overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
 }
 
@@ -95,7 +96,6 @@ span {
 .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 .backgroundGradient.size {
   height: 120vh;
 }
@@ -185,14 +185,16 @@ nav.nav a {
 nav.colorChange {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 nav.colorChange h1.logoMain span {
   background-image: none;
   background-color: white;
 }
-
 nav.colorChange .nav a {
   color: white;
+}
+nav.colorChange .nav .nav-link.active {
+  background-color: inherit !important;
+  text-decoration: underline;
 }
 
 .content {
@@ -228,11 +230,9 @@ img.services {
 section.live .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 section.live .backgroundGradient.size {
   height: 110vh;
 }
-
 section.live h1.white {
   font-family: Catamaran;
   font-size: 6vh;
@@ -242,7 +242,6 @@ section.live h1.white {
   margin-top: 8vh;
   margin-bottom: 6vh;
 }
-
 section.live img {
   display: block;
   margin-left: auto;
@@ -250,7 +249,6 @@ section.live img {
   margin-bottom: 4vh;
   height: 55vh;
 }
-
 section.live p.contentWhite {
   font-family: Catamaran;
   font-size: 4vh;
@@ -263,7 +261,6 @@ section.live p.contentWhite {
   width: 41vh;
   text-align: center;
 }
-
 section.live button.live {
   background-color: #EC8800;
   border: none;
@@ -275,7 +272,6 @@ section.live button.live {
   margin-right: auto;
   margin-top: 2vh;
 }
-
 section.live button.live p {
   font-family: Catamaran;
   font-weight: 900;
@@ -288,7 +284,6 @@ section.live button.live p {
 section.faqs {
   padding-top: 17vh;
 }
-
 section.faqs h1 {
   font-family: Catamaran;
   font-size: 8vh;
@@ -296,14 +291,12 @@ section.faqs h1 {
   margin: 0;
   margin-bottom: 6vh;
 }
-
 section.faqs h1 span {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 section.faqs p.contentLink {
   font-family: Catamaran;
   font-size: 4vh;
@@ -312,10 +305,18 @@ section.faqs p.contentLink {
   margin-bottom: 3vh;
   color: black;
 }
-
 section.faqs p.contentFAQs {
   font-family: Quicksand;
   font-size: 2.7vh;
   font-weight: 400;
   margin: 0;
+}
+
+.loginform {
+  height: 100vh;
+}
+.loginform .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
