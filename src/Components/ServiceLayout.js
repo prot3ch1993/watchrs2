@@ -3,7 +3,7 @@ import ServicesDetail from './ServicesDetail';
 
 const ServiceLayout = () => {
     return (
-        <section className="services">
+        <section className="services" id='scrollspyServices' >
             <div className="container">
                 <ServicesDetail 
                 img1 = {require('../images/video.png')}
