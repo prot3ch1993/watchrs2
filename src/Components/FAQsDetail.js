@@ -2,11 +2,11 @@ import React from 'react'
 
 const FAQsDetail = (props) => {
     return (
-        <p className='contentLink'>
+        <h2>
             <a data-bs-toggle="collapse" href={props.link} role="button" aria-expanded="true" aria-controls={props.controls}>
-                {props.p}
+                {props.h2}
             </a>
-        </p>
+        </h2>
     )
 }
 
