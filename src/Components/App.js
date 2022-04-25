@@ -8,6 +8,7 @@ import LoginForm from "./LoginForm";
 import LoggedIn from "./LoggedIn";
 import LoginProfiles from "./LoginProfiles";
 import Notfound404 from "./Notfound404";
+import IndividualMovie from "./IndividualMovie";
 
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path="/loginform" element={<LoginForm/>}></Route>
                 <Route path="/loginprofiles" element={<LoginProfiles/>}></Route>
                 <Route path="/loggedin" element={<LoggedIn/>}></Route>
+                <Route path="/movie/:id" element={<IndividualMovie/>}></Route>
                 <Route path="/*" element={<Notfound404/>}></Route>
             </Routes>
 
