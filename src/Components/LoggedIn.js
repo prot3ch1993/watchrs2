@@ -2,6 +2,7 @@ import React from 'react'
 import CategoryDetail from './CategoryDetail'
 
 const LoggedIn = () => {
+
   return (
     <>
         <div className="row p-5 loggedin">
@@ -12,8 +13,10 @@ const LoggedIn = () => {
             </div>
 
             <div className="col-12 p-5 border">
-                <CategoryDetail category="upcoming" />
-                <CategoryDetail category="continue watching" />
+                <CategoryDetail category="Upcoming Movies"  apicategory="movie/upcoming" />
+                <CategoryDetail category="Top Rated" apicategory="movie/top_rated"  />
+                <CategoryDetail category="Trending Movies this Week" apicategory="trending/movie/week"  />
+              
             </div>
         </div>
     </>
