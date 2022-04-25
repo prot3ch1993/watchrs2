@@ -1,25 +1,26 @@
 import React from 'react'
 import FAQsDetail from './FAQsDetail';
 import FAQsDetail2 from './FAQsDetail2';
+import FAQsDetail3 from './FAQsDetail3';
 
 const FAQsLayout = () => {
     return (
         <section className='faqs'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-xl-12'>
+                    <div className='col-12 col-xl-12'>
                         <h1><span>FAQs</span></h1>
                     </div>
-                    <div className='col-xl-12'>
+                    <div className='col-12 col-xl-12 lgScreen'>
                         <div id='myGroup'>
                             <div className='row'>
-                                <div className='col-xl-6'>
+                                <div className='col-12 col-sm-6 col-xl-6'>
                                     <FAQsDetail h2="What is watchr?" link="#collapse1" controls="collapse1"/>
                                     <FAQsDetail h2="How much the watchr cost?" link="#collapse2" controls="collapse2"/>
                                     <FAQsDetail h2="What kind of content do you provide?" link="#collapse4" controls="collapse4"/>
                                     <FAQsDetail h2="Can i cancel the membership?" link="#collapse5" controls="collapse5"/>
                                 </div>
-                                <div className='col-xl-6'>
+                                <div className='col-12 col-sm-6 col-xl-6 hidden'>
                                     <FAQsDetail2 
                                         h2="What is watchr?"
                                         p="Watchr is an online streaming platform that offers the user to watch their favorite shows. It consists of thousands of Movies and TV Series that released worldwide."
@@ -44,6 +45,22 @@ const FAQsLayout = () => {
                             </div>
                         </div>
                     </div>
+                    <FAQsDetail3
+                        h2="What is watchr?"
+                        p="Watchr is an online streaming platform that offers the user to watch their favorite shows. It consists of thousands of Movies and TV Series that released worldwide."
+                    />
+                    <FAQsDetail3 
+                        h2="How much the watchr cost?"
+                        p="You can avail this membership at least P110.00 good for 1 month in full HD and P200 in 4K and 8K."
+                    />
+                    <FAQsDetail3 
+                        h2="What kind of content do you provide?"
+                        p="We provide cartoons, documentaries, action pack movies, comedies that you laugh, and dramas that you will cry."
+                    />
+                    <FAQsDetail3 
+                        h2="Can i cancel the membership?"
+                        p="Yes. There is no contract in membership. You can cancel anytime."
+                    />
                 </div>
             </div>
         </section>

@@ -8,7 +8,7 @@ const LiveLayout = () => {
             <div className='backgroundGradient size'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-xl-12'>
+                        <div className='col-12 col-xl-12'>
                             <h1>
                                 Live Streaming
                             </h1>
