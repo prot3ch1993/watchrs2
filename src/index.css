@@ -133,8 +133,11 @@ button.hero {
   font-family: Catamaran;
   font-weight: 900;
   font-size: 3vh;
-  color: white;
+  color: white !important;
   margin-right: 2vh;
+}
+button.hero a {
+  color: white !important;
 }
 
 p.footerHeading {
@@ -318,5 +321,26 @@ section.faqs p.contentFAQs {
 .loginform .footer {
   position: fixed;
   bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.notfound .row.ps-5 {
+  height: 70vh;
+}
+.notfound .footer {
+  position: fixed;
+  bottom: 0;
   width: 100vw;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+}
+
+.row.p-5.loggedin {
+  background-color: black;
+  color: white;
 }

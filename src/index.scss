@@ -121,8 +121,12 @@ button.hero{
     font-family: $headingFont;
     font-weight: 900;
     font-size: 3vh;
-    color: white;
+    color: white !important;
     margin-right: 2vh;
+
+    a{
+        color: white !important;
+    }
 }
 p.footerHeading{
     font-family: $headingFont;
@@ -318,6 +322,33 @@ section.faqs{
     .footer{
         position: fixed;
         bottom:0;
+        width: 100%;
+        margin:0;
+        padding:0;
+    }
+}
+
+// page not found section
+.notfound{
+    .row.ps-5{
+        height:70vh;
+    }
+
+    .footer{
+        position: fixed;
+        bottom:0;
         width: 100vw;
     }
+}
+
+// modal section
+.modal-content{
+    background-color: black;
+    color:white;
+}
+
+//loggedin section
+.row.p-5.loggedin{
+    background-color: black;
+    color:white;
 }
