@@ -105,7 +105,6 @@ p.footerCopyright {
 nav {
   background-color: transparent;
 }
-
 nav h1.logoMain {
   font-family: Catamaran;
   font-weight: 900;
@@ -114,7 +113,6 @@ nav h1.logoMain {
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
-
 nav nav.nav a {
   font-family: Catamaran;
   font-weight: 700;
@@ -127,16 +125,13 @@ nav nav.nav a {
 nav.colorChange {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 nav.colorChange h1.logoMain span {
   background-image: none;
   background-color: white;
 }
-
 nav.colorChange .nav a {
   color: white;
 }
-
 nav.colorChange .nav .nav-link.active {
   background-color: inherit !important;
   text-decoration: underline;
@@ -145,7 +140,6 @@ nav.colorChange .nav .nav-link.active {
 section.hero .content {
   height: 100vh;
 }
-
 section.hero .content h1.hero {
   font-family: Catamaran;
   font-weight: 900;
@@ -154,7 +148,6 @@ section.hero .content h1.hero {
   margin-top: 20vh;
   margin-bottom: 2vh;
 }
-
 section.hero .content button.hero {
   background-color: #EC8800;
   border: none;
@@ -171,28 +164,23 @@ section.hero .content button.hero {
 section.services {
   padding-top: 25vh;
 }
-
 section.services .image img {
   height: 40vh;
   margin-bottom: 10vh;
 }
-
 section.services .image .right {
   float: right;
 }
-
 section.services .list {
   margin-top: 13vh;
   margin-bottom: 13vh;
 }
-
 section.services .list h2 {
   font-family: Catamaran;
   font-weight: 700;
   margin: 0;
   font-size: 5.5vh;
 }
-
 section.services .list p {
   font-family: Quicksand;
   font-weight: 400;
@@ -203,11 +191,9 @@ section.services .list p {
 section.live .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 section.live .backgroundGradient.size {
   height: 110vh;
 }
-
 section.live .backgroundGradient h1 {
   font-family: Catamaran;
   font-weight: 900;
@@ -217,7 +203,6 @@ section.live .backgroundGradient h1 {
   margin-top: 8vh;
   margin-bottom: 6vh;
 }
-
 section.live .backgroundGradient img {
   margin-left: auto;
   margin-right: auto;
@@ -225,7 +210,6 @@ section.live .backgroundGradient img {
   margin-bottom: 4vh;
   height: 55vh;
 }
-
 section.live .backgroundGradient h2 {
   font-family: Catamaran;
   font-weight: 700;
@@ -238,7 +222,6 @@ section.live .backgroundGradient h2 {
   width: 41vh;
   text-align: center;
 }
-
 section.live .backgroundGradient button.live {
   margin-left: auto;
   margin-right: auto;
@@ -257,7 +240,6 @@ section.live .backgroundGradient button.live {
   display: block;
   margin-top: 2vh;
 }
-
 section.live .backgroundGradient button.live p {
   font-family: Catamaran;
   font-weight: 700;
@@ -271,7 +253,6 @@ section.live .backgroundGradient button.live p {
 section.faqs {
   padding-top: 13vh;
 }
-
 section.faqs h1 {
   font-family: Catamaran;
   font-weight: 900;
@@ -279,7 +260,6 @@ section.faqs h1 {
   font-size: 8vh;
   margin-bottom: 6vh;
 }
-
 section.faqs h2 {
   font-family: Catamaran;
   font-weight: 700;
@@ -288,7 +268,6 @@ section.faqs h2 {
   margin-bottom: 4.5vh;
   color: black;
 }
-
 section.faqs p {
   font-family: Quicksand;
   font-weight: 400;
@@ -299,9 +278,29 @@ section.faqs p {
 .loginform {
   height: 100vh;
 }
-
 .loginform .footer {
   position: fixed;
   bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.notfound .row.ps-5 {
+  height: 70vh;
+}
+.notfound .footer {
+  position: fixed;
+  bottom: 0;
   width: 100vw;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+}
+
+.row.p-5.loggedin {
+  background-color: black;
+  color: white;
 }

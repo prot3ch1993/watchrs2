@@ -282,6 +282,33 @@ section.faqs{
     .footer{
         position: fixed;
         bottom:0;
+        width: 100%;
+        margin:0;
+        padding:0;
+    }
+}
+
+// page not found section
+.notfound{
+    .row.ps-5{
+        height:70vh;
+    }
+
+    .footer{
+        position: fixed;
+        bottom:0;
         width: 100vw;
     }
+}
+
+// modal section
+.modal-content{
+    background-color: black;
+    color:white;
+}
+
+//loggedin section
+.row.p-5.loggedin{
+    background-color: black;
+    color:white;
 }
