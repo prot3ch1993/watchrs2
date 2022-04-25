@@ -1,6 +1,45 @@
 $headingFont: Catamaran;
 $contentFont: Quicksand;
+$backgroundColorBlack: black;
 
+@mixin buttonStyle {
+    background-color: #EC8800;
+    border: none;
+    padding: 2vh;
+    width: 16vh;
+    border-radius: 2.5vh;
+    font-family: $headingFont;
+    font-weight: 900;
+    font-size: 3vh;
+    color: white;
+}
+
+@mixin headingBlackStyle {
+    font-family: $headingFont;
+    font-weight: 900;
+    margin: 0;
+}
+
+@mixin headingBoldStyle {
+    font-family: $headingFont;
+    font-weight: 700;
+    margin: 0;
+}
+
+@mixin contentStyle {
+    font-family: $contentFont;
+    font-weight: 400;
+    margin: 0;
+}
+
+@mixin marginCenterAlign {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin backgroundGradient {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+}
 
 *{
     box-sizing: border-box;
@@ -10,169 +49,91 @@ body{
     background-image: url('./images/hero-image-2.png');
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: 100vh;
+    background-size: 108vh;
     overflow-x: hidden;
     overflow-y:scroll;
     position: relative;
-}
-h1{
-    font-family: $headingFont;
-    font-size: 8vh;
-    font-weight: 900;
-    margin: 0;
-}
-h1.white{
-    font-family: $headingFont;
-    font-size: 6vh;
-    font-weight: 900;
-    color: white;
-    margin: 0;
-}
-h1.logo{
-    font-family: $headingFont;
-    font-size: 9vh;
-    font-weight: 900;
-    margin: 0;
-    color: white;
-}
-h1.hero{
-    font-family: $headingFont;
-    font-size: 9vh;
-    font-weight: 900;
-    margin: 0;
-    margin-top: 20vh;
-    margin-bottom: 2vh;
-}
-h2{
-    font-family: $headingFont;
-    font-size: 5.5vh;
-    font-weight: 700;
-    margin: 0;
-}
-p.contentServices{
-    font-family: $contentFont;
-    font-size: 3vh;
-    font-weight: 400;
-    margin: 0;
-}
-p.contentLink{
-    font-family: $headingFont;
-    font-size: 4vh;
-    font-weight: 700;
-    margin: 0;
 }
 a{
     text-decoration: none;
     color: black;
 }
-p.contentDevelopers{
-    font-family: $contentFont;
-    font-size: 2.7vh;
-    font-weight: 400;
-    margin: 0;
-}
-p.contentWhite{
-    font-family: $headingFont;
-    font-size: 4vh;
-    font-weight: 700;
-    margin: 0;
-    color: white;
-}
 span{
-    background-image: linear-gradient(90deg, #B700F8 , #E94028);
+    @include backgroundGradient();
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.backgroundGradient{
-    background-image: linear-gradient(90deg, #B700F8, #E94028);
-    &.size{
-        height: 120vh;
-    }
+
+// Aayusin ko itong section na ito once na matapos si queena sa task nya
+h1{
+    @include headingBlackStyle();
+    font-size: 8vh;
 }
-button.live{
-    background-color: #EC8800;
-    border: none;
-    padding: 1vh;
-    width: 20vh;
-    border-radius: 5vh;
-    font-family: $headingFont;
-    font-weight: 900;
-    font-size: 2vh;
+h1.logo{
+    @include headingBlackStyle();
+    font-size: 9vh;
     color: white;
+}
+p.contentLink{
+    @include headingBoldStyle();
+    font-size: 4vh;
+}
+p.contentDevelopers{
+    @include contentStyle();
+    font-size: 2.7vh;
+}
+p.contentWhite{
+    @include headingBoldStyle();
+    font-size: 4vh;
+        color: white;
+}
+.backgroundGradient{
+    @include backgroundGradient();
 }
 button.contactUs{
-    background-color: #EC8800;
-    border: none;
-    padding: 2vh;
-    width: 16vh;
-    border-radius: 3vh;
-    font-family: $headingFont;
-    font-weight: 900;
-    font-size: 3vh;
-    color: white;
-}
-button.hero{
-    background-color: #EC8800;
-    border: none;
-    padding: 2vh;
-    width: 16vh;
-    border-radius: 2.5vh;
-    font-family: $headingFont;
-    font-weight: 900;
-    font-size: 3vh;
-    color: white !important;
-    margin-right: 2vh;
-
-    a{
-        color: white !important;
-    }
+    @include buttonStyle();
 }
 p.footerHeading{
-    font-family: $headingFont;
+    @include headingBoldStyle();
     font-size: 3vh;
-    font-weight: 700;
-    margin: 0;
     color: white;
 }
 p.footerContent{
-    font-family: $contentFont;
+    @include contentStyle();
     font-size: 2vh;
-    font-weight: 400;
-    margin: 0;
     color: white;
 }
 p.footerCopyright{
-    font-family: $contentFont;
+    @include contentStyle();
     font-size: 1.5vh;
-    font-weight: 400;
-    margin: 0;
     color: white;
 }
 
+
+
 // Navigation Bar
-h1.logoMain{
-    font-family: $headingFont;
-    font-size: 5vh;
-    font-weight: 900;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin: 0;
-}
 nav{
     background-color: transparent;
-}
-nav.nav{
-    a{
-        font-family: $headingFont;
-        font-weight: 700;
-        font-size: 2.3vh;
-        margin-left: 7vh;
-        color: white;
+
+    h1.logoMain{
+        @include headingBlackStyle();
+        font-size: 5vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    nav.nav{
+        a{
+            @include headingBoldStyle();
+            font-size: 2.3vh;
+            margin-left: 3.5vh;
+            color: white;
+        }
     }
 }
+
 nav.colorChange{
-    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    @include backgroundGradient();
     h1.logoMain{
         span{
             background-image: none;
@@ -183,134 +144,133 @@ nav.colorChange{
         a{
             color: white;
         }
-
         .nav-link.active {
             background-color: inherit !important;
             text-decoration: underline;
-          }
+        }
     }
 }
 
 
 // Hero Section
-.content{
-    height: 85vh;
-}
-img.hero{
-    width: 105vh;
-    height: 150vh;
-    position: absolute;
-    right: 0;
-    float: right;
+section.hero{
+    .content{
+        height: 100vh;
+
+        h1.hero{
+            @include headingBlackStyle();
+            font-size: 9vh;
+            margin-top: 20vh;
+            margin-bottom: 2vh;
+        }
+        button.hero{
+            @include buttonStyle();
+            margin-right: 2vh;
+        }
+    }
 }
 
 
 // Services Section
 section.services{
     padding-top: 25vh;
-    
-}
-.list{
-    margin-top: 13vh;
-    margin-bottom: 13vh;
-}
-.imageRight{
-    float: right;
-}
-img.services{
-    height: 40vh;
-    margin-bottom: 10vh;
+
+    .image{
+        img{
+            height: 40vh;
+            margin-bottom: 10vh;
+        }
+        
+        .right{
+            float: right;
+        }
+    }
+    .list{
+        margin-top: 13vh;
+        margin-bottom: 13vh;
+
+        h2{
+            @include headingBoldStyle();
+            font-size: 5.5vh;
+        }
+        p{
+            @include contentStyle();
+            font-size: 3vh;
+        }
+    }
 }
 
 
 // Live Streaming Section
 section.live{
     .backgroundGradient{
-        background-image: linear-gradient(90deg, #B700F8, #E94028);
+        @include backgroundGradient();
+
         &.size{
             height: 110vh;
         }
-    }
-    h1.white{
-        font-family: $headingFont;
-        font-size: 6vh;
-        font-weight: 900;
-        color: white;
-        margin: 0;
-        margin-top: 8vh;
-        margin-bottom: 6vh;
-    }
-    img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 4vh;
-        height: 55vh;
-    }
-    p.contentWhite{
-        font-family: $headingFont;
-        font-size: 4vh;
-        font-weight: 700;
-        margin: 0;
-        color: white;
-        line-height: 5vh;
-        margin-left: auto;
-        margin-right: auto;
-        width: 41vh;
-        text-align: center;
-    }
-    button.live{
-        background-color: #EC8800;
-        border: none;
-        padding: 1vh;
-        width: 20vh;
-        border-radius: 5vh;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2vh;
-        p{
-            font-family: $headingFont;
-            font-weight: 900;
-            font-size: 2.2vh;
+        h1{
+            @include headingBlackStyle();
+            font-size: 6vh;
             color: white;
-            margin-top: 0.5vh;
-            margin-bottom: 0.5vh;
+            margin-top: 8vh;
+            margin-bottom: 6vh;
+        }
+        img{
+            @include marginCenterAlign();
+            display: block;
+            margin-bottom: 4vh;
+            height: 55vh;
+        }
+        h2{
+            @include headingBoldStyle();
+            @include marginCenterAlign();
+            font-size: 4vh;
+            color: white;
+            line-height: 5vh;
+            width: 41vh;
+            text-align: center;
+        }
+        button.live{
+            @include marginCenterAlign();
+            @include buttonStyle();
+            padding: 1vh;
+            width: 20vh;
+            border-radius: 5vh;
+            display: block;
+            margin-top: 2vh;
+            
+            p{
+                @include headingBoldStyle();
+                font-size: 2.2vh;
+                color: white;
+                margin-top: 0.5vh;
+                margin-bottom: 0.5vh;
+            }
         }
     }
+    
 }
 
 
 // FAQs Section
 section.faqs{
-    padding-top: 17vh;
+    padding-top: 13vh;
+
     h1{
-        font-family: $headingFont;
+        @include headingBlackStyle();
         font-size: 8vh;
-        font-weight: 900;
-        margin: 0;
         margin-bottom: 6vh;
-        
-        span{
-            background-image: linear-gradient(90deg, #B700F8 , #E94028);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     }
-    p.contentLink{
-        font-family: $headingFont;
+    h2{
+        @include headingBoldStyle();
         font-size: 4vh;
-        font-weight: 700;
-        margin: 0;
-        margin-bottom: 3vh;
+        margin-bottom: 4.5vh;
         color: black;
     }
-    p.contentFAQs{
-        font-family: $contentFont;
+    p{
+        @include contentStyle();
         font-size: 2.7vh;
-        font-weight: 400;
-        margin: 0;
     }
 }
 
