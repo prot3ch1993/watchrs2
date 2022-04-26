@@ -1,28 +1,27 @@
 import React from "react";
-import Grid from '@mui/material/Grid';
+import { Link } from "react-router-dom";
 
 const Hero = () => {
     return(
         <section className="hero">
             <div className="container">
-                <Grid container>
-                        <Grid item xs={12} lg={6}>
-                            <div className="content">
-                                <h1 className="hero"><span>Watch anytime you want while you’re at home.</span></h1>
-                                <button className="hero">Sign In</button>
-                                <button className="hero">Sign Up</button>
+                <div className="row">
+                    <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-6">
+                        <div className="content">
+                            <h1 className="hero"><span>Watch anytime you want while you’re at home.</span></h1>
+                            <div className="buttons">
+                                <button><Link to="/loginform" color="inherit">Sign In</Link></button>
+                                <button>Sign Up</button>
                             </div>
-                            
-                        </Grid>
-                        <Grid item xs={12} lg={6}>
-                            {/* <img src={require('../images/hero-image-2.png')} className="hero" /> */}
-                        </Grid>
-                </Grid>
+                            <div className="buttonSub">
+                                <button><Link to="/loginform" color="inherit">Sign In</Link></button>
+                                <button className="signUp">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
         </section>
-        
-        
     )
 }
 export default Hero

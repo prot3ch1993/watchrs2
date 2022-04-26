@@ -4,109 +4,54 @@
 
 body {
   margin: 0;
-  background-image: url("./images/hero-image-2.png");
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 100vh;
-}
-
-h1 {
-  font-family: Catamaran;
-  font-size: 8vh;
-  font-weight: 900;
-  margin: 0;
-}
-
-h1.white {
-  font-family: Catamaran;
-  font-size: 6vh;
-  font-weight: 900;
-  color: white;
-  margin: 0;
-}
-
-h1.logo {
-  font-family: Catamaran;
-  font-size: 9vh;
-  font-weight: 900;
-  margin: 0;
-  color: white;
-}
-
-h1.hero {
-  font-family: Catamaran;
-  font-size: 9vh;
-  font-weight: 900;
-  margin: 0;
-  margin-top: 20vh;
-  margin-bottom: 2vh;
-}
-
-h2 {
-  font-family: Catamaran;
-  font-size: 5.5vh;
-  font-weight: 700;
-  margin: 0;
-}
-
-p.contentServices {
-  font-family: Quicksand;
-  font-size: 3vh;
-  font-weight: 400;
-  margin: 0;
-}
-
-p.contentLink {
-  font-family: Catamaran;
-  font-size: 4vh;
-  font-weight: 700;
-  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
 }
 
 a {
   text-decoration: none;
-  color: black;
+}
+
+h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 8vh;
+}
+
+h1.logo {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 9vh;
+  color: white;
+}
+
+p.contentLink {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 4vh;
 }
 
 p.contentDevelopers {
   font-family: Quicksand;
-  font-size: 2.7vh;
   font-weight: 400;
   margin: 0;
+  font-size: 2.7vh;
 }
 
 p.contentWhite {
   font-family: Catamaran;
-  font-size: 4vh;
   font-weight: 700;
   margin: 0;
+  font-size: 4vh;
   color: white;
-}
-
-span {
-  background-image: linear-gradient(90deg, #B700F8, #E94028);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
-}
-
-.backgroundGradient.size {
-  height: 120vh;
-}
-
-button.live {
-  background-color: #EC8800;
-  border: none;
-  padding: 1vh;
-  width: 20vh;
-  border-radius: 5vh;
-  font-family: Catamaran;
-  font-weight: 900;
-  font-size: 2vh;
-  color: white;
 }
 
 button.contactUs {
@@ -114,14 +59,101 @@ button.contactUs {
   border: none;
   padding: 2vh;
   width: 16vh;
-  border-radius: 3vh;
+  border-radius: 2.5vh;
   font-family: Catamaran;
   font-weight: 900;
   font-size: 3vh;
   color: white;
 }
 
-button.hero {
+p.footerHeading {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 3vh;
+  color: white;
+}
+
+p.footerContent {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+  font-size: 2vh;
+  color: white;
+}
+
+p.footerCopyright {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5vh;
+  color: white;
+}
+
+nav {
+  background-color: transparent;
+}
+
+nav h1.logoMain {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 5vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+nav button {
+  display: none;
+}
+
+nav nav.nav a {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 2.3vh;
+  margin-left: 5.5vh;
+  color: white;
+  padding-right: 0;
+}
+
+nav nav.nav li {
+  padding-right: 0;
+}
+
+nav.colorChange {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+}
+
+nav.colorChange h1.logoMain span {
+  background-image: none;
+  background-color: white;
+}
+
+nav.colorChange nav.nav a {
+  color: white;
+}
+
+nav.colorChange nav.nav a.nav-link.active {
+  background-color: inherit !important;
+  text-decoration: underline;
+}
+
+section.hero .content {
+  height: 100vh;
+}
+
+section.hero .content h1.hero {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  position: static;
+  font-size: 9vh;
+  margin-top: 20vh;
+  margin-bottom: 2vh;
+}
+
+section.hero .content .buttons button {
   background-color: #EC8800;
   border: none;
   padding: 2vh;
@@ -134,79 +166,44 @@ button.hero {
   margin-right: 2vh;
 }
 
-p.footerHeading {
-  font-family: Catamaran;
-  font-size: 3vh;
-  font-weight: 700;
-  margin: 0;
+section.hero .content .buttons button a {
   color: white;
 }
 
-p.footerContent {
-  font-family: Quicksand;
-  font-size: 2vh;
-  font-weight: 400;
-  margin: 0;
-  color: white;
-}
-
-p.footerCopyright {
-  font-family: Quicksand;
-  font-size: 1.5vh;
-  font-weight: 400;
-  margin: 0;
-  color: white;
-}
-
-h1.logoMain {
-  font-family: Catamaran;
-  font-size: 5vh;
-  font-weight: 900;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  margin: 0;
-}
-
-nav {
-  background-color: transparent;
-}
-
-nav.nav a {
-  font-family: Catamaran;
-  font-weight: 700;
-  font-size: 2.3vh;
-  margin-left: 7vh;
-  color: white;
-}
-
-.content {
-  height: 100vh;
-}
-
-img.hero {
-  width: 105vh;
-  height: 150vh;
-  position: absolute;
-  right: 0;
-  float: right;
+section.hero .content .buttonSub {
+  display: none;
 }
 
 section.services {
-  padding-top: 15vh;
+  padding-top: 25vh;
 }
 
-.list {
+section.services .image img {
+  height: 40vh;
+  margin-bottom: 10vh;
+}
+
+section.services .list, section.services .list2, section.services .listSub {
   margin-top: 13vh;
   margin-bottom: 13vh;
 }
 
-.imageRight {
-  float: right;
+section.services .list h2, section.services .list2 h2, section.services .listSub h2 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 5.5vh;
 }
 
-img.services {
-  height: 40vh;
-  margin-bottom: 10vh;
+section.services .list p, section.services .list2 p, section.services .listSub p {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+  font-size: 3vh;
+}
+
+section.services .listSub {
+  display: none;
 }
 
 section.live .backgroundGradient {
@@ -217,85 +214,753 @@ section.live .backgroundGradient.size {
   height: 110vh;
 }
 
-section.live h1.white {
+section.live .backgroundGradient h1 {
   font-family: Catamaran;
-  font-size: 6vh;
   font-weight: 900;
-  color: white;
   margin: 0;
+  font-size: 6vh;
+  color: white;
   margin-top: 8vh;
   margin-bottom: 6vh;
 }
 
-section.live img {
-  display: block;
+section.live .backgroundGradient img {
   margin-left: auto;
   margin-right: auto;
+  display: block;
   margin-bottom: 4vh;
   height: 55vh;
 }
 
-section.live p.contentWhite {
+section.live .backgroundGradient h2 {
   font-family: Catamaran;
-  font-size: 4vh;
   font-weight: 700;
   margin: 0;
-  color: white;
-  line-height: 5vh;
   margin-left: auto;
   margin-right: auto;
+  font-size: 4vh;
+  color: white;
+  line-height: 5vh;
   width: 41vh;
   text-align: center;
 }
 
-section.live button.live {
+section.live .backgroundGradient button.live {
+  margin-left: auto;
+  margin-right: auto;
   background-color: #EC8800;
   border: none;
+  padding: 2vh;
+  width: 16vh;
+  border-radius: 2.5vh;
+  font-family: Catamaran;
+  font-weight: 900;
+  font-size: 3vh;
+  color: white;
   padding: 1vh;
   width: 20vh;
   border-radius: 5vh;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 2vh;
 }
 
-section.live button.live p {
+section.live .backgroundGradient button.live p {
   font-family: Catamaran;
-  font-weight: 900;
+  font-weight: 700;
+  margin: 0;
   font-size: 2.2vh;
   color: white;
   margin-top: 0.5vh;
   margin-bottom: 0.5vh;
 }
 
+section.faqs {
+  padding-top: 13vh;
+}
+
 section.faqs h1 {
   font-family: Catamaran;
-  font-size: 8vh;
   font-weight: 900;
   margin: 0;
-  margin-top: 12vh;
+  font-size: 8vh;
   margin-bottom: 6vh;
 }
 
-section.faqs h1 span {
-  background-image: linear-gradient(90deg, #B700F8, #E94028);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-section.faqs p.contentLink {
+section.faqs .lgScreen h2 {
   font-family: Catamaran;
-  font-size: 4vh;
   font-weight: 700;
   margin: 0;
-  margin-bottom: 3vh;
+  font-size: 4vh;
+  margin-bottom: 4.5vh;
   color: black;
 }
 
-section.faqs p.contentFAQs {
+section.faqs .lgScreen p {
   font-family: Quicksand;
-  font-size: 2.7vh;
   font-weight: 400;
   margin: 0;
+  font-size: 3vh;
+}
+
+section.faqs .smScreen {
+  display: none;
+}
+
+.loginform {
+  height: 100vh;
+}
+
+.loginform .heading h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 8vh;
+}
+
+.loginform input {
+  width: 38vh;
+  border: 1px solid black;
+}
+
+.loginform .emailAddress p, .loginform .password p {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 3.5vh;
+}
+
+.loginform .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.notfound .row.ps-5 {
+  height: 70vh;
+}
+
+.notfound .footer {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.modal-content {
+  background-color: black;
+  color: white;
+}
+
+.row.p-5.loggedin {
+  background-color: black;
+  color: white;
+}
+
+@media screen and (max-width: 575px) {
+  body {
+    background-image: url("./images/android-hero.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100vh;
+  }
+  nav {
+    background-color: transparent;
+  }
+  nav h1.logoMain {
+    font-size: 4vh;
+    background-color: transparent;
+  }
+  nav h1.logoMain a {
+    color: white;
+  }
+  nav button {
+    display: block;
+    border: none;
+    background: none;
+  }
+  nav button span {
+    color: white;
+    font-size: 4vh;
+  }
+  nav .offcanvas {
+    width: 75%;
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+  }
+  nav .offcanvas .offcanvas-body p {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 4vh;
+    margin-left: 3vh;
+    margin-top: 3vh;
+  }
+  nav .offcanvas .offcanvas-body p a {
+    color: white;
+  }
+  nav nav.nav {
+    display: none;
+  }
+  nav.colorChange h1.logoMain span {
+    background-color: transparent;
+  }
+  nav.colorChange h1.logoMain a {
+    color: white;
+  }
+  nav#loginForm h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loginform .heading h1.text-center {
+    margin-bottom: 2vh;
+    font-size: 7vh;
+  }
+  .loginform .heading h1.text-center span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loginform input {
+    width: 35vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .loginform .emailAddress p, .loginform .password p {
+    text-align: center;
+    font-size: 3vh;
+  }
+  section.hero .content {
+    position: absolute;
+    top: 47vh;
+  }
+  section.hero .content h1.hero {
+    text-align: center;
+    font-size: 5.3vh;
+  }
+  section.hero .content h1.hero span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.hero .content .buttons {
+    display: none;
+  }
+  section.hero .content .buttonSub {
+    display: block;
+    text-align: center;
+  }
+  section.hero .content .buttonSub button {
+    background-color: #EC8800;
+    border: none;
+    padding: 2vh;
+    width: 16vh;
+    border-radius: 2.5vh;
+    font-family: Catamaran;
+    font-weight: 900;
+    font-size: 3vh;
+    color: white;
+    width: 13vh;
+    font-size: 2.5vh;
+    padding: 1vh;
+    margin-right: 2vh;
+  }
+  section.hero .content .buttonSub button a {
+    color: white;
+  }
+  section.hero .content .buttonSub button.signUp {
+    margin-right: 0;
+  }
+  section.services {
+    margin-top: 120vh;
+    padding-top: 0;
+  }
+  section.services .row {
+    text-align: center;
+  }
+  section.services .row .image img {
+    height: 25vh;
+    margin-bottom: 0;
+  }
+  section.services .row .list {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  section.services .row .list h2 {
+    font-size: 5vh;
+    margin-bottom: 1.5vh;
+  }
+  section.services .row .list p {
+    font-size: 2.7vh;
+  }
+  section.services .row .list2 {
+    display: none;
+  }
+  section.services .row .listSub {
+    display: block;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  section.services .row .listSub h2 {
+    font-size: 5vh;
+    margin-bottom: 1.5vh;
+  }
+  section.services .row .listSub p {
+    font-size: 2.7vh;
+  }
+  section.live {
+    margin-top: 10vh;
+  }
+  section.live .backgroundGradient.size {
+    height: 258vh;
+  }
+  section.live .backgroundGradient h1 {
+    text-align: center;
+  }
+  section.live .backgroundGradient img {
+    height: 50vh;
+  }
+  section.live .backgroundGradient button {
+    margin-bottom: 5vh;
+  }
+  section.faqs h1 {
+    text-align: center;
+  }
+  section.faqs h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.faqs .collapse p {
+    margin-bottom: 8vh;
+  }
+  section.faqs .lgScreen {
+    display: none;
+  }
+  section.faqs .smScreen {
+    display: block;
+  }
+  section.faqs .smScreen .MuiButtonBase-root {
+    padding: 0;
+    margin: 0;
+  }
+  section.faqs .smScreen .MuiButtonBase-root h2 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3.5vh;
+    color: black;
+    margin-bottom: 0;
+  }
+  section.faqs .smScreen .MuiAccordionDetails-root {
+    padding: 0;
+    margin-bottom: 3vh;
+  }
+  section.faqs .smScreen .MuiAccordionDetails-root p {
+    font-family: Quicksand;
+    font-weight: 400;
+    margin: 0;
+    font-size: 2.5vh;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    background-image: url("./images/hero-image-2.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 55%;
+  }
+  nav h1.logoMain span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav nav.nav a {
+    margin-left: 3vh;
+  }
+  nav.colorChange nav.nav a {
+    margin-left: 3vh;
+    padding-right: 0;
+  }
+  nav.colorChange nav.nav li {
+    padding-right: 0;
+  }
+  .loginform {
+    height: 100vh;
+  }
+  .loginform .heading h1 {
+    font-size: 8vh;
+  }
+  .loginform .heading h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loginform input {
+    width: 50vh;
+    border: 1px solid black;
+  }
+  .loginform .emailAddress p, .loginform .password p {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 4.5vh;
+  }
+  section.hero .content h1.hero {
+    font-size: 7.5vh;
+  }
+  section.hero .content h1.hero span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.services .image img {
+    height: 35vh;
+  }
+  section.services .list, section.services .list2, section.services .listSub {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+  }
+  section.faqs h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.faqs .lgScreen h2 a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-image: url("./images/tablet-hero.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100vh;
+  }
+  nav {
+    background-color: transparent;
+  }
+  nav h1.logoMain {
+    font-size: 4vh;
+  }
+  nav h1.logoMain span a {
+    color: white;
+  }
+  nav button {
+    display: block;
+    border: none;
+    background: none;
+  }
+  nav button span {
+    color: white;
+    font-size: 4vh;
+  }
+  nav .offcanvas {
+    width: 50%;
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+  }
+  nav .offcanvas .offcanvas-body p {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 4vh;
+    margin-left: 3vh;
+    margin-top: 3vh;
+    font-size: 2.5vh;
+  }
+  nav .offcanvas .offcanvas-body p a {
+    color: white;
+  }
+  nav nav.nav {
+    display: none;
+  }
+  nav.colorChange h1.logoMain span {
+    background-color: transparent;
+  }
+  nav.colorChange h1.logoMain a {
+    color: white;
+  }
+  nav#loginForm h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loginform .heading h1.text-center {
+    margin-bottom: 2vh;
+    font-size: 7vh;
+  }
+  .loginform .heading h1.text-center span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loginform input {
+    width: 55vh;
+    height: 5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .loginform .emailAddress p, .loginform .password p {
+    text-align: center;
+    font-size: 3vh;
+  }
+  section.hero .content {
+    position: absolute;
+    top: 52vh;
+  }
+  section.hero .content h1.hero {
+    text-align: center;
+    font-size: 5.3vh;
+  }
+  section.hero .content h1.hero span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.hero .content .buttons {
+    display: none;
+  }
+  section.hero .content .buttonSub {
+    display: block;
+    text-align: center;
+  }
+  section.hero .content .buttonSub button {
+    background-color: #EC8800;
+    border: none;
+    padding: 2vh;
+    width: 16vh;
+    border-radius: 2.5vh;
+    font-family: Catamaran;
+    font-weight: 900;
+    font-size: 3vh;
+    color: white;
+    width: 13vh;
+    font-size: 2.5vh;
+    padding: 1vh;
+    margin-right: 2vh;
+  }
+  section.hero .content .buttonSub button a {
+    color: white;
+  }
+  section.hero .content .buttonSub button.signUp {
+    margin-right: 0;
+  }
+  section.services {
+    margin-top: 120vh;
+    padding-top: 0;
+  }
+  section.services .row {
+    text-align: center;
+  }
+  section.services .row .image img {
+    height: 25vh;
+    margin-bottom: 0;
+  }
+  section.services .row .list {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  section.services .row .list h2 {
+    font-size: 5vh;
+    margin-bottom: 1.5vh;
+  }
+  section.services .row .list p {
+    font-size: 2.7vh;
+  }
+  section.services .row .list2 {
+    display: none;
+  }
+  section.services .row .listSub {
+    display: block;
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+  }
+  section.services .row .listSub h2 {
+    font-size: 5vh;
+    margin-bottom: 1.5vh;
+  }
+  section.services .row .listSub p {
+    font-size: 2.7vh;
+  }
+  section.live {
+    margin-top: 10vh;
+  }
+  section.live .backgroundGradient.size {
+    height: 258vh;
+  }
+  section.live .backgroundGradient h1 {
+    text-align: center;
+  }
+  section.live .backgroundGradient img {
+    height: 50vh;
+  }
+  section.live .backgroundGradient button {
+    margin-bottom: 5vh;
+  }
+  section.faqs h1 {
+    text-align: center;
+  }
+  section.faqs h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.faqs .collapse p {
+    margin-bottom: 8vh;
+  }
+  section.faqs .lgScreen {
+    display: none;
+  }
+  section.faqs .smScreen {
+    display: block;
+  }
+  section.faqs .smScreen .MuiButtonBase-root {
+    padding: 0;
+    margin: 0;
+  }
+  section.faqs .smScreen .MuiButtonBase-root h2 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3.5vh;
+    color: black;
+    margin-bottom: 3vh;
+  }
+  section.faqs .smScreen .MuiAccordionDetails-root {
+    padding: 0;
+    margin-bottom: 3vh;
+  }
+  section.faqs .smScreen .MuiAccordionDetails-root p {
+    font-family: Quicksand;
+    font-weight: 400;
+    margin: 0;
+    font-size: 2.5vh;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  body {
+    background-image: url("./images/hero-image-2.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 55%;
+  }
+  nav h1.logoMain span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4vh;
+  }
+  nav nav.nav a {
+    margin-left: 3.5vh;
+    font-size: 2vh;
+  }
+  nav.colorChange nav.nav a {
+    margin-left: 3.5vh;
+    padding-right: 0;
+  }
+  nav.colorChange nav.nav li {
+    padding-right: 0;
+  }
+  .loginform {
+    height: 100vh;
+  }
+  .loginform .heading h1 {
+    font-size: 8vh;
+  }
+  .loginform .heading h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .loginform input {
+    width: 45vh;
+    height: 5vh;
+  }
+  .loginform .emailAddress p, .loginform .password p {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3vh;
+  }
+  section.hero .content h1.hero {
+    font-size: 6.5vh;
+  }
+  section.hero .content h1.hero span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.services .image img {
+    height: 35vh;
+  }
+  section.services .list, section.services .list2, section.services .listSub {
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+  }
+  section.live .backgroundGradient.size {
+    height: 100vh;
+  }
+  section.live .backgroundGradient img {
+    height: 45vh;
+  }
+  section.live .backgroundGradient h2 {
+    font-size: 3.8vh;
+    width: 39vh;
+  }
+  section.faqs h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.faqs .lgScreen h2 a {
+    color: black;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-image: url("./images/hero-image-2.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 108vh;
+  }
+  span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  a {
+    color: black;
+  }
+  section.services .image .right img {
+    float: right;
+  }
+  section.faqs p {
+    font-family: Quicksand;
+    font-weight: 400;
+    margin: 0;
+    font-size: 2.7vh;
+  }
 }

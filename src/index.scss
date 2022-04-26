@@ -1,114 +1,8 @@
 $headingFont: Catamaran;
 $contentFont: Quicksand;
+$backgroundColorBlack: black;
 
-
-*{
-    box-sizing: border-box;
-}
-body{
-    margin: 0;
-    background-image: url('./images/hero-image-2.png');
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 100vh;
-}
-h1{
-    font-family: $headingFont;
-    font-size: 8vh;
-    font-weight: 900;
-    margin: 0;
-}
-h1.white{
-    font-family: $headingFont;
-    font-size: 6vh;
-    font-weight: 900;
-    color: white;
-    margin: 0;
-}
-h1.logo{
-    font-family: $headingFont;
-    font-size: 9vh;
-    font-weight: 900;
-    margin: 0;
-    color: white;
-}
-h1.hero{
-    font-family: $headingFont;
-    font-size: 9vh;
-    font-weight: 900;
-    margin: 0;
-    margin-top: 20vh;
-    margin-bottom: 2vh;
-}
-h2{
-    font-family: $headingFont;
-    font-size: 5.5vh;
-    font-weight: 700;
-    margin: 0;
-}
-p.contentServices{
-    font-family: $contentFont;
-    font-size: 3vh;
-    font-weight: 400;
-    margin: 0;
-}
-p.contentLink{
-    font-family: $headingFont;
-    font-size: 4vh;
-    font-weight: 700;
-    margin: 0;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-p.contentDevelopers{
-    font-family: $contentFont;
-    font-size: 2.7vh;
-    font-weight: 400;
-    margin: 0;
-}
-p.contentWhite{
-    font-family: $headingFont;
-    font-size: 4vh;
-    font-weight: 700;
-    margin: 0;
-    color: white;
-}
-span{
-    background-image: linear-gradient(90deg, #B700F8 , #E94028);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.backgroundGradient{
-    background-image: linear-gradient(90deg, #B700F8, #E94028);
-    &.size{
-        height: 120vh;
-    }
-}
-button.live{
-    background-color: #EC8800;
-    border: none;
-    padding: 1vh;
-    width: 20vh;
-    border-radius: 5vh;
-    font-family: $headingFont;
-    font-weight: 900;
-    font-size: 2vh;
-    color: white;
-}
-button.contactUs{
-    background-color: #EC8800;
-    border: none;
-    padding: 2vh;
-    width: 16vh;
-    border-radius: 3vh;
-    font-family: $headingFont;
-    font-weight: 900;
-    font-size: 3vh;
-    color: white;
-}
-button.hero{
+@mixin buttonStyle {
     background-color: #EC8800;
     border: none;
     padding: 2vh;
@@ -118,173 +12,1084 @@ button.hero{
     font-weight: 900;
     font-size: 3vh;
     color: white;
-    margin-right: 2vh;
 }
-p.footerHeading{
+
+@mixin headingBlackStyle {
     font-family: $headingFont;
-    font-size: 3vh;
+    font-weight: 900;
+    margin: 0;
+}
+
+@mixin headingBoldStyle {
+    font-family: $headingFont;
     font-weight: 700;
     margin: 0;
+}
+
+@mixin contentStyle {
+    font-family: $contentFont;
+    font-weight: 400;
+    margin: 0;
+}
+
+@mixin marginCenterAlign {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin backgroundGradient {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+}
+
+@mixin backgroundGradientText{
+    @include backgroundGradient();
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y:scroll;
+    position: relative;
+}
+a{
+    text-decoration: none;
+}
+
+// Aayusin ko itong section na ito once na matapos si queena sa task nya
+h1{
+    @include headingBlackStyle();
+    font-size: 8vh;
+}
+h1.logo{
+    @include headingBlackStyle();
+    font-size: 9vh;
+    color: white;
+}
+p.contentLink{
+    @include headingBoldStyle();
+    font-size: 4vh;
+}
+p.contentDevelopers{
+    @include contentStyle();
+    font-size: 2.7vh;
+}
+p.contentWhite{
+    @include headingBoldStyle();
+    font-size: 4vh;
+        color: white;
+}
+.backgroundGradient{
+    @include backgroundGradient();
+}
+button.contactUs{
+    @include buttonStyle();
+}
+p.footerHeading{
+    @include headingBoldStyle();
+    font-size: 3vh;
     color: white;
 }
 p.footerContent{
-    font-family: $contentFont;
+    @include contentStyle();
     font-size: 2vh;
-    font-weight: 400;
-    margin-top: 10px;
     color: white;
 }
 p.footerCopyright{
-    font-family: $contentFont;
+    @include contentStyle();
     font-size: 1.5vh;
-    font-weight: 400;
-    margin: 0;
     color: white;
 }
 
+
+
 // Navigation Bar
-h1.logoMain{
-    font-family: $headingFont;
-    font-size: 5vh;
-    font-weight: 900;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin: 0;
-}
 nav{
     background-color: transparent;
     
+    
+    h1.logoMain{
+        @include headingBlackStyle();
+        font-size: 5vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    button{
+        display: none;
+    }
+   
+    nav.nav{
+        a{
+            @include headingBoldStyle();
+            font-size: 2.3vh;
+            margin-left: 5.5vh;
+            color: white;
+            padding-right: 0;
+        }
+        li{
+            padding-right: 0;
+        }
+    }
 }
-nav.nav{
-    a{
-        font-family: $headingFont;
-        font-weight: 700;
-        font-size: 2.3vh;
-        margin-left: 7vh;
-        color: white;
+
+nav.colorChange{
+    @include backgroundGradient();
+    
+    h1.logoMain{
+        span{
+            background-image: none;
+            background-color: white;
+        }
+    }
+    nav.nav{
+        a{
+            color: white;
+        }
+        a.nav-link.active {
+            background-color: inherit !important;
+            text-decoration: underline;
+        }
     }
 }
 
 
 // Hero Section
-.content{
-    height: 100vh;
-}
-img.hero{
-    width: 105vh;
-    height: 150vh;
-    position: absolute;
-    right: 0;
-    float: right;
+section.hero{
+    
+    .content{
+        height: 100vh;
+
+        h1.hero{
+            @include headingBlackStyle();
+            position: static;
+            font-size: 9vh;
+            margin-top: 20vh;
+            margin-bottom: 2vh;
+        }
+        .buttons{
+            button{
+                @include buttonStyle();
+                margin-right: 2vh;
+                
+                a{
+                    color: white;
+                }
+            }
+        }
+        .buttonSub{
+            display: none;
+        }
+    }
 }
 
 
 // Services Section
 section.services{
-    padding-top: 15vh;
-    
-}
-.list{
-    margin-top: 13vh;
-    margin-bottom: 13vh;
-}
-.imageRight{
-    float: right;
-}
-img.services{
-    height: 40vh;
-    margin-bottom: 10vh;
+    padding-top: 25vh;
+
+    .image{
+        img{
+            height: 40vh;
+            margin-bottom: 10vh;
+        }
+    }
+    .list,.list2,.listSub{
+        margin-top: 13vh;
+        margin-bottom: 13vh;
+
+        h2{
+            @include headingBoldStyle();
+            font-size: 5.5vh;
+        }
+        p{
+            @include contentStyle();
+            font-size: 3vh;
+        }
+    }
+    .listSub{
+        display: none;
+    }
 }
 
 
 // Live Streaming Section
 section.live{
     .backgroundGradient{
-        background-image: linear-gradient(90deg, #B700F8, #E94028);
+        @include backgroundGradient();
+
         &.size{
             height: 110vh;
         }
-    }
-    h1.white{
-        font-family: $headingFont;
-        font-size: 6vh;
-        font-weight: 900;
-        color: white;
-        margin: 0;
-        margin-top: 8vh;
-        margin-bottom: 6vh;
-    }
-    img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 4vh;
-        height: 55vh;
-    }
-    p.contentWhite{
-        font-family: $headingFont;
-        font-size: 4vh;
-        font-weight: 700;
-        margin: 0;
-        color: white;
-        line-height: 5vh;
-        margin-left: auto;
-        margin-right: auto;
-        width: 41vh;
-        text-align: center;
-    }
-    button.live{
-        background-color: #EC8800;
-        border: none;
-        padding: 1vh;
-        width: 20vh;
-        border-radius: 5vh;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2vh;
-        p{
-            font-family: $headingFont;
-            font-weight: 900;
-            font-size: 2.2vh;
+        h1{
+            @include headingBlackStyle();
+            font-size: 6vh;
             color: white;
-            margin-top: 0.5vh;
-            margin-bottom: 0.5vh;
+            margin-top: 8vh;
+            margin-bottom: 6vh;
+        }
+        img{
+            @include marginCenterAlign();
+            display: block;
+            margin-bottom: 4vh;
+            height: 55vh;
+        }
+        h2{
+            @include headingBoldStyle();
+            @include marginCenterAlign();
+            font-size: 4vh;
+            color: white;
+            line-height: 5vh;
+            width: 41vh;
+            text-align: center;
+        }
+        button.live{
+            @include marginCenterAlign();
+            @include buttonStyle();
+            padding: 1vh;
+            width: 20vh;
+            border-radius: 5vh;
+            display: block;
+            margin-top: 2vh;
+            
+            p{
+                @include headingBoldStyle();
+                font-size: 2.2vh;
+                color: white;
+                margin-top: 0.5vh;
+                margin-bottom: 0.5vh;
+            }
         }
     }
+    
 }
 
 
 // FAQs Section
 section.faqs{
+    padding-top: 13vh;
+
     h1{
-        font-family: $headingFont;
+        @include headingBlackStyle();
         font-size: 8vh;
-        font-weight: 900;
-        margin: 0;
-        margin-top: 12vh;
         margin-bottom: 6vh;
-        
-        span{
-            background-image: linear-gradient(90deg, #B700F8 , #E94028);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    }
+    .lgScreen{
+        h2{
+            @include headingBoldStyle();
+            font-size: 4vh;
+            margin-bottom: 4.5vh;
+            color: black;
+        }
+        p{
+            @include contentStyle();
+            font-size: 3vh;
         }
     }
-    p.contentLink{
-        font-family: $headingFont;
-        font-size: 4vh;
-        font-weight: 700;
-        margin: 0;
-        margin-bottom: 3vh;
-        color: black;
-    }
-    p.contentFAQs{
-        font-family: $contentFont;
-        font-size: 2.7vh;
-        font-weight: 400;
-        margin: 0;
+    
+    .smScreen{
+        display: none;
     }
 }
 
+
+//login form section
+.loginform {
+    height:100vh;
+
+    .heading{
+        h1{
+            @include headingBlackStyle();
+            font-size: 8vh;
+        }
+    }
+    input{
+        width: 38vh;
+        border: 1px solid black
+    }
+    .emailAddress,.password{
+        p{
+            @include headingBoldStyle();
+            font-size: 3.5vh;
+        }
+    }
+    
+    .footer{
+        position: fixed;
+        bottom:0;
+        width: 100%;
+        margin:0;
+        padding:0;
+    }
+}
+
+// page not found section
+.notfound{
+    .row.ps-5{
+        height:70vh;
+    }
+
+    .footer{
+        position: fixed;
+        bottom:0;
+        width: 100vw;
+    }
+}
+
+// modal section
+.modal-content{
+    background-color: black;
+    color:white;
+}
+
+//loggedin section
+.row.p-5.loggedin{
+    background-color: black;
+    color:white;
+}
+
+
+@media screen and (max-width:575px){
+    body{
+        background-image: url('./images/android-hero.png');
+        background-repeat: no-repeat;
+        background-position:top;
+        background-size: 100vh;
+    }
+
+    // Nav Page
+    nav{
+        background-color: transparent;
+    
+        h1.logoMain{
+            font-size: 4vh;
+            background-color: transparent;
+            
+            a{
+                color: white;
+            }
+        }
+        button{
+            display: block;
+            border: none;
+            background: none;
+
+            span{
+                color: white;
+                font-size: 4vh;
+            }
+        }
+        .offcanvas{
+            width: 75%;
+            @include backgroundGradient();
+
+            .offcanvas-body{
+                p{
+                    @include headingBoldStyle();
+                    margin-bottom: 4vh;
+                    margin-left: 3vh;
+                    margin-top: 3vh;
+                    
+                    a{
+                        color: white;
+                    }
+                }
+            }
+        }
+        nav.nav{
+            display: none;
+        }
+    }
+    nav.colorChange{
+        h1.logoMain{
+            span{
+                background-color: transparent;
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+
+    // Log In Form
+    nav#loginForm{
+        h1{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+    }
+    .loginform{
+        .heading{
+            h1.text-center{
+                margin-bottom: 2vh;
+                font-size: 7vh;
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+        input{
+            width: 35vh;
+            display: block;
+            @include marginCenterAlign();
+        }
+        .emailAddress,.password{
+            p{
+                text-align: center;
+                font-size: 3vh;
+            }
+        }
+    }
+
+
+    // Hero Page
+    section.hero{
+        .content{
+            position: absolute;
+            top: 47vh;
+            
+            h1.hero{
+                text-align: center;
+                font-size: 5.3vh;
+                
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+            .buttons{
+                display: none;
+            }
+            .buttonSub{
+                display: block;
+                text-align: center;
+                button{
+                    @include buttonStyle();
+                    width: 13vh;
+                    font-size: 2.5vh;
+                    padding: 1vh;
+                    margin-right: 2vh;
+                    
+                    a{
+                        color: white;
+                    }
+                }
+                button.signUp{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    // Services Page
+    section.services{
+        margin-top: 120vh;
+        padding-top: 0;
+
+        .row{
+            text-align: center;
+
+            .image{
+                img{
+                    height: 25vh;
+                    margin-bottom: 0;
+                }
+                
+            }
+            .list{
+                margin-top: 5vh;
+                margin-bottom: 10vh; 
+                
+                h2{
+                    font-size: 5vh;
+                    margin-bottom: 1.5vh;
+                }
+                p{
+                    font-size: 2.7vh;
+                }
+            }
+            .list2{
+                display: none;
+            }
+            .listSub{
+                display: block;
+                margin-top: 5vh;
+                margin-bottom: 10vh; 
+                
+                h2{
+                    font-size: 5vh;
+                    margin-bottom: 1.5vh;
+                }
+                p{
+                    font-size: 2.7vh;
+                }
+            }
+        }
+    }
+
+    // Live Section
+    section.live{
+        margin-top: 10vh;
+       
+
+        .backgroundGradient{
+            &.size{
+                height: 258vh;
+            }
+            h1{
+                text-align: center;
+            }
+            img{
+                height: 50vh;
+            }
+            button{
+                margin-bottom: 5vh;
+            }
+        }
+    }
+
+    // FAQ Section
+    section.faqs{
+        h1{
+            text-align: center;
+
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        .collapse{
+            p{
+                margin-bottom: 8vh;
+            }
+        }
+        .lgScreen{
+            display: none;
+        }
+        .smScreen{
+            display: block;
+
+            .MuiButtonBase-root{
+                padding: 0;
+                margin: 0;
+
+                h2{
+                    @include headingBoldStyle();
+                    font-size: 3.5vh;
+                    color: black;
+                    margin-bottom: 0;
+                }
+                
+            }
+            .MuiAccordionDetails-root{
+                padding: 0;
+                margin-bottom: 3vh;
+                p{
+                    @include contentStyle();
+                    font-size: 2.5vh;
+                }
+            }
+            
+            
+        }
+    }
+}
+@media screen and (min-width:576px) and (max-width:767px){
+    body{
+        background-image: url('./images/hero-image-2.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 55%;
+    }
+
+    // Navbar Page
+    nav{
+        h1.logoMain{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        nav.nav{
+            a{
+                margin-left: 3vh;
+            }
+        }
+    }
+    nav.colorChange{
+        nav.nav{
+            a{
+                margin-left: 3vh;
+                padding-right: 0;
+            }
+            li{
+                padding-right: 0;
+            }
+        }
+    }
+
+    //login form section
+    .loginform {
+        height:100vh;
+
+        .heading{
+            h1{
+                font-size: 8vh;
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+        input{
+            width: 50vh;
+            border: 1px solid black
+        }
+        .emailAddress,.password{
+            p{
+                @include headingBoldStyle();
+                font-size: 4.5vh;
+            }
+        }
+    }
+
+    // Hero Page
+    section.hero{
+        .content{
+            h1.hero{
+                font-size: 7.5vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+    }
+
+    // Services Page
+    section.services{
+        .image{
+            img{
+                height: 35vh;
+            }
+        }
+        .list,.list2,.listSub{
+            margin-top: 8vh;
+            margin-bottom: 8vh;
+        }
+    }
+
+    // FAQs Page
+    section.faqs{
+        h1{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        .lgScreen{
+            h2{
+                a{
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    body{
+        background-image: url('./images/tablet-hero.png');
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 100vh;
+    }
+
+    // Nav Page
+    nav{
+        background-color: transparent;
+    
+        h1.logoMain{
+            font-size: 4vh;
+            span{
+                a{
+                    color: white
+                }
+            }
+        }
+        button{
+            display: block;
+            border: none;
+            background: none;
+
+            span{
+                color: white;
+                font-size: 4vh;
+            }
+        }
+        .offcanvas{
+            width: 50%;
+            @include backgroundGradient();
+
+            .offcanvas-body{
+                p{
+                    @include headingBoldStyle();
+                    margin-bottom: 4vh;
+                    margin-left: 3vh;
+                    margin-top: 3vh;
+                    font-size: 2.5vh;
+                    
+                    a{
+                        color: white;
+                    }
+                }
+            }
+        }
+        nav.nav{
+            display: none;
+        }
+    }
+    nav.colorChange{
+        h1.logoMain{
+            span{
+                background-color: transparent;
+            }
+            a{
+                color: white;
+            }
+        }
+    }
+
+    // Log In Form
+    nav#loginForm{
+        h1{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+    }
+    .loginform{
+        .heading{
+            h1.text-center{
+                margin-bottom: 2vh;
+                font-size: 7vh;
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+        input{
+            width: 55vh;
+            height: 5vh;
+            display: block;
+            @include marginCenterAlign();
+        }
+        .emailAddress,.password{
+            p{
+                text-align: center;
+                font-size: 3vh;
+            }
+        }
+    }
+
+
+    // Hero Page
+    section.hero{
+        .content{
+            position: absolute;
+            top: 52vh;
+            
+            h1.hero{
+                text-align: center;
+                font-size: 5.3vh;
+                
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+            .buttons{
+                display: none;
+            }
+            .buttonSub{
+                display: block;
+                text-align: center;
+                button{
+                    @include buttonStyle();
+                    width: 13vh;
+                    font-size: 2.5vh;
+                    padding: 1vh;
+                    margin-right: 2vh;
+                    
+                    a{
+                        color: white;
+                    }
+                }
+                button.signUp{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    // Services Page
+    section.services{
+        margin-top: 120vh;
+        padding-top: 0;
+
+        .row{
+            text-align: center;
+
+            .image{
+                img{
+                    height: 25vh;
+                    margin-bottom: 0;
+                }
+                
+            }
+            .list{
+                margin-top: 5vh;
+                margin-bottom: 10vh; 
+                
+                h2{
+                    font-size: 5vh;
+                    margin-bottom: 1.5vh;
+                }
+                p{
+                    font-size: 2.7vh;
+                }
+            }
+            .list2{
+                display: none;
+            }
+            .listSub{
+                display: block;
+                margin-top: 5vh;
+                margin-bottom: 10vh; 
+                
+                h2{
+                    font-size: 5vh;
+                    margin-bottom: 1.5vh;
+                }
+                p{
+                    font-size: 2.7vh;
+                }
+            }
+        }
+    }
+
+    // Live Section
+    section.live{
+        margin-top: 10vh;
+       
+
+        .backgroundGradient{
+            &.size{
+                height: 258vh;
+            }
+            h1{
+                text-align: center;
+            }
+            img{
+                height: 50vh;
+            }
+            button{
+                margin-bottom: 5vh;
+            }
+        }
+    }
+
+    // FAQ Section
+    section.faqs{
+        h1{
+            text-align: center;
+
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        .collapse{
+            p{
+                margin-bottom: 8vh;
+            }
+        }
+        .lgScreen{
+            display: none;
+        }
+        .smScreen{
+            display: block;
+
+            .MuiButtonBase-root{
+                padding: 0;
+                margin: 0;
+
+                h2{
+                    @include headingBoldStyle();
+                    font-size: 3.5vh;
+                    color: black;
+                    margin-bottom: 3vh;
+                }
+                
+            }
+            .MuiAccordionDetails-root{
+                padding: 0;
+                margin-bottom: 3vh;
+                p{
+                    @include contentStyle();
+                    font-size: 2.5vh;
+                }
+            }
+            
+            
+        }
+    }
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+    body{
+        background-image: url('./images/hero-image-2.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 55%;
+    }
+
+    // Navbar Page
+    nav{
+        h1.logoMain{
+            span{
+                @include backgroundGradientText();
+                font-size: 4vh;
+            }
+        }
+        nav.nav{
+            a{
+                margin-left: 3.5vh;
+                font-size: 2vh;
+            }
+        }
+    }
+    nav.colorChange{
+        nav.nav{
+            a{
+                margin-left: 3.5vh;
+                padding-right: 0;
+            }
+            li{
+                padding-right: 0;
+            }
+        }
+    }
+
+    //login form section
+    .loginform {
+        height:100vh;
+
+        .heading{
+            h1{
+                font-size: 8vh;
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+        input{
+            width: 45vh;
+            height: 5vh;
+        }
+        .emailAddress,.password{
+            p{
+                @include headingBoldStyle();
+                font-size: 3vh;
+            }
+        }
+    }
+
+    // Hero Page
+    section.hero{
+        .content{
+            h1.hero{
+                font-size: 6.5vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+    }
+
+    // Services Page
+    section.services{
+        .image{
+            img{
+                height: 35vh;
+            }
+        }
+        .list,.list2,.listSub{
+            margin-top: 8vh;
+            margin-bottom: 8vh;
+        }
+    }
+
+    // Live Page
+    section.live{
+        .backgroundGradient{
+            &.size{
+                height: 100vh;
+            }
+            img{
+                height: 45vh;
+            }
+            h2{
+                font-size: 3.8vh;
+                width: 39vh;
+            }
+        }
+    }
+
+    // FAQs Page
+    section.faqs{
+        h1{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        .lgScreen{
+            h2{
+                a{
+                    color: black;
+                }
+            }
+        }
+
+    }
+}
+@media screen and (min-width:1200px){
+    body{
+        background-image: url('./images/hero-image-2.png');
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 108vh;
+    }
+    span{
+        @include backgroundGradientText();
+    }
+    a{
+        color: black;
+    }
+    
+    section.services{
+        .image{
+            .right{
+                img{
+                    float: right;
+                }
+            }
+        }
+    }
+
+    section.faqs{
+        p{
+            @include contentStyle();
+            font-size: 2.7vh;
+        }
+    }
+}
 

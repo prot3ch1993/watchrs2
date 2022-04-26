@@ -9,12 +9,14 @@ import "../index.css"
 import Team from "./Team";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 
 
 const App = ()=> {
     return (
         <>
+            <Navbar/>
             <Hero/>
             <ServiceLayout/>
             <LiveLayout/>

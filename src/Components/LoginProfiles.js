@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import NavbarLogin from './NavbarLogin'
 
 const LoginProfiles = () => {
 
@@ -46,6 +47,7 @@ const LoginProfiles = () => {
     ]
     return (
         <>
+            <NavbarLogin/>
             <div className="row p-5">
                 {
                     profiles.map(

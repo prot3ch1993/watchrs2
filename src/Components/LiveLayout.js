@@ -8,24 +8,24 @@ const LiveLayout = () => {
             <div className='backgroundGradient size'>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-xl-12'>
-                            <h1 className='white'>
+                        <div className='col-12 col-xl-12'>
+                            <h1>
                                 Live Streaming
                             </h1>
                         </div>
                         <LiveDetail
-                        img={require('../images/dsmom.jpg')}
-                        p= "Doctor Strange in the Multiverse of Madness"
-                        button= "Sign In to watch"
+                            img={require('../images/dsmom.jpg')}
+                            h2= "Doctor Strange in the Multiverse of Madness"
+                            button= "Sign In to watch"
                         />
                         <LiveDetail
                             img={require('../images/fb3.png')}
-                            p= "Fantastic Beasts: The Secrets of Dumbledore"
+                            h2= "Fantastic Beasts: The Secrets of Dumbledore"
                             button= "Sign In to watch"
                         />
                         <LiveDetail
                             img={require('../images/jwd.jpeg')}
-                            p= "Jurassic World: Dominion"
+                            h2= "Jurassic World: Dominion"
                             button= "Sign In to watch"
                         />
                     </div>
