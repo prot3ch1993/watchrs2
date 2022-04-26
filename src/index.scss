@@ -1093,3 +1093,11 @@ section.faqs{
     }
 }
 
+// team pics
+#imgid{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: 50px;
+    border-radius: 20px;
+}

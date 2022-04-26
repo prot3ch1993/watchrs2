@@ -964,3 +964,11 @@ section.faqs .smScreen {
     font-size: 2.7vh;
   }
 }
+
+#img{
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50px;
+  border-radius: 20px;
+}
