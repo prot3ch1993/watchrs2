@@ -20,7 +20,7 @@ function ContactUs() {
             <p className="contentWhite">
                 Your Message:
             </p>
-            <input type="textarea"></input>
+            <textarea rows="5" cols="30"/>
             <div>
             <button className="contactUs">Submit</button>
             </div>
