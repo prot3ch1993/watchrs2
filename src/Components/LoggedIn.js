@@ -1,6 +1,7 @@
 import React from 'react'
 import CategoryDetail from './CategoryDetail'
 import NavbarLoggedIn from './NavbarLoggedIn'
+import CategoryDetailTrending from './CategoryDetailTrending'
 
 
 
@@ -20,9 +21,10 @@ const LoggedIn = () => {
         </div>
 
         <div className="col-12 p-1 p-lg-5">
+          <CategoryDetailTrending category="Trending Movies this Week" apicategory="trending/movie/week" />
           <CategoryDetail category="Upcoming Movies" apicategory="movie/upcoming" />
           <CategoryDetail category="Top Rated" apicategory="movie/top_rated" />
-          <CategoryDetail category="Trending Movies this Week" apicategory="trending/movie/week" />
+
 
         </div>
       </div>

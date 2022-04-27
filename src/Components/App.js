@@ -11,6 +11,7 @@ import Notfound404 from "./Notfound404";
 import IndividualMovie from "./IndividualMovie";
 import SignUpForm from "./SignUpForm";
 import SearchPage from "./SearchPage";
+import LoggedOut from "./LoggedOut";
 
 
 const App = () => {
@@ -19,7 +20,11 @@ const App = () => {
 
 
             <Routes>
-                <Route path="/" element={<NotLoggedIn />}></Route>
+                <Route path="/" element={<NotLoggedIn />}>
+                    <Route path="/logout" element={<LoggedOut />} />
+                </Route>
+
+
                 <Route path="/loginform" element={<LoginForm />}></Route>
                 <Route path="/signupform" element={<SignUpForm />}></Route>
                 <Route path="/loginprofiles" element={<LoginProfiles />}></Route>
