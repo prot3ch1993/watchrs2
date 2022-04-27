@@ -9,24 +9,28 @@ import LoggedIn from "./LoggedIn";
 import LoginProfiles from "./LoginProfiles";
 import Notfound404 from "./Notfound404";
 import IndividualMovie from "./IndividualMovie";
+import SignUpForm from "./SignUpForm";
+import SearchPage from "./SearchPage";
 
 
 const App = () => {
     return (
         <>
-            
+
 
             <Routes>
-                <Route path="/" element={<NotLoggedIn/>}></Route>
-                <Route path="/loginform" element={<LoginForm/>}></Route>
-                <Route path="/loginprofiles" element={<LoginProfiles/>}></Route>
-                <Route path="/loggedin" element={<LoggedIn/>}></Route>
-                <Route path="/movie/:id" element={<IndividualMovie/>}></Route>
-                <Route path="/*" element={<Notfound404/>}></Route>
+                <Route path="/" element={<NotLoggedIn />}></Route>
+                <Route path="/loginform" element={<LoginForm />}></Route>
+                <Route path="/signupform" element={<SignUpForm />}></Route>
+                <Route path="/loginprofiles" element={<LoginProfiles />}></Route>
+                <Route path="/loggedin" element={<LoggedIn />}></Route>
+                <Route path="/movie/:id" element={<IndividualMovie />}></Route>
+                <Route path="/search" element={<SearchPage />}></Route>
+                <Route path="/*" element={<Notfound404 />}></Route>
             </Routes>
 
 
-            
+
         </>
     )
 }
