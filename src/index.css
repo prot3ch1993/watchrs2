@@ -13,83 +13,6 @@ a {
   text-decoration: none;
 }
 
-h1 {
-  font-family: Catamaran;
-  font-weight: 900;
-  margin: 0;
-  font-size: 8vh;
-}
-
-h1.logo {
-  font-family: Catamaran;
-  font-weight: 900;
-  margin: 0;
-  font-size: 9vh;
-  color: white;
-}
-
-p.contentLink {
-  font-family: Catamaran;
-  font-weight: 700;
-  margin: 0;
-  font-size: 4vh;
-}
-
-p.contentDevelopers {
-  font-family: Quicksand;
-  font-weight: 400;
-  margin: 0;
-  font-size: 2.7vh;
-}
-
-p.contentWhite {
-  font-family: Catamaran;
-  font-weight: 700;
-  margin: 0;
-  font-size: 4vh;
-  color: white;
-}
-
-.backgroundGradient {
-  background-image: linear-gradient(90deg, #B700F8, #E94028);
-}
-
-button.contactUs {
-  background-color: #EC8800;
-  border: none;
-  padding: 2vh;
-  width: 16vh;
-  border-radius: 2.5vh;
-  font-family: Catamaran;
-  font-weight: 900;
-  font-size: 3vh;
-  color: white;
-}
-
-p.footerHeading {
-  font-family: Catamaran;
-  font-weight: 700;
-  margin: 0;
-  font-size: 3vh;
-  color: white;
-}
-
-p.footerContent {
-  font-family: Quicksand;
-  font-weight: 400;
-  margin: 0;
-  font-size: 2vh;
-  color: white;
-}
-
-p.footerCopyright {
-  font-family: Quicksand;
-  font-weight: 400;
-  margin: 0;
-  font-size: 1.5vh;
-  color: white;
-}
-
 nav {
   background-color: transparent;
 }
@@ -274,15 +197,12 @@ section.live .backgroundGradient button.live p {
   margin-bottom: 0.5vh;
 }
 
-section.faqs {
-  padding-top: 13vh;
-}
-
 section.faqs h1 {
   font-family: Catamaran;
   font-weight: 900;
   margin: 0;
   font-size: 8vh;
+  margin-top: 13vh;
   margin-bottom: 6vh;
 }
 
@@ -304,6 +224,162 @@ section.faqs .lgScreen p {
 
 section.faqs .smScreen {
   display: none;
+}
+
+section.team .title h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 8vh;
+  margin-top: 13vh;
+  margin-bottom: 6vh;
+}
+
+section.team .profile img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40vh;
+}
+
+section.team .profile p.contentLink {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 4vh;
+  text-align: center;
+}
+
+section.team .profile p.contentDevelopers {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+  font-size: 2.5vh;
+  text-align: center;
+}
+
+section.contactus {
+  margin-bottom: 13vh;
+}
+
+section.contactus .title h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 8vh;
+  margin-top: 13vh;
+  margin-bottom: 6vh;
+}
+
+section.contactus .backgroundGradient {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+  padding: 5vh;
+  border-radius: 3vh;
+}
+
+section.contactus .backgroundGradient p.contentWhite {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 3vh;
+  color: white;
+}
+
+section.contactus .backgroundGradient input {
+  width: 100%;
+  border: none;
+  margin-bottom: 3vh;
+  height: 6vh;
+}
+
+section.contactus .backgroundGradient textarea {
+  resize: none;
+  border: none;
+  width: 100%;
+  height: 20vh;
+  margin-bottom: 3vh;
+}
+
+section.contactus .backgroundGradient button.contactUs {
+  background-color: #EC8800;
+  border: none;
+  padding: 2vh;
+  width: 16vh;
+  border-radius: 2.5vh;
+  font-family: Catamaran;
+  font-weight: 900;
+  font-size: 3vh;
+  color: white;
+}
+
+section.contactus .image img {
+  float: right;
+  height: 80vh;
+  margin-top: 6vh;
+}
+
+footer.logo {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+  padding-top: 8vh;
+  padding-bottom: 4vh;
+}
+
+footer.logo .logo h1.logo {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 9vh;
+  color: white;
+}
+
+footer.logo .contactUsFooter p.footerHeading {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 3.5vh;
+  margin-bottom: 1vh;
+  color: white;
+}
+
+footer.logo .contactUsFooter p.footerContent {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+  font-size: 2vh;
+  color: white;
+  margin-bottom: 1.5vh;
+}
+
+footer.logo .contactUsFooter p.footerContent a {
+  color: white;
+}
+
+footer.logo .contactUsFooter p.footerContent a:hover {
+  color: #dd80ff;
+}
+
+footer.logo .contactUsFooter img {
+  height: 3.8vh;
+  margin-right: 4.5vh;
+}
+
+footer.logo .copyright {
+  background-color: white;
+  height: 20%;
+}
+
+footer.copyright {
+  background-image: linear-gradient(90deg, #8400B2, #CF2D16);
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+footer.copyright p.footerContent {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+  font-size: 1.5vh;
+  color: white;
 }
 
 .loginform {
@@ -335,6 +411,19 @@ section.faqs .smScreen {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+.loginform button.contactUs {
+  background-color: #EC8800;
+  border: none;
+  padding: 2vh;
+  width: 16vh;
+  border-radius: 2.5vh;
+  font-family: Catamaran;
+  font-weight: 900;
+  font-size: 3vh;
+  color: white;
+  margin-bottom: 20vh;
 }
 
 .notfound .row.ps-5 {
@@ -963,12 +1052,4 @@ section.faqs .smScreen {
     margin: 0;
     font-size: 2.7vh;
   }
-}
-
-#img{
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  object-position: 50px;
-  border-radius: 20px;
 }
