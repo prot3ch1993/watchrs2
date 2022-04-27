@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const NavbarLoggedIn = () => {
+const NavbarProfiles = () => {
     const [colorChange, setColorchange] = useState(false);
     const changeNavbarColor = () => {
         if (window.scrollY >= 80) {
@@ -20,10 +20,7 @@ const NavbarLoggedIn = () => {
                     <h1 className="logoMain"><span><a href="/#">watchr</a></span></h1>
                     <nav className="nav" id="navbarWatchr">
                         <ul className="nav nav-pills">
-                            <Link to="/loggedin"><li className="nav-link text-white" >Home</li></Link>
-                            <Link to="/search"><li className="nav-link text-white" >Search</li></Link>
-                            <Link to="/loginprofiles"><li className="nav-link text-white" >Profiles</li></Link>
-                            <Link to="/logout"><li className="nav-link text-white" >Log Out</li></Link>
+                            <Link to="/logout"><li className="nav-link text-white" >Logout</li></Link>
                         </ul>
                     </nav>
                 </div>
@@ -32,4 +29,4 @@ const NavbarLoggedIn = () => {
     )
 }
 
-export default NavbarLoggedIn
+export default NavbarProfiles
