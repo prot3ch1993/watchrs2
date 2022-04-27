@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react'
 import axios from "axios"
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
 
 
 const api_key = "ad5e016faee23b29f43cb50d75692d8e";
 const BASE_URL = "https://api.themoviedb.org/3";
 
-const Recommendations = (props) => {
+const IndivRecommendations = ({id, setNewIndivId}) => {
 
-  const id = props.id
+  const [newId, setNewId] = useState(id)
   const [datas, setData] = useState([{},{}]);
   const api = axios.create({ baseURL: BASE_URL });
-  const getUpcoming = api.get(`movie/${id}/recommendations`, { params: { api_key } });
+  const getUpcoming = api.get(`movie/${newId}/recommendations`, { params: { api_key } });
 
 
   useEffect(() => {
@@ -22,7 +21,7 @@ const Recommendations = (props) => {
       setData(response.data.results);
     });
 
-  }, [id]);
+  }, [newId]);
 
 
   const getImage = (path) => `https://image.tmdb.org/t/p/w500/${path}`;
@@ -34,11 +33,10 @@ const Recommendations = (props) => {
 
         {datas.map((movie, index) => (
 
-          <div className='col-2' key={index} style={{ width: "15vw", backgroundColor:"black", backgroundSize: "cover", height: "35vh" }}>
-          <Link to={"/movie/" + movie.id}>
-          <div style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", height: "35vh" }}>
-          </div>
-          </Link>
+          <div className="col-2" style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", margin: "10px", height: "35vh" }} key={index} >
+            <button type="button" className="btn btn-dark btn-lg" onClick={() => {setNewId(movie.id);
+            setNewIndivId(movie.id)}}>Play Trailer</button><br />
+
           </div>
         ))}
 
@@ -47,4 +45,4 @@ const Recommendations = (props) => {
   )
 }
 
-export default Recommendations
+export default IndivRecommendations

@@ -21,6 +21,7 @@ const NavbarLoggedIn = () => {
                     <nav className="nav" id="navbarWatchr">
                         <ul className="nav nav-pills">
                             <Link to="/loggedin"><li className="nav-link text-white" >Home</li></Link>
+                            <Link to="/search"><li className="nav-link text-white" >Search</li></Link>
                         </ul>
                     </nav>
                 </div>

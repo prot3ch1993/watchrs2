@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-    return(
+    return (
         <section className="hero">
             <div className="container">
                 <div className="row">
@@ -11,7 +11,7 @@ const Hero = () => {
                             <h1 className="hero"><span>Watch anytime you want while you’re at home.</span></h1>
                             <div className="buttons">
                                 <button><Link to="/loginform" color="inherit">Sign In</Link></button>
-                                <button>Sign Up</button>
+                                <button><Link to="/signupform" color="inherit">Sign Up</Link></button>
                             </div>
                             <div className="buttonSub">
                                 <button><Link to="/loginform" color="inherit">Sign In</Link></button>
