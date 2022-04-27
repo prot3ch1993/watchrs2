@@ -5,7 +5,7 @@ import FAQsDetail3 from './FAQsDetail3';
 
 const FAQsLayout = () => {
     return (
-        <section className='faqs'>
+        <section className='faqs'  id='scrollspyFAQs'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-12 col-xl-12'>

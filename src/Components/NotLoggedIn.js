@@ -9,6 +9,7 @@ import "../index.css"
 import Team from "./Team";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
+import FooterCopyright from "./FooterCopyright";
 import Navbar from "./Navbar";
 
 
@@ -24,6 +25,7 @@ const App = ()=> {
             <Team/>
             <ContactUs/>
             <Footer/>
+            <FooterCopyright/>
         </>
     )
 }

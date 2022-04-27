@@ -40,131 +40,74 @@ $backgroundColorBlack: black;
 @mixin backgroundGradient {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
+@mixin darkbackgroundGradient {
+    background-image: linear-gradient(90deg, #8400B2, #CF2D16);
+}
 
-@mixin backgroundGradientText {
+@mixin backgroundGradientText{
     @include backgroundGradient();
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-* {
+*{
     box-sizing: border-box;
 }
-
-body {
+body{
     margin: 0;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y:scroll;
     position: relative;
 }
-
-a {
+a{
     text-decoration: none;
-}
-
-// Aayusin ko itong section na ito once na matapos si queena sa task nya
-h1 {
-    @include headingBlackStyle();
-    font-size: 8vh;
-}
-
-h1.logo {
-    @include headingBlackStyle();
-    font-size: 9vh;
-    color: white;
-}
-
-p.contentLink {
-    @include headingBoldStyle();
-    font-size: 4vh;
-}
-
-p.contentDevelopers {
-    @include contentStyle();
-    font-size: 2.7vh;
-}
-
-p.contentWhite {
-    @include headingBoldStyle();
-    font-size: 4vh;
-    color: white;
-}
-
-.backgroundGradient {
-    @include backgroundGradient();
-}
-
-button.contactUs {
-    @include buttonStyle();
-}
-
-p.footerHeading {
-    @include headingBoldStyle();
-    font-size: 3vh;
-    color: white;
-}
-
-p.footerContent {
-    @include contentStyle();
-    font-size: 2vh;
-    color: white;
-}
-
-p.footerCopyright {
-    @include contentStyle();
-    font-size: 1.5vh;
-    color: white;
 }
 
 
 
 // Navigation Bar
-nav {
+nav{
     background-color: transparent;
-
-
-    h1.logoMain {
+    
+    
+    h1.logoMain{
         @include headingBlackStyle();
         font-size: 5vh;
         padding-top: 1vh;
         padding-bottom: 1vh;
     }
-
-    button {
+    button{
         display: none;
     }
-
-    nav.nav {
-        a {
+    
+    nav.nav{
+        a{
             @include headingBoldStyle();
             font-size: 2.3vh;
             margin-left: 5.5vh;
             color: white;
             padding-right: 0;
         }
-
-        li {
+        li{
             padding-right: 0;
         }
     }
 }
 
-nav.colorChange {
+nav.colorChange{
     @include backgroundGradient();
-
-    h1.logoMain {
-        span {
+    
+    h1.logoMain{
+        span{
             background-image: none;
             background-color: white;
         }
     }
-
-    nav.nav {
-        a {
+    nav.nav{
+        a{
             color: white;
         }
-
         a.nav-link.active {
             background-color: inherit !important;
             text-decoration: underline;
@@ -174,31 +117,29 @@ nav.colorChange {
 
 
 // Hero Section
-section.hero {
-
-    .content {
+section.hero{
+    
+    .content{
         height: 100vh;
 
-        h1.hero {
+        h1.hero{
             @include headingBlackStyle();
             position: static;
             font-size: 9vh;
             margin-top: 20vh;
             margin-bottom: 2vh;
         }
-
-        .buttons {
-            button {
+        .buttons{
+            button{
                 @include buttonStyle();
                 margin-right: 2vh;
-
-                a {
+                
+                a{
                     color: white;
                 }
             }
         }
-
-        .buttonSub {
+        .buttonSub{
             display: none;
         }
     }
@@ -206,64 +147,56 @@ section.hero {
 
 
 // Services Section
-section.services {
+section.services{
     padding-top: 25vh;
 
-    .image {
-        img {
+    .image{
+        img{
             height: 40vh;
             margin-bottom: 10vh;
         }
     }
-
-    .list,
-    .list2,
-    .listSub {
+    .list,.list2,.listSub{
         margin-top: 13vh;
         margin-bottom: 13vh;
 
-        h2 {
+        h2{
             @include headingBoldStyle();
             font-size: 5.5vh;
         }
-
-        p {
+        p{
             @include contentStyle();
             font-size: 3vh;
         }
     }
-
-    .listSub {
+    .listSub{
         display: none;
     }
 }
 
 
 // Live Streaming Section
-section.live {
-    .backgroundGradient {
+section.live{
+    .backgroundGradient{
         @include backgroundGradient();
 
-        &.size {
+        &.size{
             height: 110vh;
         }
-
-        h1 {
+        h1{
             @include headingBlackStyle();
             font-size: 6vh;
             color: white;
             margin-top: 8vh;
             margin-bottom: 6vh;
         }
-
-        img {
+        img{
             @include marginCenterAlign();
             display: block;
             margin-bottom: 4vh;
             height: 55vh;
         }
-
-        h2 {
+        h2{
             @include headingBoldStyle();
             @include marginCenterAlign();
             font-size: 4vh;
@@ -272,8 +205,7 @@ section.live {
             width: 41vh;
             text-align: center;
         }
-
-        button.live {
+        button.live{
             @include marginCenterAlign();
             @include buttonStyle();
             padding: 1vh;
@@ -281,8 +213,8 @@ section.live {
             border-radius: 5vh;
             display: block;
             margin-top: 2vh;
-
-            p {
+            
+            p{
                 @include headingBoldStyle();
                 font-size: 2.2vh;
                 color: white;
@@ -291,196 +223,317 @@ section.live {
             }
         }
     }
-
+    
 }
 
 
 // FAQs Section
-section.faqs {
-    padding-top: 13vh;
-
-    h1 {
+section.faqs{
+    h1{
         @include headingBlackStyle();
         font-size: 8vh;
+        margin-top: 13vh;
         margin-bottom: 6vh;
     }
-
-    .lgScreen {
-        h2 {
+    .lgScreen{
+        h2{
             @include headingBoldStyle();
             font-size: 4vh;
             margin-bottom: 4.5vh;
             color: black;
         }
-
-        p {
+        p{
             @include contentStyle();
             font-size: 3vh;
         }
     }
-
-    .smScreen {
+    
+    .smScreen{
         display: none;
     }
 }
 
 
+// Team Behind Section
+section.team{
+    .title{
+        h1{
+            @include headingBlackStyle();
+            font-size: 8vh;
+            margin-top: 13vh;
+            margin-bottom: 6vh;
+        }
+    }
+    .profile{
+        img{
+            display: block;
+            @include marginCenterAlign();
+            height: 40vh;
+        }
+        p.contentLink{
+            @include headingBoldStyle();
+            font-size: 4vh;
+            text-align: center;
+        }
+        p.contentDevelopers{
+            @include contentStyle();
+            font-size: 2.5vh;text-align: center;
+        }
+    }
+}
+
+
+// Contact Us Section
+section.contactus{
+    margin-bottom: 13vh;
+    .title{
+        h1{
+            @include headingBlackStyle();
+            font-size: 8vh;
+            margin-top: 13vh;
+            margin-bottom: 6vh;
+        }
+    }
+    .backgroundGradient{
+        @include backgroundGradient();
+        padding: 5vh;
+        border-radius: 3vh;
+
+        p.contentWhite{
+            @include headingBoldStyle();
+            font-size: 3vh;
+            color: white;
+        }
+        input{
+            width: 100%;
+            border: none;
+            margin-bottom: 3vh;
+            height: 6vh;
+        }
+        textarea{
+            resize: none;
+            border: none;
+            width: 100%;
+            height: 20vh;
+            margin-bottom: 3vh;
+        }
+        button.contactUs{
+            @include buttonStyle();
+        }
+    }
+    .image{
+        img{
+            float: right;
+            height: 80vh;
+            margin-top: 6vh;
+        }
+    }
+}
+
+
+// Footer Section
+footer.logo{
+    @include backgroundGradient();
+    padding-top: 8vh;
+    padding-bottom: 4vh;
+
+    .logo{
+        h1.logo{
+            @include headingBlackStyle();
+            font-size: 9vh;
+            color: white;
+        }
+    }
+    .contactUsFooter{
+        p.footerHeading{
+            @include headingBoldStyle();
+            font-size: 3.5vh;
+            margin-bottom: 1vh;
+            color: white;
+        }
+        p.footerContent{
+            @include contentStyle();
+            font-size: 2vh;
+            color: white;
+            margin-bottom: 1.5vh;
+
+            a{
+                color: white;
+
+                &:hover{
+                    color: #dd80ff;
+                }
+            }
+        }
+        img{
+            height: 3.8vh;
+            margin-right: 4.5vh;
+        }
+    }
+    .copyright{
+        background-color: white;
+        height:20%;
+    }
+}
+footer.copyright{
+    @include darkbackgroundGradient();
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+    p.footerContent{
+        @include contentStyle();
+        font-size: 1.5vh;
+        color: white;
+    }
+}
+
 //login form section
 .loginform {
-    height: 100vh;
+    height:100vh;
 
-    .heading {
-        h1 {
+    .heading{
+        h1{
             @include headingBlackStyle();
             font-size: 8vh;
         }
     }
-
-    input {
+    input{
         width: 38vh;
         border: 1px solid black
     }
-
-    .emailAddress,
-    .password {
-        p {
+    .emailAddress,.password{
+        p{
             @include headingBoldStyle();
             font-size: 3.5vh;
         }
     }
-
-    .footer {
+    
+    .footer{
         position: fixed;
-        bottom: 0;
+        bottom:0;
         width: 100%;
-        margin: 0;
-        padding: 0;
+        margin:0;
+        padding:0;
+    }
+    button.contactUs{
+        @include buttonStyle();
+        margin-bottom: 20vh;
     }
 }
 
 // page not found section
-.notfound {
-    .row.ps-5 {
-        height: 70vh;
+.notfound{
+    .row.ps-5{
+        height:70vh;
     }
 
-    .footer {
+    .footer{
         position: fixed;
-        bottom: 0;
+        bottom:0;
         width: 100vw;
     }
 }
 
 // modal section
-.modal-content {
+.modal-content{
     background-color: black;
-    color: white;
+    color:white;
 }
 
 //loggedin section
-.row.p-5.loggedin {
+.row.p-5.loggedin{
     background-color: black;
-    color: white;
+    color:white;
 }
 
 
-@media screen and (max-width:575px) {
-    body {
+@media screen and (max-width:575px){
+    body{
         background-image: url('./images/android-hero.png');
         background-repeat: no-repeat;
-        background-position: top;
+        background-position:top;
         background-size: 100vh;
     }
 
     // Nav Page
-    nav {
+    nav{
         background-color: transparent;
-
-        h1.logoMain {
+    
+        h1.logoMain{
             font-size: 4vh;
             background-color: transparent;
-
-            a {
+            
+            a{
                 color: white;
             }
         }
-
-        button {
+        button{
             display: block;
             border: none;
             background: none;
 
-            span {
+            span{
                 color: white;
                 font-size: 4vh;
             }
         }
-
-        .offcanvas {
+        .offcanvas{
             width: 75%;
             @include backgroundGradient();
 
-            .offcanvas-body {
-                p {
+            .offcanvas-body{
+                p{
                     @include headingBoldStyle();
                     margin-bottom: 4vh;
                     margin-left: 3vh;
                     margin-top: 3vh;
-
-                    a {
+                    
+                    a{
                         color: white;
                     }
                 }
             }
         }
-
-        nav.nav {
+        nav.nav{
             display: none;
         }
     }
-
-    nav.colorChange {
-        h1.logoMain {
-            span {
+    nav.colorChange{
+        h1.logoMain{
+            span{
                 background-color: transparent;
             }
-
-            a {
+            a{
                 color: white;
             }
         }
     }
 
     // Log In Form
-    nav#loginForm {
-        h1 {
-            span {
+    nav#loginForm{
+        h1{
+            span{
                 @include backgroundGradientText();
             }
         }
     }
-
-    .loginform {
-        .heading {
-            h1.text-center {
+    .loginform{
+        .heading{
+            h1.text-center{
                 margin-bottom: 2vh;
                 font-size: 7vh;
-
-                span {
+                span{
                     @include backgroundGradientText();
                 }
             }
         }
-
-        input {
+        input{
             width: 35vh;
             display: block;
             @include marginCenterAlign();
         }
-
-        .emailAddress,
-        .password {
-            p {
+        .emailAddress,.password{
+            p{
                 text-align: center;
                 font-size: 3vh;
             }
@@ -489,41 +542,37 @@ section.faqs {
 
 
     // Hero Page
-    section.hero {
-        .content {
+    section.hero{
+        .content{
             position: absolute;
             top: 47vh;
-
-            h1.hero {
+            
+            h1.hero{
                 text-align: center;
                 font-size: 5.3vh;
-
-                span {
+                
+                span{
                     @include backgroundGradientText();
                 }
             }
-
-            .buttons {
+            .buttons{
                 display: none;
             }
-
-            .buttonSub {
+            .buttonSub{
                 display: block;
                 text-align: center;
-
-                button {
+                button{
                     @include buttonStyle();
                     width: 13vh;
                     font-size: 2.5vh;
                     padding: 1vh;
                     margin-right: 2vh;
-
-                    a {
+                    
+                    a{
                         color: white;
                     }
                 }
-
-                button.signUp {
+                button.signUp{
                     margin-right: 0;
                 }
             }
@@ -531,50 +580,45 @@ section.faqs {
     }
 
     // Services Page
-    section.services {
+    section.services{
         margin-top: 120vh;
         padding-top: 0;
 
-        .row {
+        .row{
             text-align: center;
 
-            .image {
-                img {
+            .image{
+                img{
                     height: 25vh;
                     margin-bottom: 0;
                 }
-
+                
             }
-
-            .list {
+            .list{
                 margin-top: 5vh;
-                margin-bottom: 10vh;
-
-                h2 {
+                margin-bottom: 10vh; 
+                
+                h2{
                     font-size: 5vh;
                     margin-bottom: 1.5vh;
                 }
-
-                p {
+                p{
                     font-size: 2.7vh;
                 }
             }
-
-            .list2 {
+            .list2{
                 display: none;
             }
-
-            .listSub {
+            .listSub{
                 display: block;
                 margin-top: 5vh;
-                margin-bottom: 10vh;
-
-                h2 {
+                margin-bottom: 10vh; 
+                
+                h2{
                     font-size: 5vh;
                     margin-bottom: 1.5vh;
                 }
-
-                p {
+                p{
                     font-size: 2.7vh;
                 }
             }
@@ -582,82 +626,73 @@ section.faqs {
     }
 
     // Live Section
-    section.live {
+    section.live{
         margin-top: 10vh;
+       
 
-
-        .backgroundGradient {
-            &.size {
+        .backgroundGradient{
+            &.size{
                 height: 258vh;
             }
-
-            h1 {
+            h1{
                 text-align: center;
             }
-
-            img {
+            img{
                 height: 50vh;
             }
-
-            button {
+            button{
                 margin-bottom: 5vh;
             }
         }
     }
 
     // FAQ Section
-    section.faqs {
-        h1 {
+    section.faqs{
+        h1{
             text-align: center;
 
-            span {
+            span{
                 @include backgroundGradientText();
             }
         }
-
-        .collapse {
-            p {
+        .collapse{
+            p{
                 margin-bottom: 8vh;
             }
         }
-
-        .lgScreen {
+        .lgScreen{
             display: none;
         }
-
-        .smScreen {
+        .smScreen{
             display: block;
 
-            .MuiButtonBase-root {
+            .MuiButtonBase-root{
                 padding: 0;
                 margin: 0;
 
-                h2 {
+                h2{
                     @include headingBoldStyle();
                     font-size: 3.5vh;
                     color: black;
                     margin-bottom: 0;
                 }
-
+                
             }
-
-            .MuiAccordionDetails-root {
+            .MuiAccordionDetails-root{
                 padding: 0;
                 margin-bottom: 3vh;
-
-                p {
+                p{
                     @include contentStyle();
                     font-size: 2.5vh;
                 }
             }
-
-
+            
+            
         }
     }
 }
-
-@media screen and (min-width:576px) and (max-width:767px) {
-    body {
+@media screen and (min-width:576px) and (max-width:767px){
+    body{
         background-image: url('./images/hero-image-2.png');
         background-repeat: no-repeat;
         background-position: right top;
@@ -665,28 +700,25 @@ section.faqs {
     }
 
     // Navbar Page
-    nav {
-        h1.logoMain {
-            span {
+    nav{
+        h1.logoMain{
+            span{
                 @include backgroundGradientText();
             }
         }
-
-        nav.nav {
-            a {
+        nav.nav{
+            a{
                 margin-left: 3vh;
             }
         }
     }
-
-    nav.colorChange {
-        nav.nav {
-            a {
+    nav.colorChange{
+        nav.nav{
+            a{
                 margin-left: 3vh;
                 padding-right: 0;
             }
-
-            li {
+            li{
                 padding-right: 0;
             }
         }
@@ -694,26 +726,22 @@ section.faqs {
 
     //login form section
     .loginform {
-        height: 100vh;
+        height:100vh;
 
-        .heading {
-            h1 {
+        .heading{
+            h1{
                 font-size: 8vh;
-
-                span {
+                span{
                     @include backgroundGradientText();
                 }
             }
         }
-
-        input {
+        input{
             width: 50vh;
             border: 1px solid black
         }
-
-        .emailAddress,
-        .password {
-            p {
+        .emailAddress,.password{
+            p{
                 @include headingBoldStyle();
                 font-size: 4.5vh;
             }
@@ -721,12 +749,12 @@ section.faqs {
     }
 
     // Hero Page
-    section.hero {
-        .content {
-            h1.hero {
+    section.hero{
+        .content{
+            h1.hero{
                 font-size: 7.5vh;
 
-                span {
+                span{
                     @include backgroundGradientText();
                 }
             }
@@ -734,32 +762,28 @@ section.faqs {
     }
 
     // Services Page
-    section.services {
-        .image {
-            img {
+    section.services{
+        .image{
+            img{
                 height: 35vh;
             }
         }
-
-        .list,
-        .list2,
-        .listSub {
+        .list,.list2,.listSub{
             margin-top: 8vh;
             margin-bottom: 8vh;
         }
     }
 
     // FAQs Page
-    section.faqs {
-        h1 {
-            span {
+    section.faqs{
+        h1{
+            span{
                 @include backgroundGradientText();
             }
         }
-
-        .lgScreen {
-            h2 {
-                a {
+        .lgScreen{
+            h2{
+                a{
                     color: black;
                 }
             }
@@ -767,9 +791,8 @@ section.faqs {
 
     }
 }
-
-@media screen and (min-width:768px) and (max-width:991px) {
-    body {
+@media screen and (min-width:768px) and (max-width:991px){
+    body{
         background-image: url('./images/tablet-hero.png');
         background-repeat: no-repeat;
         background-position: top;
@@ -777,97 +800,86 @@ section.faqs {
     }
 
     // Nav Page
-    nav {
+    nav{
         background-color: transparent;
-
-        h1.logoMain {
+    
+        h1.logoMain{
             font-size: 4vh;
-
-            span {
-                a {
+            span{
+                a{
                     color: white
                 }
             }
         }
-
-        button {
+        button{
             display: block;
             border: none;
             background: none;
 
-            span {
+            span{
                 color: white;
                 font-size: 4vh;
             }
         }
-
-        .offcanvas {
+        .offcanvas{
             width: 50%;
             @include backgroundGradient();
 
-            .offcanvas-body {
-                p {
+            .offcanvas-body{
+                p{
                     @include headingBoldStyle();
                     margin-bottom: 4vh;
                     margin-left: 3vh;
                     margin-top: 3vh;
                     font-size: 2.5vh;
-
-                    a {
+                    
+                    a{
                         color: white;
                     }
                 }
             }
         }
-
-        nav.nav {
+        nav.nav{
             display: none;
         }
     }
-
-    nav.colorChange {
-        h1.logoMain {
-            span {
+    nav.colorChange{
+        h1.logoMain{
+            span{
                 background-color: transparent;
             }
-
-            a {
+            a{
                 color: white;
             }
         }
     }
 
     // Log In Form
-    nav#loginForm {
-        h1 {
-            span {
+    nav#loginForm{
+        h1{
+            span{
                 @include backgroundGradientText();
             }
         }
     }
-
-    .loginform {
-        .heading {
-            h1.text-center {
+    .loginform{
+        .heading{
+            h1.text-center{
                 margin-bottom: 2vh;
                 font-size: 7vh;
-
-                span {
+                span{
                     @include backgroundGradientText();
                 }
             }
         }
-
-        input {
+        input{
             width: 55vh;
             height: 5vh;
             display: block;
             @include marginCenterAlign();
         }
-
-        .emailAddress,
-        .password {
-            p {
+        .emailAddress,.password{
+            p{
                 text-align: center;
                 font-size: 3vh;
             }
@@ -876,41 +888,37 @@ section.faqs {
 
 
     // Hero Page
-    section.hero {
-        .content {
+    section.hero{
+        .content{
             position: absolute;
             top: 52vh;
-
-            h1.hero {
+            
+            h1.hero{
                 text-align: center;
                 font-size: 5.3vh;
-
-                span {
+                
+                span{
                     @include backgroundGradientText();
                 }
             }
-
-            .buttons {
+            .buttons{
                 display: none;
             }
-
-            .buttonSub {
+            .buttonSub{
                 display: block;
                 text-align: center;
-
-                button {
+                button{
                     @include buttonStyle();
                     width: 13vh;
                     font-size: 2.5vh;
                     padding: 1vh;
                     margin-right: 2vh;
-
-                    a {
+                    
+                    a{
                         color: white;
                     }
                 }
-
-                button.signUp {
+                button.signUp{
                     margin-right: 0;
                 }
             }
@@ -918,50 +926,45 @@ section.faqs {
     }
 
     // Services Page
-    section.services {
+    section.services{
         margin-top: 120vh;
         padding-top: 0;
 
-        .row {
+        .row{
             text-align: center;
 
-            .image {
-                img {
+            .image{
+                img{
                     height: 25vh;
                     margin-bottom: 0;
                 }
-
+                
             }
-
-            .list {
+            .list{
                 margin-top: 5vh;
-                margin-bottom: 10vh;
-
-                h2 {
+                margin-bottom: 10vh; 
+                
+                h2{
                     font-size: 5vh;
                     margin-bottom: 1.5vh;
                 }
-
-                p {
+                p{
                     font-size: 2.7vh;
                 }
             }
-
-            .list2 {
+            .list2{
                 display: none;
             }
-
-            .listSub {
+            .listSub{
                 display: block;
                 margin-top: 5vh;
-                margin-bottom: 10vh;
-
-                h2 {
+                margin-bottom: 10vh; 
+                
+                h2{
                     font-size: 5vh;
                     margin-bottom: 1.5vh;
                 }
-
-                p {
+                p{
                     font-size: 2.7vh;
                 }
             }
@@ -969,82 +972,73 @@ section.faqs {
     }
 
     // Live Section
-    section.live {
+    section.live{
         margin-top: 10vh;
+       
 
-
-        .backgroundGradient {
-            &.size {
+        .backgroundGradient{
+            &.size{
                 height: 258vh;
             }
-
-            h1 {
+            h1{
                 text-align: center;
             }
-
-            img {
+            img{
                 height: 50vh;
             }
-
-            button {
+            button{
                 margin-bottom: 5vh;
             }
         }
     }
 
     // FAQ Section
-    section.faqs {
-        h1 {
+    section.faqs{
+        h1{
             text-align: center;
 
-            span {
+            span{
                 @include backgroundGradientText();
             }
         }
-
-        .collapse {
-            p {
+        .collapse{
+            p{
                 margin-bottom: 8vh;
             }
         }
-
-        .lgScreen {
+        .lgScreen{
             display: none;
         }
-
-        .smScreen {
+        .smScreen{
             display: block;
 
-            .MuiButtonBase-root {
+            .MuiButtonBase-root{
                 padding: 0;
                 margin: 0;
 
-                h2 {
+                h2{
                     @include headingBoldStyle();
                     font-size: 3.5vh;
                     color: black;
                     margin-bottom: 3vh;
                 }
-
+                
             }
-
-            .MuiAccordionDetails-root {
+            .MuiAccordionDetails-root{
                 padding: 0;
                 margin-bottom: 3vh;
-
-                p {
+                p{
                     @include contentStyle();
                     font-size: 2.5vh;
                 }
             }
-
-
+            
+            
         }
     }
 }
-
-@media screen and (min-width:992px) and (max-width:1199px) {
-    body {
+@media screen and (min-width:992px) and (max-width:1199px){
+    body{
         background-image: url('./images/hero-image-2.png');
         background-repeat: no-repeat;
         background-position: right top;
@@ -1052,30 +1046,27 @@ section.faqs {
     }
 
     // Navbar Page
-    nav {
-        h1.logoMain {
-            span {
+    nav{
+        h1.logoMain{
+            span{
                 @include backgroundGradientText();
                 font-size: 4vh;
             }
         }
-
-        nav.nav {
-            a {
+        nav.nav{
+            a{
                 margin-left: 3.5vh;
                 font-size: 2vh;
             }
         }
     }
-
-    nav.colorChange {
-        nav.nav {
-            a {
+    nav.colorChange{
+        nav.nav{
+            a{
                 margin-left: 3.5vh;
                 padding-right: 0;
             }
-
-            li {
+            li{
                 padding-right: 0;
             }
         }
@@ -1083,26 +1074,22 @@ section.faqs {
 
     //login form section
     .loginform {
-        height: 100vh;
+        height:100vh;
 
-        .heading {
-            h1 {
+        .heading{
+            h1{
                 font-size: 8vh;
-
-                span {
+                span{
                     @include backgroundGradientText();
                 }
             }
         }
-
-        input {
+        input{
             width: 45vh;
             height: 5vh;
         }
-
-        .emailAddress,
-        .password {
-            p {
+        .emailAddress,.password{
+            p{
                 @include headingBoldStyle();
                 font-size: 3vh;
             }
@@ -1110,12 +1097,12 @@ section.faqs {
     }
 
     // Hero Page
-    section.hero {
-        .content {
-            h1.hero {
+    section.hero{
+        .content{
+            h1.hero{
                 font-size: 6.5vh;
 
-                span {
+                span{
                     @include backgroundGradientText();
                 }
             }
@@ -1123,33 +1110,28 @@ section.faqs {
     }
 
     // Services Page
-    section.services {
-        .image {
-            img {
+    section.services{
+        .image{
+            img{
                 height: 35vh;
             }
         }
-
-        .list,
-        .list2,
-        .listSub {
+        .list,.list2,.listSub{
             margin-top: 8vh;
             margin-bottom: 8vh;
         }
     }
 
     // Live Page
-    section.live {
-        .backgroundGradient {
-            &.size {
+    section.live{
+        .backgroundGradient{
+            &.size{
                 height: 100vh;
             }
-
-            img {
+            img{
                 height: 45vh;
             }
-
-            h2 {
+            h2{
                 font-size: 3.8vh;
                 width: 39vh;
             }
@@ -1157,16 +1139,15 @@ section.faqs {
     }
 
     // FAQs Page
-    section.faqs {
-        h1 {
-            span {
+    section.faqs{
+        h1{
+            span{
                 @include backgroundGradientText();
             }
         }
-
-        .lgScreen {
-            h2 {
-                a {
+        .lgScreen{
+            h2{
+                a{
                     color: black;
                 }
             }
@@ -1174,35 +1155,32 @@ section.faqs {
 
     }
 }
-
-@media screen and (min-width:1200px) {
-    body {
+@media screen and (min-width:1200px){
+    body{
         background-image: url('./images/hero-image-2.png');
         background-repeat: no-repeat;
         background-position: right top;
         background-size: 108vh;
     }
-
-    span {
+    span{
         @include backgroundGradientText();
     }
-
-    a {
+    a{
         color: black;
     }
-
-    section.services {
-        .image {
-            .right {
-                img {
+    
+    section.services{
+        .image{
+            .right{
+                img{
                     float: right;
                 }
             }
         }
     }
 
-    section.faqs {
-        p {
+    section.faqs{
+        p{
             @include contentStyle();
             font-size: 2.7vh;
         }

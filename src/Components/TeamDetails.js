@@ -3,11 +3,8 @@ import React from 'react'
 export default function TeamDetails(props) {
   return (
     <div>
-        
-        <img src={props.imgsrc} alt = "Member" className="TeamDetails"/>
-        <p className="contentLink">
-          <a href="/#">{props.memberName}</a>
-        </p>
+        <img src={props.imgsrc} alt = "Member"/>
+        <p className='contentLink'><a href='/#'>{props.membername}</a></p>
         <p className="contentDevelopers">
           {props.description1}
         </p>

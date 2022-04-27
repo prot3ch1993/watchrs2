@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import Footer from './Footer';
+import FooterCopyright from './FooterCopyright';
 import NavbarLogin from './NavbarLogin';
 import React, { useRef, useState } from 'react';
 
@@ -34,7 +35,7 @@ const LoginForm = () => {
   const handleClick = (event) => {
 
     event.preventDefault();
-    if (passwordRef.current.value == "admin" && emailRef.current.value == "admin@admin.com") {
+    if (passwordRef.current.value === "admin" && emailRef.current.value === "admin@admin.com") {
       setLoginValidity(true)
       setPassValidity(true)
       loginFn()
@@ -93,6 +94,7 @@ const LoginForm = () => {
         </div>
       </div>
       <Footer />
+      <FooterCopyright/>
     </div>
   )
 }
