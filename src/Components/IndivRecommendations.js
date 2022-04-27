@@ -7,10 +7,10 @@ import { useState } from 'react';
 const api_key = "ad5e016faee23b29f43cb50d75692d8e";
 const BASE_URL = "https://api.themoviedb.org/3";
 
-const IndivRecommendations = ({id, setNewIndivId}) => {
+const IndivRecommendations = ({ id, setNewIndivId }) => {
 
   const [newId, setNewId] = useState(id)
-  const [datas, setData] = useState([{},{}]);
+  const [datas, setData] = useState([{}, {}]);
   const api = axios.create({ baseURL: BASE_URL });
   const getUpcoming = api.get(`movie/${newId}/recommendations`, { params: { api_key } });
 
@@ -33,9 +33,13 @@ const IndivRecommendations = ({id, setNewIndivId}) => {
 
         {datas.map((movie, index) => (
 
-          <div className="col-2" style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", margin: "10px", height: "35vh" }} key={index} >
-            <button type="button" className="btn btn-dark btn-lg" onClick={() => {setNewId(movie.id);
-            setNewIndivId(movie.id)}}>Play Trailer</button><br />
+          <div className="col-2" onClick={() => {
+            setNewId(movie.id);
+            setNewIndivId(movie.id)
+          }}
+
+            style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", margin: "10px", height: "35vh" }} key={index} >
+
 
           </div>
         ))}
