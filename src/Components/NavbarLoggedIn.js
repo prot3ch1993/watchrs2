@@ -1,8 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const NavbarLoggedIn = () => {
     const [colorChange, setColorchange] = useState(false);
+    const navigate = useNavigate();
+
+    const backHandler = () => {
+
+
+        navigate(-1)
+    }
+
+
     const changeNavbarColor = () => {
         if (window.scrollY >= 80) {
             setColorchange(true);
@@ -24,6 +33,7 @@ const NavbarLoggedIn = () => {
                             <Link to="/search"><li className="nav-link text-white" >Search</li></Link>
                             <Link to="/loginprofiles"><li className="nav-link text-white" >Profiles</li></Link>
                             <Link to="/logout"><li className="nav-link text-white" >Log Out</li></Link>
+                            <li className="nav-link text-white" onClick={backHandler} >Back</li>
                         </ul>
                     </nav>
                 </div>

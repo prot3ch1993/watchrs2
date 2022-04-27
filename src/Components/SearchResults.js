@@ -34,13 +34,19 @@ const SearchResults = (props) => {
     const [datas, setData] = useState(initialArray);
     const api = axios.create({ baseURL: BASE_URL });
     const term = props.term
-    const getUpcoming = api.get("/search/movie", { params: { api_key, term } });
+    const getUpcoming = api.get("/search/movie", {
+
+        params: {
+            query: term,
+            api_key: api_key
+        }
+    })
 
     useEffect(() => {
         getUpcoming.then(response => {
             setData(response.data.results);
         });
-    }, []);
+    }, [term]);
 
     console.log(datas)
 
@@ -50,7 +56,7 @@ const SearchResults = (props) => {
     return (
         <>
 
-            <h4 className='py-5'>Search Results</h4>
+            <h4>Search Results</h4>
             <div className="row justify-content-center" style={{ overflowY: "scroll", maxHeight: "50vh" }}>
 
                 {datas.map((movie, index) => (
