@@ -24,6 +24,7 @@ const LoggedIn = () => {
           <CategoryDetailTrending category="Trending Movies this Week" apicategory="trending/movie/week" />
           <CategoryDetail category="Upcoming Movies" apicategory="movie/upcoming" />
           <CategoryDetail category="Top Rated" apicategory="movie/top_rated" />
+          <CategoryDetail category="Now Playing" apicategory="movie/now_playing" />
 
 
         </div>

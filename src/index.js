@@ -4,14 +4,16 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import App from "./Components/App"
 import "./index.css"
-import {BrowserRouter} from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 
 
-const Index = ()=> {
+const Index = () => {
     return (
+
         <BrowserRouter>
-           <App />
+            <App />
         </BrowserRouter>
+
     )
 }
-ReactDOM.render(<Index/>, document.getElementById("root"))
+ReactDOM.render(<Index />, document.getElementById("root"))

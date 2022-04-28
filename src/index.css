@@ -16,7 +16,6 @@ a {
 nav {
   background-color: transparent;
 }
-
 nav h1.logoMain {
   font-family: Catamaran;
   font-weight: 900;
@@ -25,11 +24,9 @@ nav h1.logoMain {
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
-
 nav button {
   display: none;
 }
-
 nav nav.nav a {
   font-family: Catamaran;
   font-weight: 700;
@@ -39,7 +36,6 @@ nav nav.nav a {
   color: white;
   padding-right: 0;
 }
-
 nav nav.nav li {
   padding-right: 0;
 }
@@ -47,16 +43,13 @@ nav nav.nav li {
 nav.colorChange {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 nav.colorChange h1.logoMain span {
   background-image: none;
   background-color: white;
 }
-
 nav.colorChange nav.nav a {
   color: white;
 }
-
 nav.colorChange nav.nav a.nav-link.active {
   background-color: inherit !important;
   text-decoration: underline;
@@ -65,7 +58,6 @@ nav.colorChange nav.nav a.nav-link.active {
 section.hero .content {
   height: 100vh;
 }
-
 section.hero .content h1.hero {
   font-family: Catamaran;
   font-weight: 900;
@@ -75,8 +67,8 @@ section.hero .content h1.hero {
   margin-top: 20vh;
   margin-bottom: 2vh;
 }
-
 section.hero .content .buttons button {
+  background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
   border: none;
   padding: 2vh;
@@ -86,45 +78,57 @@ section.hero .content .buttons button {
   font-weight: 900;
   font-size: 3vh;
   color: white;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
   margin-right: 2vh;
 }
-
 section.hero .content .buttons button a {
   color: white;
 }
-
+section.hero .content .buttons button:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
 section.hero .content .buttonSub {
   display: none;
+}
+section.hero .content .buttonSub:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 section.services {
   padding-top: 25vh;
 }
-
 section.services .image img {
   height: 40vh;
   margin-bottom: 10vh;
 }
-
-section.services .list, section.services .list2, section.services .listSub {
+section.services .list,
+section.services .list2,
+section.services .listSub {
   margin-top: 13vh;
   margin-bottom: 13vh;
 }
-
-section.services .list h2, section.services .list2 h2, section.services .listSub h2 {
+section.services .list h2,
+section.services .list2 h2,
+section.services .listSub h2 {
   font-family: Catamaran;
   font-weight: 700;
   margin: 0;
   font-size: 5.5vh;
 }
-
-section.services .list p, section.services .list2 p, section.services .listSub p {
+section.services .list p,
+section.services .list2 p,
+section.services .listSub p {
   font-family: Quicksand;
   font-weight: 400;
   margin: 0;
   font-size: 3vh;
 }
-
 section.services .listSub {
   display: none;
 }
@@ -132,11 +136,9 @@ section.services .listSub {
 section.live .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
-
 section.live .backgroundGradient.size {
   height: 110vh;
 }
-
 section.live .backgroundGradient h1 {
   font-family: Catamaran;
   font-weight: 900;
@@ -146,7 +148,6 @@ section.live .backgroundGradient h1 {
   margin-top: 8vh;
   margin-bottom: 6vh;
 }
-
 section.live .backgroundGradient img {
   margin-left: auto;
   margin-right: auto;
@@ -154,7 +155,6 @@ section.live .backgroundGradient img {
   margin-bottom: 4vh;
   height: 55vh;
 }
-
 section.live .backgroundGradient h2 {
   font-family: Catamaran;
   font-weight: 700;
@@ -167,10 +167,10 @@ section.live .backgroundGradient h2 {
   width: 41vh;
   text-align: center;
 }
-
 section.live .backgroundGradient button.live {
   margin-left: auto;
   margin-right: auto;
+  background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
   border: none;
   padding: 2vh;
@@ -180,13 +180,20 @@ section.live .backgroundGradient button.live {
   font-weight: 900;
   font-size: 3vh;
   color: white;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
   padding: 1vh;
   width: 20vh;
   border-radius: 5vh;
   display: block;
   margin-top: 2vh;
 }
-
+section.live .backgroundGradient button.live:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
 section.live .backgroundGradient button.live p {
   font-family: Catamaran;
   font-weight: 700;
@@ -205,7 +212,6 @@ section.faqs h1 {
   margin-top: 13vh;
   margin-bottom: 6vh;
 }
-
 section.faqs .lgScreen h2 {
   font-family: Catamaran;
   font-weight: 700;
@@ -214,14 +220,12 @@ section.faqs .lgScreen h2 {
   margin-bottom: 4.5vh;
   color: black;
 }
-
 section.faqs .lgScreen p {
   font-family: Quicksand;
   font-weight: 400;
   margin: 0;
   font-size: 3vh;
 }
-
 section.faqs .smScreen {
   display: none;
 }
@@ -234,14 +238,39 @@ section.team .title h1 {
   margin-top: 13vh;
   margin-bottom: 6vh;
 }
-
+section.team .profile {
+  position: relative;
+}
+section.team .profile .overlay {
+  opacity: 0;
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+section.team .profile .overlay:hover {
+  opacity: 1;
+  mix-blend-mode: screen;
+}
+section.team .profile .overlay .text-center {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+}
+section.team .profile .overlay .text-center:hover {
+  color: black;
+  opacity: 1;
+}
 section.team .profile img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 40vh;
 }
-
 section.team .profile p.contentLink {
   font-family: Catamaran;
   font-weight: 700;
@@ -249,14 +278,12 @@ section.team .profile p.contentLink {
   font-size: 4vh;
   text-align: center;
 }
-
 section.team .profile p.contentLink a:hover {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 section.team .profile p.contentDevelopers {
   font-family: Quicksand;
   font-weight: 400;
@@ -268,7 +295,6 @@ section.team .profile p.contentDevelopers {
 section.contactus {
   margin-bottom: 13vh;
 }
-
 section.contactus .title h1 {
   font-family: Catamaran;
   font-weight: 900;
@@ -277,13 +303,11 @@ section.contactus .title h1 {
   margin-top: 13vh;
   margin-bottom: 6vh;
 }
-
 section.contactus .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   padding: 5vh;
   border-radius: 3vh;
 }
-
 section.contactus .backgroundGradient p.contentWhite {
   font-family: Catamaran;
   font-weight: 700;
@@ -291,14 +315,12 @@ section.contactus .backgroundGradient p.contentWhite {
   font-size: 3vh;
   color: white;
 }
-
 section.contactus .backgroundGradient input {
   width: 100%;
   border: none;
   margin-bottom: 3vh;
   height: 6vh;
 }
-
 section.contactus .backgroundGradient textarea {
   resize: none;
   border: none;
@@ -306,8 +328,8 @@ section.contactus .backgroundGradient textarea {
   height: 20vh;
   margin-bottom: 3vh;
 }
-
 section.contactus .backgroundGradient button.contactUs {
+  background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
   border: none;
   padding: 2vh;
@@ -317,8 +339,15 @@ section.contactus .backgroundGradient button.contactUs {
   font-weight: 900;
   font-size: 3vh;
   color: white;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
 }
-
+section.contactus .backgroundGradient button.contactUs:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
 section.contactus .image img {
   float: right;
   height: 80vh;
@@ -330,7 +359,6 @@ footer.logo {
   padding-top: 8vh;
   padding-bottom: 4vh;
 }
-
 footer.logo .logo h1.logo {
   font-family: Catamaran;
   font-weight: 900;
@@ -338,7 +366,6 @@ footer.logo .logo h1.logo {
   font-size: 9vh;
   color: white;
 }
-
 footer.logo .contactUsFooter p.footerHeading {
   font-family: Catamaran;
   font-weight: 700;
@@ -347,7 +374,6 @@ footer.logo .contactUsFooter p.footerHeading {
   margin-bottom: 1vh;
   color: white;
 }
-
 footer.logo .contactUsFooter p.footerContent {
   font-family: Quicksand;
   font-weight: 400;
@@ -356,20 +382,16 @@ footer.logo .contactUsFooter p.footerContent {
   color: white;
   margin-bottom: 1.5vh;
 }
-
 footer.logo .contactUsFooter p.footerContent a {
   color: white;
 }
-
 footer.logo .contactUsFooter p.footerContent a:hover {
   color: #dd80ff;
 }
-
 footer.logo .contactUsFooter img {
   height: 3.8vh;
   margin-right: 4.5vh;
 }
-
 footer.logo .copyright {
   background-color: white;
   height: 20%;
@@ -380,7 +402,6 @@ footer.copyright {
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
-
 footer.copyright p.footerContent {
   font-family: Quicksand;
   font-weight: 400;
@@ -392,26 +413,23 @@ footer.copyright p.footerContent {
 .loginform .heading {
   margin-top: 6vh;
 }
-
 .loginform .heading h1 {
   font-family: Catamaran;
   font-weight: 900;
   margin: 0;
   font-size: 8vh;
 }
-
 .loginform input {
   width: 38vh;
   border: 1px solid black;
 }
-
-.loginform .emailAddress p, .loginform .password p {
+.loginform .emailAddress p,
+.loginform .password p {
   font-family: Catamaran;
   font-weight: 700;
   margin: 0;
   font-size: 3.5vh;
 }
-
 .loginform .footer {
   position: fixed;
   bottom: 0;
@@ -419,8 +437,8 @@ footer.copyright p.footerContent {
   margin: 0;
   padding: 0;
 }
-
 .loginform button.contactUs {
+  background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
   border: none;
   padding: 2vh;
@@ -430,13 +448,20 @@ footer.copyright p.footerContent {
   font-weight: 900;
   font-size: 3vh;
   color: white;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-size: 300% 100%;
   margin-bottom: 20vh;
+}
+.loginform button.contactUs:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .notfound .row.ps-5 {
   height: 70vh;
 }
-
 .notfound .footer {
   position: fixed;
   bottom: 0;
@@ -460,6 +485,7 @@ footer.copyright p.footerContent {
     background-position: top;
     background-size: 100vh;
   }
+
   nav {
     background-color: transparent;
   }
@@ -497,18 +523,21 @@ footer.copyright p.footerContent {
   nav nav.nav {
     display: none;
   }
+
   nav.colorChange h1.logoMain span {
     background-color: transparent;
   }
   nav.colorChange h1.logoMain a {
     color: white;
   }
+
   nav#loginForm h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .loginform .heading h1.text-center {
     margin-bottom: 2vh;
     font-size: 7vh;
@@ -525,10 +554,12 @@ footer.copyright p.footerContent {
     margin-left: auto;
     margin-right: auto;
   }
-  .loginform .emailAddress p, .loginform .password p {
+  .loginform .emailAddress p,
+.loginform .password p {
     text-align: center;
     font-size: 3vh;
   }
+
   section.hero .content {
     position: absolute;
     top: 47vh;
@@ -551,6 +582,7 @@ footer.copyright p.footerContent {
     text-align: center;
   }
   section.hero .content .buttonSub button {
+    background-image: linear-gradient(90deg, #EC8800, #E94028);
     background-color: #EC8800;
     border: none;
     padding: 2vh;
@@ -560,6 +592,9 @@ footer.copyright p.footerContent {
     font-weight: 900;
     font-size: 3vh;
     color: white;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-size: 300% 100%;
     width: 13vh;
     font-size: 2.5vh;
     padding: 1vh;
@@ -568,9 +603,15 @@ footer.copyright p.footerContent {
   section.hero .content .buttonSub button a {
     color: white;
   }
+  section.hero .content .buttonSub button:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
   section.hero .content .buttonSub button.signUp {
     margin-right: 0;
   }
+
   section.services {
     margin-top: 120vh;
     padding-top: 0;
@@ -608,6 +649,7 @@ footer.copyright p.footerContent {
   section.services .row .listSub p {
     font-size: 2.7vh;
   }
+
   section.live {
     margin-top: 10vh;
   }
@@ -623,6 +665,7 @@ footer.copyright p.footerContent {
   section.live .backgroundGradient button {
     margin-bottom: 5vh;
   }
+
   section.faqs h1 {
     text-align: center;
   }
@@ -666,6 +709,7 @@ footer.copyright p.footerContent {
     padding: 0;
     margin-bottom: 3vh;
   }
+
   section.team .title h1 {
     text-align: center;
   }
@@ -684,6 +728,7 @@ footer.copyright p.footerContent {
   section.team .profile p.contentLink a {
     color: black;
   }
+
   section.contactus .title h1 {
     text-align: center;
   }
@@ -703,6 +748,7 @@ footer.copyright p.footerContent {
     text-align: center;
   }
   section.contactus .backgroundGradient button.contactUs {
+    background-image: linear-gradient(90deg, #EC8800, #E94028);
     background-color: #EC8800;
     border: none;
     padding: 2vh;
@@ -712,13 +758,22 @@ footer.copyright p.footerContent {
     font-weight: 900;
     font-size: 3vh;
     color: white;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-size: 300% 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  section.contactus .backgroundGradient button.contactUs:hover {
+    background-position: 100% 0;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
   section.contactus .image {
     display: none;
   }
+
   footer.logo {
     padding-top: 6vh;
   }
@@ -738,7 +793,6 @@ footer.copyright p.footerContent {
     display: none;
   }
 }
-
 @media screen and (min-width: 576px) and (max-width: 767px) {
   body {
     background-image: url("./images/hero-image-2.png");
@@ -746,6 +800,7 @@ footer.copyright p.footerContent {
     background-position: right top;
     background-size: 55%;
   }
+
   nav h1.logoMain span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -755,6 +810,7 @@ footer.copyright p.footerContent {
   nav nav.nav a {
     margin-left: 3vh;
   }
+
   nav.colorChange nav.nav a {
     margin-left: 3vh;
     padding-right: 0;
@@ -762,6 +818,7 @@ footer.copyright p.footerContent {
   nav.colorChange nav.nav li {
     padding-right: 0;
   }
+
   .loginform {
     height: 100vh;
   }
@@ -778,12 +835,14 @@ footer.copyright p.footerContent {
     width: 50vh;
     border: 1px solid black;
   }
-  .loginform .emailAddress p, .loginform .password p {
+  .loginform .emailAddress p,
+.loginform .password p {
     font-family: Catamaran;
     font-weight: 700;
     margin: 0;
     font-size: 4.5vh;
   }
+
   section.hero .content h1.hero {
     font-size: 7.5vh;
   }
@@ -793,13 +852,17 @@ footer.copyright p.footerContent {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   section.services .image img {
     height: 35vh;
   }
-  section.services .list, section.services .list2, section.services .listSub {
+  section.services .list,
+section.services .list2,
+section.services .listSub {
     margin-top: 8vh;
     margin-bottom: 8vh;
   }
+
   section.faqs h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -809,6 +872,7 @@ footer.copyright p.footerContent {
   section.faqs .lgScreen h2 a {
     color: black;
   }
+
   section.team .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -818,6 +882,7 @@ footer.copyright p.footerContent {
   section.team .profile a {
     color: black;
   }
+
   section.contactus .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -827,11 +892,11 @@ footer.copyright p.footerContent {
   section.contactus .image img {
     height: 65vh;
   }
+
   footer.logo .logo h1.logo {
     margin-bottom: 2vh;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 991px) {
   body {
     background-image: url("./images/tablet-hero.png");
@@ -839,6 +904,7 @@ footer.copyright p.footerContent {
     background-position: top;
     background-size: 100vh;
   }
+
   nav {
     background-color: transparent;
   }
@@ -876,18 +942,21 @@ footer.copyright p.footerContent {
   nav nav.nav {
     display: none;
   }
+
   nav.colorChange h1.logoMain span {
     background-color: transparent;
   }
   nav.colorChange h1.logoMain a {
     color: white;
   }
+
   nav#loginForm h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .loginform .heading h1.text-center {
     margin-bottom: 2vh;
     font-size: 7vh;
@@ -905,10 +974,12 @@ footer.copyright p.footerContent {
     margin-left: auto;
     margin-right: auto;
   }
-  .loginform .emailAddress p, .loginform .password p {
+  .loginform .emailAddress p,
+.loginform .password p {
     text-align: center;
     font-size: 3vh;
   }
+
   section.hero .content {
     position: absolute;
     top: 52vh;
@@ -931,6 +1002,7 @@ footer.copyright p.footerContent {
     text-align: center;
   }
   section.hero .content .buttonSub button {
+    background-image: linear-gradient(90deg, #EC8800, #E94028);
     background-color: #EC8800;
     border: none;
     padding: 2vh;
@@ -940,6 +1012,9 @@ footer.copyright p.footerContent {
     font-weight: 900;
     font-size: 3vh;
     color: white;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-size: 300% 100%;
     width: 13vh;
     font-size: 2.5vh;
     padding: 1vh;
@@ -951,6 +1026,7 @@ footer.copyright p.footerContent {
   section.hero .content .buttonSub button.signUp {
     margin-right: 0;
   }
+
   section.services {
     margin-top: 120vh;
     padding-top: 0;
@@ -988,6 +1064,7 @@ footer.copyright p.footerContent {
   section.services .row .listSub p {
     font-size: 2.7vh;
   }
+
   section.live {
     margin-top: 10vh;
   }
@@ -1003,6 +1080,7 @@ footer.copyright p.footerContent {
   section.live .backgroundGradient button {
     margin-bottom: 5vh;
   }
+
   section.faqs h1 {
     text-align: center;
   }
@@ -1046,6 +1124,7 @@ footer.copyright p.footerContent {
     padding: 0;
     margin-bottom: 3vh;
   }
+
   section.team .title h1 {
     text-align: center;
   }
@@ -1064,6 +1143,7 @@ footer.copyright p.footerContent {
   section.team .profile p.contentLink a {
     color: black;
   }
+
   section.contactus .title h1 {
     text-align: center;
   }
@@ -1083,6 +1163,7 @@ footer.copyright p.footerContent {
     text-align: center;
   }
   section.contactus .backgroundGradient button.contactUs {
+    background-image: linear-gradient(90deg, #EC8800, #E94028);
     background-color: #EC8800;
     border: none;
     padding: 2vh;
@@ -1092,6 +1173,9 @@ footer.copyright p.footerContent {
     font-weight: 900;
     font-size: 3vh;
     color: white;
+    moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    background-size: 300% 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1099,6 +1183,7 @@ footer.copyright p.footerContent {
   section.contactus .image {
     display: none;
   }
+
   footer.logo {
     padding-top: 6vh;
   }
@@ -1118,7 +1203,6 @@ footer.copyright p.footerContent {
     display: none;
   }
 }
-
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   body {
     background-image: url("./images/hero-image-2.png");
@@ -1126,6 +1210,7 @@ footer.copyright p.footerContent {
     background-position: right top;
     background-size: 55%;
   }
+
   nav h1.logoMain span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1137,6 +1222,7 @@ footer.copyright p.footerContent {
     margin-left: 3.5vh;
     font-size: 2vh;
   }
+
   nav.colorChange nav.nav a {
     margin-left: 3.5vh;
     padding-right: 0;
@@ -1144,6 +1230,7 @@ footer.copyright p.footerContent {
   nav.colorChange nav.nav li {
     padding-right: 0;
   }
+
   .loginform {
     height: 100vh;
   }
@@ -1160,12 +1247,14 @@ footer.copyright p.footerContent {
     width: 45vh;
     height: 5vh;
   }
-  .loginform .emailAddress p, .loginform .password p {
+  .loginform .emailAddress p,
+.loginform .password p {
     font-family: Catamaran;
     font-weight: 700;
     margin: 0;
     font-size: 3vh;
   }
+
   section.hero .content h1.hero {
     font-size: 6.5vh;
   }
@@ -1175,13 +1264,17 @@ footer.copyright p.footerContent {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   section.services .image img {
     height: 35vh;
   }
-  section.services .list, section.services .list2, section.services .listSub {
+  section.services .list,
+section.services .list2,
+section.services .listSub {
     margin-top: 8vh;
     margin-bottom: 8vh;
   }
+
   section.live .backgroundGradient.size {
     height: 100vh;
   }
@@ -1192,6 +1285,7 @@ footer.copyright p.footerContent {
     font-size: 3.8vh;
     width: 39vh;
   }
+
   section.faqs h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1201,6 +1295,7 @@ footer.copyright p.footerContent {
   section.faqs .lgScreen h2 a {
     color: black;
   }
+
   section.team .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1213,6 +1308,7 @@ footer.copyright p.footerContent {
   section.team .profile img {
     height: 30vh;
   }
+
   section.contactus .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1222,6 +1318,7 @@ footer.copyright p.footerContent {
   section.contactus .image img {
     height: 55vh;
   }
+
   footer.logo {
     padding-top: 3vh;
     padding-bottom: 3vh;
@@ -1230,7 +1327,6 @@ footer.copyright p.footerContent {
     margin-bottom: 2vh;
   }
 }
-
 @media screen and (min-width: 1200px) {
   body {
     background-image: url("./images/hero-image-2.png");
@@ -1238,18 +1334,22 @@ footer.copyright p.footerContent {
     background-position: right top;
     background-size: 108vh;
   }
+
   span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   a {
     color: black;
   }
+
   section.services .image .right img {
     float: right;
   }
+
   section.faqs p {
     font-family: Quicksand;
     font-weight: 400;
