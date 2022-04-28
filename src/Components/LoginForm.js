@@ -65,7 +65,7 @@ const LoginForm = () => {
       <NavbarLogin />
       <div className='container'>
         <div className="row">
-          <div className='col-12 mt-3 heading'>
+          <div className='col-12 heading'>
             <h1 className='text-center mt-5'><span>Sign in</span></h1>
           </div>
         </div>
