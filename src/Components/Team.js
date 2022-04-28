@@ -10,7 +10,7 @@ export default function Team() {
               <h1><span>Meet the Team</span></h1>
           </div>
           
-          <div className="col-12 col-xl-4 profile">
+          <div className="col-12 col-sm-4 col-md-12 col-lg-4 col-xl-4 profile">
               <TeamDetails
               imgsrc = {require('../images/adrianoq.png')}
               membername="Adriano Sabanal Jr"
@@ -18,7 +18,7 @@ export default function Team() {
               description2="Front-end Web Developer"
               />
           </div>
-          <div className="col-12 col-xl-4 profile">
+          <div className="col-12 col-sm-4 col-md-12 col-lg-4 col-xl-4 profile">
               <TeamDetails
               imgsrc = {require('../images/cleo4.png')}
               membername="Cleo Beverly Torniado"
@@ -26,7 +26,7 @@ export default function Team() {
               description2="Front-end Web Developer"
               />
           </div>
-          <div className="col-12 col-xl-4 profile">
+          <div className="col-12 col-sm-4 col-md-12 col-lg-4 col-xl-4 profile">
               <TeamDetails
               imgsrc = {require('../images/queeta.png')}
               membername="Queena Tagala"

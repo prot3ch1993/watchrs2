@@ -16,7 +16,7 @@ const FAQsLayout = () => {
                             <div className='row'>
                                 <div className='col-12 col-sm-6 col-xl-6'>
                                     <FAQsDetail h2="What is watchr?" link="#collapse1" controls="collapse1"/>
-                                    <FAQsDetail h2="How much the watchr cost?" link="#collapse2" controls="collapse2"/>
+                                    <FAQsDetail h2="How much does this membership cost?" link="#collapse2" controls="collapse2"/>
                                     <FAQsDetail h2="What kind of content do you provide?" link="#collapse4" controls="collapse4"/>
                                     <FAQsDetail h2="Can i cancel the membership?" link="#collapse5" controls="collapse5"/>
                                 </div>
@@ -27,7 +27,7 @@ const FAQsLayout = () => {
                                         link="collapse1"
                                     />
                                     <FAQsDetail2 
-                                        h2="How much the watchr cost?"
+                                        h2="How much does this membership cost?"
                                         p="You can avail this membership at least P110.00 good for 1 month in full HD and P200 in 4K and 8K."
                                         link="collapse2"
                                     />
@@ -50,7 +50,7 @@ const FAQsLayout = () => {
                         p="Watchr is an online streaming platform that offers the user to watch their favorite shows. It consists of thousands of Movies and TV Series that released worldwide."
                     />
                     <FAQsDetail3 
-                        h2="How much the watchr cost?"
+                        h2="How much does this membership cost?"
                         p="You can avail this membership at least P110.00 good for 1 month in full HD and P200 in 4K and 8K."
                     />
                     <FAQsDetail3 
