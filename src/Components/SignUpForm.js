@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Footer from './Footer';
 import NavbarLogin from './NavbarLogin';
 import { useRef, useState } from 'react';
@@ -8,7 +8,7 @@ const entryInfo = (localStorage.getItem("entryDetails")) ? JSON.parse(localStora
 
 const SignUpForm = () => {
 
-    let navigate = useNavigate();
+    let navigate = useNavigate()
 
     const [errorMessage, setErrorMessage] = useState("Please input password")
     const [errorColor, setErrorColor] = useState("red")
@@ -23,7 +23,8 @@ const SignUpForm = () => {
     let passwordRef = useRef();
     let confirmPasswordRef = useRef();
 
-    let regEx = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/
+    //eslint-disable-next-line
+    let regEx = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
 
 
     const passChecker = () => {
@@ -63,9 +64,9 @@ const SignUpForm = () => {
     const handleClick = (event) => {
         event.preventDefault()
 
-        if (emailValidity == true && passValidity == true) {
+        if (emailValidity === true && passValidity === true) {
             alert("Thank you for registering, you can now log in.")
-            // navigate("/loginform")
+
 
             const entryObject = {
                 email: emailRef.current.value,
@@ -75,6 +76,7 @@ const SignUpForm = () => {
             setEntryList([...entryList, entryObject]);
             localStorage.setItem("entryDetails", JSON.stringify(entryList));
             console.log(entryList)
+            navigate("/loginform")
         }
 
         else {
@@ -122,10 +124,18 @@ const SignUpForm = () => {
                 </div>
 
                 <div className="row justify-content-center">
+                    <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center text-black pt-3">
+                        <p>Already have an account? <Link to="/loginform"><span>Log in here</span></Link></p>
+                    </div>
+                </div>
+
+                <div className="row justify-content-center">
                     <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center pt-3">
                         <button className="btn contactUs" onClick={handleClick}>Submit</button>
                     </div>
                 </div>
+
+
             </div>
             <Footer />
         </div >

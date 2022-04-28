@@ -3,7 +3,7 @@ import React from 'react'
 function ContactUs() {
     return (
         <section className='contactus'>
-            <div className='container'>
+            <div className='container' id="scrollspyContact">
                 <div className="row">
                     <div className='col-12 title'>
                         <h1><span>Contact Us</span></h1>
@@ -25,17 +25,19 @@ function ContactUs() {
                             <p className="contentWhite">
                                 Your Message:
                             </p>
-                            <textarea/>
-                            <button className="contactUs">Submit</button>
+                            <textarea />
+                            <a href="mailto:watchr.studios@gmail.com">
+                                <button className="contactUs">Submit</button>
+                            </a>
                         </div>
                     </div>
                     <div className='col-sm-7 col-lg-7 col-xl-8 image'>
-                        <img src={require('../images/home.png')} alt="home"/>
+                        <img src={require('../images/home.png')} alt="home" />
                     </div>
                 </div>
             </div>
         </section>
-        
+
     )
 }
 

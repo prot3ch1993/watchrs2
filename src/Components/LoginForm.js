@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Footer from './Footer';
 import FooterCopyright from './FooterCopyright';
 import NavbarLogin from './NavbarLogin';
@@ -87,6 +87,13 @@ const LoginForm = () => {
             <div className='text-center' style={{ color: "red" }}>{errorMessage}</div>
           </div>
         </div>
+
+        <div className="row justify-content-center">
+          <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center text-black pt-3">
+            <p>New to watchr? <Link to="/loginform"><span>Sign up here</span></Link></p>
+          </div>
+        </div>
+
         <div className="row justify-content-center">
           <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center pt-3">
             <button className="btn contactUs" onClick={handleClick}>Submit</button>
@@ -94,7 +101,7 @@ const LoginForm = () => {
         </div>
       </div>
       <Footer />
-      <FooterCopyright/>
+      <FooterCopyright />
     </div>
   )
 }

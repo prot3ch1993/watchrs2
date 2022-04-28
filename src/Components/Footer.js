@@ -1,6 +1,6 @@
 import React from "react"
 
-const Footer = () =>{
+const Footer = () => {
     return (
         <footer className="logo">
             <div className="container">
@@ -11,9 +11,9 @@ const Footer = () =>{
                     <div className="col-6 col-sm-4 col-md-6 col-lg-4 col-xl-3 contactUsFooter">
                         <p className="footerHeading">Contact Us</p>
                         <p className="footerContent">watchr.studios@gmail.com</p>
-                        <p className="footerContent">09973950611</p>
-                        <img src={require('../images/facebook.png')} alt="image1"></img>
-                        <img src={require('../images/twitter.png')} alt="image2"></img>
+                        <p className="footerContent">0997 395 0611</p>
+                        <a href="https://facebook.com"><img src={require('../images/facebook.png')} alt="image1"></img></a>
+                        <a href="https://twitter.com"><img src={require('../images/twitter.png')} alt="image2"></img></a>
                     </div>
                     <div className="col-6 col-sm-4 col-md-6 col-lg-4 col-xl-3 contactUsFooter">
                         <p className="footerHeading">Terms & Conditions</p>
