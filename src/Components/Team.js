@@ -16,6 +16,7 @@ export default function Team() {
               membername="Adriano Sabanal Jr"
               description1="Web Designer"
               description2="Front-end Web Developer"
+              link="https://adriisabz.vercel.app/"
             />
           </div>
           <div className="col-12 col-sm-4 col-md-12 col-lg-4 col-xl-4 profile">
@@ -24,6 +25,7 @@ export default function Team() {
               membername="Cleo Beverly Torniado"
               description1=""
               description2="Front-end Web Developer"
+              link="https://portfolio-cgtorniado.vercel.app/"
             />
           </div>
           <div className="col-12 col-sm-4 col-md-12 col-lg-4 col-xl-4 profile">
@@ -32,6 +34,7 @@ export default function Team() {
               membername="Queena Tagala"
               description1=""
               description2="Front-end Web Developer"
+              link="https://myportfolio-7fwkgx2xi-prot3ch1993.vercel.app/"
             />
           </div>
         </div>

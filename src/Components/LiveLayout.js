@@ -1,6 +1,5 @@
 import React from 'react'
 import LiveDetail from './LiveDetail'
-import Modal from './Modal';
 
 const LiveLayout = () => {
     return (
@@ -14,22 +13,16 @@ const LiveLayout = () => {
                             </h1>
                         </div>
                         <LiveDetail
-                            img={require('../images/dsmom.jpg')}
-                            h2= "Doctor Strange in the Multiverse of Madness"
+                            img={require('../images/spyxfam.jpg')}
+                            h2= "Spy X Family"
                             button= "Sign In to watch"
                         />
                         <LiveDetail
-                            img={require('../images/fb3.png')}
-                            h2= "Fantastic Beasts: The Secrets of Dumbledore"
-                            button= "Sign In to watch"
-                        />
-                        <LiveDetail
-                            img={require('../images/jwd.jpeg')}
-                            h2= "Jurassic World: Dominion"
+                            img={require('../images/x-ys.jpg')}
+                            h2= "MY Ex and Whys"
                             button= "Sign In to watch"
                         />
                     </div>
-                    <Modal/>
                 </div>
             </div>
         </section>

@@ -26,9 +26,9 @@ const Navbar = () => {
                         <div className="offcanvas-body">
                             <p><a href="#scrollspyServices">Services</a></p>
                             <p><a href="#scrollspyFAQs">FAQs</a></p>
-                            <p><a href="#scrollspyAbout">About</a></p>
+                            <p><a href="#scrollspyAbout">Team</a></p>
                             <p><a href="#scrollspyContact">Contact</a></p>
-                            <p><Link to="/loginform">Account</Link></p>
+                            <p><Link to="/loginform">Sign In</Link></p>
                         </div>
                     </div>
                     <nav className="nav" id="navbarWatchr">
@@ -40,12 +40,12 @@ const Navbar = () => {
                             <a href="#scrollspyFAQs" className="nav-link">FAQs</a>
                             </li>
                             <li className="nav-item" >
-                            <a href="#scrollspyAbout" className="nav-link">About</a>
+                            <a href="#scrollspyAbout" className="nav-link">Team</a>
                             </li>
                             <li className="nav-item" >
                             <a href="#scrollspyContact" className="nav-link">Contact</a>
                             </li>
-                            <Link to="/loginform"><li className="nav-link text-white" >Account</li></Link>
+                            <Link to="/loginform"><li className="nav-link text-white" >Sign In</li></Link>
                         </ul>
                     </nav>
                 </div>

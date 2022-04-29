@@ -3,6 +3,7 @@ import Footer from './Footer';
 import FooterCopyright from './FooterCopyright';
 import NavbarLogin from './NavbarLogin';
 import React, { useRef, useState } from 'react';
+import { Outlet } from "react-router-dom";
 
 const entryInfo = (localStorage.getItem("entryDetails")) ? JSON.parse(localStorage.getItem("entryDetails")) : [];
 
@@ -63,6 +64,7 @@ const LoginForm = () => {
   return (
     <div className="bg-white loginform">
       <NavbarLogin />
+      <Outlet />
       <div className='container'>
         <div className="row">
           <div className='col-12 heading'>
@@ -70,27 +72,20 @@ const LoginForm = () => {
           </div>
         </div>
         <div className="row justify-content-center p-3">
-          <div className="col-12 col-sm-4 col-md-12 col-lg-3 col-xl-2  emailAddress">
-            <p>Email Address:</p>
-          </div>
           <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
-            <input type="text" ref={emailRef} />
+            <input type="text" ref={emailRef} placeholder="Email Address"/>
           </div>
         </div>
         <div className="row justify-content-center p-3">
-          <div className="col-12 col-sm-4 col-md-12 col-lg-3 col-xl-2 password">
-            <p>Password:</p>
-          </div>
           <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
-            <input type="password" ref={passwordRef} />
-
+            <input type="password" ref={passwordRef} placeholder="Password" />
             <div className='text-center' style={{ color: "red" }}>{errorMessage}</div>
           </div>
         </div>
 
         <div className="row justify-content-center">
           <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center text-black pt-3">
-            <p>New to watchr? <Link to="/loginform"><span>Sign up here</span></Link></p>
+            <p>New to watchr? <Link to="/signupform"><span>Sign up here</span></Link></p>
           </div>
         </div>
 

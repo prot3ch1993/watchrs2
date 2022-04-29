@@ -17,22 +17,29 @@ const SearchPage = () => {
 
 
     return (
-
-        <div className="row bg-black p-5 loggedin" style={{ height: "100vh" }}>
+        <>
             <NavbarLoggedIn />
-            <div className="col-12 p-1 p-lg-5">
-                <div className="col-12 px-1 px-lg-5">
-                    <h1> Search For Your Favorite Movie </h1>
+            <section className='searchPage bg-black'>
+                <div className='container'>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="col-12">
+                                <h2>
+                                    <input type="text" ref={searchRef} placeholder="movie title" />
+                                    <a href='#0' onClick={handleSubmit}> <i class="bi bi-search"></i></a>
+                                </h2>
+                            </div>
+                        </div>
 
-                    <h2 className='display-5'><input type="text" ref={searchRef} placeholder="movie title" /><button type="button" className='btn btn-secondary btn-lg' onClick={handleSubmit}> Search</button></h2>
-
+                        <div className="col-12 searchResults">
+                            <SearchResults term={term} />
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div className="col-12 px-1 px-lg-5">
-                <SearchResults term={term} />
-            </div>
-        </div>
+                
+            </section>
+            
+        </>
 
     )
 }

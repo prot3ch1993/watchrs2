@@ -6,15 +6,16 @@ import Fade from "react-reveal/Fade"
 
 const Hero = () => {
     return (
+        <>
         <section className="hero">
             <div className="container">
 
                 <div className="row">
-
+                <Outlet />
                     <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-6">
 
                         <div className="content">
-                            <Outlet />
+                            
                             <Fade left duration={2000}>
                                 <h1 className="hero"><span>Watch anytime you want while you’re at home.</span></h1>
                                 <div className="buttons">
@@ -32,6 +33,8 @@ const Hero = () => {
                 </div>
             </div>
         </section>
+        </>
+        
     )
 }
 export default Hero

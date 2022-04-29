@@ -27,16 +27,16 @@ const IndivRecommendations = ({ id, setNewIndivId }) => {
   return (
     <>
       <h4 className='py-5'>More like this</h4>
-      <div className="row justify-content-center" style={{ overflowY: "scroll", maxHeight: "50vh" }}>
+      <div className="row justify-content-center" style={{ overflowY: "scroll", maxHeight: "70vh" }}>
 
         {datas.map((movie, index) => (
 
-          <div className="col-2" onClick={() => {
+          <div className="col-2 movieRecommend" onClick={() => {
             setNewId(movie.id);
             setNewIndivId(movie.id)
           }}
 
-            style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", margin: "10px", height: "35vh" }} key={index} >
+            style={{backgroundImage: `url(${getImage(movie.poster_path)})`}} key={index} >
 
 
           </div>

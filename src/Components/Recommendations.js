@@ -30,21 +30,23 @@ const Recommendations = (props) => {
   return (
 
     <>
+      <div className='recommendations'>
+        <h4 className='py-5'>More like this</h4>
+        <div className="row justify-content-center bg-black" style={{ overflowY: "scroll", maxHeight: "80vh" }}>
 
-      <h4 className='py-5'>More like this</h4>
-      <div className="row justify-content-center bg-black" style={{ overflowY: "scroll", maxHeight: "80vh" }}>
+          {datas.map((movie, index) => (
 
-        {datas.map((movie, index) => (
+            <div className='col-2 recoMovie' key={index}>
+              <Link to={"/movie/" + movie.id}>
+                <div className='movieCard' style={{backgroundImage: `url(${getImage(movie.poster_path)})` }}>
+                </div>
+              </Link>
+            </div>
+          ))}
 
-          <div className='col-2' key={index} style={{ width: "15vw", backgroundColor: "black", backgroundSize: "cover", height: "35vh" }}>
-            <Link to={"/movie/" + movie.id}>
-              <div style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", height: "35vh" }}>
-              </div>
-            </Link>
-          </div>
-        ))}
-
+        </div>
       </div>
+      
 
 
     </>

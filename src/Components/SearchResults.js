@@ -55,15 +55,14 @@ const SearchResults = (props) => {
 
     return (
         <>
-
             <h4>Search Results</h4>
-            <div className="row justify-content-center" style={{ overflowY: "scroll", maxHeight: "50vh" }}>
+            <div className="row justify-content-center" style={{ overflowY: "scroll", maxHeight: "60vh" }}>
 
                 {datas.map((movie, index) => (
 
-                    <div className='col-2' key={index} style={{ width: "15vw", backgroundColor: "black", backgroundSize: "cover", height: "35vh" }}>
+                    <div className='col-2 movieCards' key={index}>
                         <Link to={"/movie/" + movie.id}>
-                            <div style={{ width: "15vw", backgroundImage: `url(${getImage(movie.poster_path)})`, backgroundSize: "cover", height: "35vh" }}>
+                            <div className='movieTitle' style={{backgroundImage: `url(${getImage(movie.poster_path)})` }}>
                             </div>
                         </Link>
                     </div>
