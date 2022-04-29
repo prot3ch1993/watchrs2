@@ -9,26 +9,34 @@ const LoggedIn = () => {
 
   return (
     <>
+      <NavbarLoggedIn />
+      <section className='accountLoggedIn bg-black'>
+        <div className='container'>
+          <div className="row">
+              <div className="col-12 title">
+                <h1><span>LIVE</span></h1>
+              </div>
+              <div className='col-12 col-sm-6 col-md-12 col-lg-6 live'>
+                <iframe src="https://www.youtube.com/embed/12vGm8GJdO0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div className='col-12 col-sm-6 col-md-12 col-lg-6 live'>
+              <iframe src="https://www.youtube.com/embed/jsK8-HOo6io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              
 
-      <div className="row bg-black p-5 loggedin">
-        <NavbarLoggedIn />
-        <div className="col-12 p-1 p-lg-5">
-          <div className="col-12 p-1 p-lg-5">
-            <h1> LIVE </h1>
+              <div className="col-12">
+                <CategoryDetailTrending category="Trending Movies this Week" apicategory="trending/movie/week" />
+                <CategoryDetail category="Upcoming Movies" apicategory="movie/upcoming" />
+                <CategoryDetail category="Top Rated" apicategory="movie/top_rated" />
+                <CategoryDetail category="Now Playing" apicategory="movie/now_playing" />
 
-            <iframe width="674" height="281" src="https://www.youtube.com/embed/9vuRbBZpb9M" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen controls="0"></iframe>
+
+              </div>
           </div>
         </div>
-
-        <div className="col-12 p-1 p-lg-5">
-          <CategoryDetailTrending category="Trending Movies this Week" apicategory="trending/movie/week" />
-          <CategoryDetail category="Upcoming Movies" apicategory="movie/upcoming" />
-          <CategoryDetail category="Top Rated" apicategory="movie/top_rated" />
-          <CategoryDetail category="Now Playing" apicategory="movie/now_playing" />
-
-
-        </div>
-      </div>
+          
+      </section>
+      
     </>
   )
 }

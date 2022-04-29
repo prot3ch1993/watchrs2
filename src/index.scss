@@ -139,7 +139,22 @@ nav.colorChange {
 
 // Hero Section
 section.hero {
+    position: relative;
+    .logOutInd{
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2vh;
+        width: 13vw;
+        position: absolute;
+        right: 7vh;
+        background-color: white;
+        border-radius: 5vh;
 
+        h1{
+            text-align: center;
+            font-size: 2.5vh;
+        }
+    }
     .content {
         height: 100vh;
 
@@ -331,11 +346,15 @@ section.team {
             }
 
             .text-center {
-                color: white;
-                font-size: 1.5em;
-                position: absolute;
-                top: 50%;
-                left: 35%;
+                a{
+                    @include headingBoldStyle();
+                    color: white;
+                    font-size: 3vh;
+                    position: absolute;
+                    top: 50%;
+                    left: 35%;
+                }
+                
 
                 &:hover {
                     color: black;
@@ -508,7 +527,7 @@ footer.copyright {
     }
 
     input {
-        width: 38vh;
+        width: 42vh;
         border: 1px solid black
     }
 
@@ -557,12 +576,308 @@ footer.copyright {
     color: white;
 }
 
-//loggedin section
-.row.p-5.loggedin {
+
+// Profile Page
+nav.profiles{
     background-color: black;
-    color: white;
+    
+    h1{
+        @include headingBlackStyle();
+        font-size: 5vh;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+    }
+    nav.nav{
+        ul{
+            a{
+                @include headingBoldStyle();
+                font-size: 2.3vh;
+                margin-left: 5.5vh;
+                color: white;
+                padding-right: 0; 
+            }
+        }
+    }
+}
+.profileSection{
+    .settings{
+        p{
+            text-align: left;
+
+            button{
+                background: none;
+                border: none;
+
+                i.bi-gear{
+                    color: white;
+                }
+            }
+            i.bi-plus-circle{
+                color: white;
+                margin-left: 2vh;
+            }
+        }
+        .modal{
+            .modal-header{
+                h5{
+                    @include headingBoldStyle();
+                }
+            }
+            .modal-body{
+                label{
+                    @include headingBoldStyle();
+                    font-size: 3vh;
+                }
+                input[type=text]{
+                    border: none;
+                    background: none;
+                    color: white;
+                    padding-left:2vh;
+                    font-size: 3vh;
+
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                input[type=color]{
+                    margin-left: 2vh;
+                }
+            }
+        }
+    }
+}
+.profile{
+    .profile-tile{
+        width: 200px;
+        height: 200px;
+        color: white;
+        font-size: 35px;
+        border-radius: 30vh;
+
+        .profile-text{
+            h1{
+                @include headingBoldStyle();
+                font-size: 5vh;
+            }
+        }
+    }
 }
 
+
+// Logged In Page
+nav.loggedIn{
+    background-color: black;
+}
+
+section.accountLoggedIn{
+    padding-bottom: 20vh;
+    .title{
+        h1{
+            @include headingBlackStyle();
+            color: white;
+            font-size: 8vh;
+            margin-top: 8vh;
+            margin-bottom: 6vh;
+        }
+    }
+    .live{
+        iframe{
+            width: 100%;
+            height: 60vh
+        }
+    }
+    .category{
+        h1{
+            @include headingBlackStyle();
+            color: white;
+            font-size: 8vh;
+            margin-top: 13vh;
+            margin-bottom: 6vh;
+        }
+        ::-webkit-scrollbar{
+            width:3vh;
+        }
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            background: black;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            @include backgroundGradient();
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+        }
+        .trendingMovie{
+            position: relative;
+            width: 20vw;
+            background-size: cover;
+            margin: 10px;
+            height: 65vh;
+
+            h1{
+                font-size: 12vh;
+                position: absolute;
+                bottom: -10px;
+                margin-left: 0;
+            }
+        }
+        .modal{
+            .modal-header{
+                h2{
+                    @include headingBoldStyle();
+                    position: absolute;
+                    bottom: 0;
+                    text-shadow: 0px 1px 3px black;
+                }
+            }
+            .modal-body{
+                p{
+                    @include contentStyle();
+                }
+            }
+        }
+        .recommendations{
+            h4{
+                @include headingBoldStyle();
+                font-size: 5vh;
+            }
+
+            .recoMovie{
+                width: 15vw;
+                background-color: black;
+                background-size: cover;
+                height: 35vh;
+
+                .movieCard{
+                    width: 15vw;
+                    background-size: cover;
+                    height: 35vh;
+                }
+            }
+        }
+        .movieList{
+            width: 15vw;
+            background-size: cover;
+            height: 35vh;
+            margin: 10px;
+        }
+    }
+}
+
+// Search Page
+section.searchPage{
+    height: 90vh;
+
+    h1{
+        @include headingBlackStyle();
+        font-size: 8vh;
+        color: white;
+        margin-top: 5vh;
+    }
+    h2{
+        @include headingBoldStyle();
+        font-size: 5vh;
+        margin-top: 2vh;
+        
+        input{
+            height: 8vh;
+            background-color: black;
+            border: none;
+            color: white;
+
+            &:focus{
+                outline: none;
+            }
+        }
+        a{
+            color: white;
+
+            &:hover{
+                @include buttonHoverStyle();
+            }
+        }
+    }
+    .searchResults{
+        margin-top: 5vh;
+        
+        h4{
+            @include headingBoldStyle();
+            font-size: 4vh;
+            margin-bottom: 4vh;
+        }
+        ::-webkit-scrollbar{
+            width:3vh;
+        }
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            background: black;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            @include backgroundGradient();
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+        }
+        .movieCards{
+            width: 15vw;
+            background-color: black;
+            background-size: cover;
+            height: 35vh;
+        }
+        .movieTitle{
+            width: 15vw;
+            background-size: cover;
+            height: 35vh;
+        }
+    }
+}
+
+// Individual Movie Page
+section.movie{
+    height: 200vh;
+    .trailer{
+        iframe{
+            width: 100%;
+            height: 75vh;
+        }
+        p{
+            @include headingBoldStyle();
+            margin-top: 2vh;
+        }
+    }
+    .recommendations{
+        h4{
+            @include headingBoldStyle();
+            font-size: 5vh;
+            margin-top: 5vh;
+        }
+        ::-webkit-scrollbar{
+            width:3vh;
+        }
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey; 
+            background: black;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            @include backgroundGradient();
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b30000; 
+        }
+        .movieRecommend{
+            width: 15vw;
+            background-size: cover;
+            margin: 10px;
+            height: 35vh;
+        }
+    }
+}
 
 @media screen and (max-width:575px) {
     body {
@@ -670,6 +985,19 @@ footer.copyright {
 
     // Hero Page
     section.hero {
+        .logOutInd{
+            width: 33vw;
+            position: absolute;
+            right: 3vh;
+    
+            h1{
+                font-size: 2vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
         .content {
             position: absolute;
             top: 47vh;
@@ -772,7 +1100,7 @@ footer.copyright {
 
         .backgroundGradient {
             &.size {
-                height: 258vh;
+                height: 170vh;
             }
 
             h1 {
@@ -881,7 +1209,7 @@ footer.copyright {
 
         .backgroundGradient {
             @include marginCenterAlign();
-            width: 48vh;
+            width: 42vh;
             padding: 3.5vh;
 
             p.contentWhite {
@@ -917,17 +1245,182 @@ footer.copyright {
 
         .contactUsFooter {
             p.footerHeading {
-                font-size: 2.5vh;
+                font-size: 2.3vh;
                 margin-bottom: 2vh;
             }
 
             p.footerContent {
-                font-size: 1.8vh;
+                font-size: 1.5vh;
                 margin-bottom: 1vh;
             }
 
             &.content {
                 display: none;
+            }
+        }
+    }
+
+    // Profile Section
+    nav.profiles{
+        h1{
+            font-size: 4vh;
+
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        nav.nav{
+            display: block;
+            
+            ul{
+                a{
+                    font-size: 1.9vh;
+                }
+            }
+        }
+    }
+    .profileSection{
+        .settings{
+            p{
+                margin-bottom: 0;
+            }
+            .modal{
+                .modal-body{
+                    label{
+                        font-size: 2vh;
+                    }
+                    input[type=text]{
+                        font-size: 2vh;
+                        margin-left: 0vh;
+                        
+                    }
+                    input[type=color]{
+                        margin-left: 2vh;
+                    }
+                }
+            }
+        }
+    }
+    .profile{
+        .profile-tile{
+            width: 150px;
+            height: 150px;
+            
+            .profile-text{
+                h1{
+                    @include headingBoldStyle();
+                    font-size: 3vh;
+                }
+            }
+        }
+    }
+
+    // Navbar Logged in Page
+    nav.loggedIn{
+        h1.logoMain{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+    }
+
+    // Logged In Page
+    section.accountLoggedIn{
+        .title{
+            h1{
+                font-size: 4vh;
+            }
+
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        .live{
+            iframe{
+                width: 100%;
+                height: 35vh
+            }
+        }
+        .category{
+            h1{
+                font-size: 4vh;
+                
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+            .trendingMovie{
+                width: 100vw;
+                
+                h1{
+                    font-size: 8vh;
+                }
+            }
+            .recommendations{
+                h4{
+                    @include headingBoldStyle();
+                    font-size: 3vh;
+                }
+                .recoMovie{
+                    width: 50vw;
+                    height: 40vh;
+
+                    .movieCard{
+                        width: 55vw;
+                        height: 35vh;
+                    }
+                }
+            }
+            .movieList{
+                width: 35vw;
+            }
+        }
+    }
+
+    // Search Page
+    section.searchPage{
+        height: 100vh;
+
+            input{
+                width: 85%;
+                height: 8vh;
+                background-color: black;
+                border: none;
+                color: white;
+            }
+            a{
+                font-size: 4vh;
+            }
+        
+        .searchResults{
+            .movieCards{
+                width: 55vw;
+                height: 40vh;
+            }
+            .movieTitle{
+                width: 55vw;
+                height: 35vh;
+            }
+        }
+    }
+
+    // Individual Movie Page
+    section.movie{
+        height: 150vh;
+        
+        .trailer{
+            iframe{
+                width: 100%;
+                height: 30vh;
+            }
+        }
+        .recommendations{
+            h4{
+                font-size: 3vh;
+            }
+            .movieRecommend{
+                width: 55vw;
+                height: 35vh;
             }
         }
     }
@@ -999,6 +1492,19 @@ footer.copyright {
 
     // Hero Page
     section.hero {
+        .logOutInd{
+            width: 13vw;
+            position: absolute;
+            right: 8vh;
+    
+            h1{
+                font-size: 2vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
         .content {
             h1.hero {
                 font-size: 7.5vh;
@@ -1082,6 +1588,91 @@ footer.copyright {
         .logo {
             h1.logo {
                 margin-bottom: 2vh;
+            }
+        }
+    }
+
+    // Profile Section
+    nav.profiles{
+        h1{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        nav.nav{
+            display: block;
+            
+            ul{
+                a{
+                    font-size: 1.9vh;
+                }
+            }
+        }
+    }
+    .profileSection{
+        .settings{
+            p{
+                margin-bottom: 0;
+
+                button{
+                    i.bi-gear{
+                        font-size: 5vh;
+                    }
+                }
+                i.bi-plus-circle{
+                    font-size: 5vh;
+
+                }
+            }
+            .modal{
+                .modal-body{
+                    label{
+                        font-size: 4.5vh;
+                    }
+                    input[type=text]{
+                        font-size: 4.5vh;
+                        margin-left: 0vh;
+                        
+                    }
+                    input[type=color]{
+                        margin-left: 2vh;
+                    }
+                }
+            }
+        }
+    }
+    .profile{
+        .profile-tile{
+            width: 100px;
+            height: 100px;
+            
+            .profile-text{
+                h1{
+                    @include headingBoldStyle();
+                    font-size: 5vh;
+                }
+            }
+        }
+    }
+
+    // Logged In Page
+    section.accountLoggedIn{
+        .title{
+            h1{
+                font-size: 8vh;
+                
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+        .category{
+            h1{
+                font-size: 8vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
             }
         }
     }
@@ -1196,6 +1787,19 @@ footer.copyright {
 
     // Hero Page
     section.hero {
+        .logOutInd{
+            width: 33vw;
+            position: absolute;
+            right: 3vh;
+    
+            h1{
+                font-size: 2vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
         .content {
             position: absolute;
             top: 52vh;
@@ -1448,6 +2052,181 @@ footer.copyright {
             }
         }
     }
+
+    // Profile Section
+    nav.profiles{
+        h1{
+            font-size: 4vh;
+
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        nav.nav{
+            display: block;
+            
+            ul{
+                a{
+                    font-size: 1.9vh;
+                }
+            }
+        }
+    }
+    .profileSection{
+        .settings{
+            p{
+                margin-bottom: 0;
+                
+                button{
+                    i.bi-gear{
+                        font-size: 3vh;
+                    }
+                }
+                i.bi-plus-circle{
+                    font-size: 3vh;
+
+                }
+            }
+            .modal{
+                .modal-body{
+                    label{
+                        font-size: 2vh;
+                    }
+                    input[type=text]{
+                        font-size: 2vh;
+                        margin-left: 0vh;
+                        
+                    }
+                    input[type=color]{
+                        margin-left: 2vh;
+                    }
+                }
+            }
+        }
+    }
+    .profile{
+        .profile-tile{
+            width: 200px;
+            height: 200px;
+            
+            .profile-text{
+                h1{
+                    @include headingBoldStyle();
+                    font-size: 3vh;
+                }
+            }
+        }
+    }
+
+    // Navbar Logged in Page
+    nav.loggedIn{
+        h1.logoMain{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+    }
+
+    // Logged In Page
+    section.accountLoggedIn{
+        .title{
+            h1{
+                font-size: 4vh;
+            }
+
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        .live{
+            iframe{
+                width: 100%;
+                height: 35vh
+            }
+        }
+        .category{
+            h1{
+                font-size: 4vh;
+                
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+            .trendingMovie{
+                width: 100vw;
+                
+                h1{
+                    font-size: 8vh;
+                }
+            }
+            .recommendations{
+                h4{
+                    @include headingBoldStyle();
+                    font-size: 3vh;
+                }
+                .recoMovie{
+                    width: 50vw;
+                    height: 40vh;
+
+                    .movieCard{
+                        width: 55vw;
+                        height: 35vh;
+                    }
+                }
+            }
+            .movieList{
+                width: 35vw;
+            }
+        }
+    }
+
+    // Search Page
+    section.searchPage{
+        height: 100vh;
+
+            input{
+                width: 85%;
+                height: 8vh;
+                background-color: black;
+                border: none;
+                color: white;
+            }
+            a{
+                font-size: 4vh;
+            }
+        
+        .searchResults{
+            .movieCards{
+                width: 55vw;
+                height: 40vh;
+            }
+            .movieTitle{
+                width: 55vw;
+                height: 35vh;
+            }
+        }
+    }
+
+    // Individual Movie Page
+    section.movie{
+        height: 150vh;
+        
+        .trailer{
+            iframe{
+                width: 100%;
+                height: 40vh;
+            }
+        }
+        .recommendations{
+            h4{
+                font-size: 3vh;
+            }
+            .movieRecommend{
+                width: 55vw;
+                height: 35vh;
+            }
+        }
+    }
 }
 
 @media screen and (min-width:992px) and (max-width:1199px) {
@@ -1518,6 +2297,19 @@ footer.copyright {
 
     // Hero Page
     section.hero {
+        .logOutInd{
+            width: 13vw;
+            position: absolute;
+            right: 3vh;
+    
+            h1{
+                font-size: 2vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
         .content {
             h1.hero {
                 font-size: 6.5vh;
@@ -1628,6 +2420,91 @@ footer.copyright {
         .logo {
             h1.logo {
                 margin-bottom: 2vh;
+            }
+        }
+    }
+
+    // Profile Section
+    nav.profiles{
+        h1{
+            span{
+                @include backgroundGradientText();
+            }
+        }
+        nav.nav{
+            display: block;
+            
+            ul{
+                a{
+                    font-size: 1.9vh;
+                }
+            }
+        }
+    }
+    .profileSection{
+        .settings{
+            p{
+                margin-bottom: 0;
+                
+                button{
+                    i.bi-gear{
+                        font-size: 3vh;
+                    }
+                }
+                i.bi-plus-circle{
+                    font-size: 3vh;
+
+                }
+            }
+            .modal{
+                .modal-body{
+                    label{
+                        font-size: 4.5vh;
+                    }
+                    input[type=text]{
+                        font-size: 4.5vh;
+                        margin-left: 0vh;
+                        
+                    }
+                    input[type=color]{
+                        margin-left: 2vh;
+                    }
+                }
+            }
+        }
+    }
+    .profile{
+        .profile-tile{
+            width: 200px;
+            height: 200px;
+            
+            .profile-text{
+                h1{
+                    @include headingBoldStyle();
+                    font-size: 4vh;
+                }
+            }
+        }
+    }
+    
+    // Logged In Page
+    section.accountLoggedIn{
+        .title{
+            h1{
+                font-size: 5vh;
+                
+                span{
+                    @include backgroundGradientText();
+                }
+            }
+        }
+        .category{
+            h1{
+                font-size: 5vh;
+
+                span{
+                    @include backgroundGradientText();
+                }
             }
         }
     }

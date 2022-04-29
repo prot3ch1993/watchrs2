@@ -1,11 +1,12 @@
 import React from 'react'
+// import { Outlet } from "react-router-dom";
 
 const LoggedOut = () => {
 
 
 
     return (
-        <div className='container-fluid bg-white' style={{ height: "50vh", width: "100vw" }}>
+        <div className='col-12 logOutInd'>
             <div className="row" >
 
 

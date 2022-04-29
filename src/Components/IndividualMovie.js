@@ -33,16 +33,24 @@ const IndividualMovie = () => {
     }
 
     return (
-        <div className='container-fluid bg-black'>
+        <section className='movie bg-black'>
             <NavbarLoggedIn />
-            <div className="text-white text-center">
-                <iframe width="640" height="360" src={"https://www.youtube.com/embed/" + datas[1].key} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <p className='fs-3'>Youtube Title: {datas[1].name}</p>
-                <div className='row mx-auto'>
-                    <IndivRecommendations id={id} setNewIndivId={setNewIndivId} />
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-12'>
+                        <div className="text-white text-center trailer">
+                            <iframe src={"https://www.youtube.com/embed/" + datas[1].key} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                            <p className='fs-3'>Youtube Title: {datas[1].name}</p>
+                            <div className='row mx-auto recommendations'>
+                                <IndivRecommendations id={id} setNewIndivId={setNewIndivId} />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
             </div>
-        </div>
+        </section>
+        
     )
 }
 

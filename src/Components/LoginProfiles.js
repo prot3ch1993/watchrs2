@@ -97,16 +97,9 @@ const LoginProfiles = () => {
     const AddProfileChecker = () => {
 
         if (profile.length < 5) {
-
             return (
                 <>
-                    <div className="box align-self-center mx-auto m-5 col  border text-center" data-bs-toggle="modal" data-bs-target="#staticBackdrops" style={{ backgroundColor: `black `, width: "200px", height: "200px", color: "white", fontSize: "35px", borderRadius: "15px" }
-                    }>
-                        New
-                        <h1 className="p-3"><i className="bi bi-plus-circle"></i></h1>
-                    </div >
-
-
+                    <a href='#0' data-bs-toggle="modal" data-bs-target="#staticBackdrops"><i className="bi bi-plus-circle"></i></a>
                     <div className="modal fade" id="staticBackdrops" tabIndex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
                         <div className="modal-dialog modal-lg">
                             <div className="modal-content">
@@ -141,48 +134,59 @@ const LoginProfiles = () => {
     }
 
     return (
-        <div className='container-fluid bg-black text-center' style={{ height: "100vh" }}>
+        <>
             <NavbarProfiles />
-            <div className='row text-white px-5 fs-3'>
-                <button type='button' className='btn btn-dark col-1' onClick={colorHandler}>Manage Profiles</button>
-                <button type='button' className={`btn col-1 btn-black`} style={{ color: `${editColorDone}` }} onClick={colorHandlerDone}>Done Editing</button>
-            </div>
-            <div className="row p-5">
-                {
-                    profile.map(
-                        (individualprofile, index) => (
-                            <div key={index} className="col py-1 px-5 " style={{ maxHeight: "100vh" }}>
-                                <Link to={individualprofile.linkto}>
-                                    <div className="mx-auto my-auto border d-flex" style={{ backgroundColor: `${individualprofile.tempbg} `, width: "200px", height: "200px", color: "white", fontSize: "35px", borderRadius: "15px" }}>
-                                        <div className='my-auto mx-auto'>{individualprofile.name}</div>
-                                    </div>
-                                </Link>
+            <div className='bg-black profileSection' style={{ height: "90vh" }}>
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-12'>
+                            <div className='text-white fs-3 settings'>
+                                <p>
+                                    <button type='button' onClick={colorHandler}><i class="bi bi-gear"></i></button><AddProfileChecker /> <br/>
+                                    <button type='button' className={`btn btn-black`} style={{ color: `${editColorDone}` }} onClick={colorHandlerDone}><i class="bi bi-check-lg"></i></button>
+                                </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            <div className='container-fluid text-center'>
+                
+                <div className="row">
+                    {
+                        profile.map(
+                            (individualprofile, index) => (
+                                <div key={index} className="col profile">
+                                    <Link to={individualprofile.linkto}>
+                                        <div className="mx-auto my-auto d-flex profile-tile" style={{ backgroundColor: `${individualprofile.tempbg} `}}>
+                                            <div className='my-auto mx-auto profile-text'><h1>{individualprofile.name}</h1></div>
+                                        </div>
+                                    </Link>
+                                    <button type="button" className="btn btn-black" style={{ color: `${editColor}` }} data-bs-toggle="modal" data-bs-target={`#${individualprofile.id}`}><i className="bi bi-pencil-square"></i></button>
+                                    <div className="modal fade" id={individualprofile.id} tabIndex="-1" aria-labelledby="editModal" aria-hidden="true">
+                                        <div className="modal-dialog">
+                                            <div className="modal-content">
+                                                <div className="modal-header">
+                                                    <h5 className="modal-title">Are you sure you want to delete the Profile?</h5>
+                                                </div>
 
-                                <button type="button" className="btn btn-black fs-2" style={{ color: `${editColor}` }} data-bs-toggle="modal" data-bs-target={`#${individualprofile.id}`}><i className="bi bi-pencil-square"></i></button>
 
-                                <div className="modal fade" id={individualprofile.id} tabIndex="-1" aria-labelledby="editModal" aria-hidden="true">
-                                    <div className="modal-dialog">
-                                        <div className="modal-content">
-                                            <div className="modal-header">
-                                                <h5 className="modal-title">Are you sure you want to delete the Profile?</h5>
-                                            </div>
-
-
-                                            <div className="modal-footer">
-                                                <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" ref={modalDelRef}  >Close</button>
-                                                <button type="button" className="btn btn-danger" value={individualprofile.id} onClick={handleDeleteProfile}>Delete Profile</button>
+                                                <div className="modal-footer">
+                                                    <button type="button" className="btn btn-secondary" data-bs-dismiss="modal" ref={modalDelRef}  >Close</button>
+                                                    <button type="button" className="btn btn-danger" value={individualprofile.id} onClick={handleDeleteProfile}>Delete Profile</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            )
                         )
-                    )
-                }
-
+                    }
+                </div>
             </div>
-            <AddProfileChecker />
-        </div>
+            </div>
+        </>
     )
 }
 

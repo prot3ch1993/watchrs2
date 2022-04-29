@@ -16,6 +16,7 @@ a {
 nav {
   background-color: transparent;
 }
+
 nav h1.logoMain {
   font-family: Catamaran;
   font-weight: 900;
@@ -24,9 +25,11 @@ nav h1.logoMain {
   padding-top: 1vh;
   padding-bottom: 1vh;
 }
+
 nav button {
   display: none;
 }
+
 nav nav.nav a {
   font-family: Catamaran;
   font-weight: 700;
@@ -36,6 +39,7 @@ nav nav.nav a {
   color: white;
   padding-right: 0;
 }
+
 nav nav.nav li {
   padding-right: 0;
 }
@@ -43,21 +47,45 @@ nav nav.nav li {
 nav.colorChange {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
+
 nav.colorChange h1.logoMain span {
   background-image: none;
   background-color: white;
 }
+
 nav.colorChange nav.nav a {
   color: white;
 }
+
 nav.colorChange nav.nav a.nav-link.active {
   background-color: inherit !important;
   text-decoration: underline;
 }
 
+section.hero {
+  position: relative;
+}
+
+section.hero .logOutInd {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2vh;
+  width: 13vw;
+  position: absolute;
+  right: 7vh;
+  background-color: white;
+  border-radius: 5vh;
+}
+
+section.hero .logOutInd h1 {
+  text-align: center;
+  font-size: 2.5vh;
+}
+
 section.hero .content {
   height: 100vh;
 }
+
 section.hero .content h1.hero {
   font-family: Catamaran;
   font-weight: 900;
@@ -67,6 +95,7 @@ section.hero .content h1.hero {
   margin-top: 20vh;
   margin-bottom: 2vh;
 }
+
 section.hero .content .buttons button {
   background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
@@ -78,41 +107,48 @@ section.hero .content .buttons button {
   font-weight: 900;
   font-size: 3vh;
   color: white;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   background-size: 300% 100%;
   margin-right: 2vh;
 }
+
 section.hero .content .buttons button a {
   color: white;
 }
+
 section.hero .content .buttons button:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
+
 section.hero .content .buttonSub {
   display: none;
 }
+
 section.hero .content .buttonSub:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 section.services {
   padding-top: 25vh;
 }
+
 section.services .image img {
   height: 40vh;
   margin-bottom: 10vh;
 }
+
 section.services .list,
 section.services .list2,
 section.services .listSub {
   margin-top: 13vh;
   margin-bottom: 13vh;
 }
+
 section.services .list h2,
 section.services .list2 h2,
 section.services .listSub h2 {
@@ -121,6 +157,7 @@ section.services .listSub h2 {
   margin: 0;
   font-size: 5.5vh;
 }
+
 section.services .list p,
 section.services .list2 p,
 section.services .listSub p {
@@ -129,6 +166,7 @@ section.services .listSub p {
   margin: 0;
   font-size: 3vh;
 }
+
 section.services .listSub {
   display: none;
 }
@@ -136,9 +174,11 @@ section.services .listSub {
 section.live .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
 }
+
 section.live .backgroundGradient.size {
   height: 110vh;
 }
+
 section.live .backgroundGradient h1 {
   font-family: Catamaran;
   font-weight: 900;
@@ -148,6 +188,7 @@ section.live .backgroundGradient h1 {
   margin-top: 8vh;
   margin-bottom: 6vh;
 }
+
 section.live .backgroundGradient img {
   margin-left: auto;
   margin-right: auto;
@@ -155,6 +196,7 @@ section.live .backgroundGradient img {
   margin-bottom: 4vh;
   height: 55vh;
 }
+
 section.live .backgroundGradient h2 {
   font-family: Catamaran;
   font-weight: 700;
@@ -167,6 +209,7 @@ section.live .backgroundGradient h2 {
   width: 41vh;
   text-align: center;
 }
+
 section.live .backgroundGradient button.live {
   margin-left: auto;
   margin-right: auto;
@@ -180,8 +223,8 @@ section.live .backgroundGradient button.live {
   font-weight: 900;
   font-size: 3vh;
   color: white;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   background-size: 300% 100%;
   padding: 1vh;
   width: 20vh;
@@ -189,11 +232,13 @@ section.live .backgroundGradient button.live {
   display: block;
   margin-top: 2vh;
 }
+
 section.live .backgroundGradient button.live:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
+
 section.live .backgroundGradient button.live p {
   font-family: Catamaran;
   font-weight: 700;
@@ -212,6 +257,7 @@ section.faqs h1 {
   margin-top: 13vh;
   margin-bottom: 6vh;
 }
+
 section.faqs .lgScreen h2 {
   font-family: Catamaran;
   font-weight: 700;
@@ -220,12 +266,14 @@ section.faqs .lgScreen h2 {
   margin-bottom: 4.5vh;
   color: black;
 }
+
 section.faqs .lgScreen p {
   font-family: Quicksand;
   font-weight: 400;
   margin: 0;
   font-size: 3vh;
 }
+
 section.faqs .smScreen {
   display: none;
 }
@@ -238,9 +286,11 @@ section.team .title h1 {
   margin-top: 13vh;
   margin-bottom: 6vh;
 }
+
 section.team .profile {
   position: relative;
 }
+
 section.team .profile .overlay {
   opacity: 0;
   background-image: linear-gradient(90deg, #B700F8, #E94028);
@@ -250,27 +300,35 @@ section.team .profile .overlay {
   left: 0;
   right: 0;
 }
+
 section.team .profile .overlay:hover {
   opacity: 1;
   mix-blend-mode: screen;
 }
-section.team .profile .overlay .text-center {
+
+section.team .profile .overlay .text-center a {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
   color: white;
-  font-size: 1.5em;
+  font-size: 3vh;
   position: absolute;
   top: 50%;
   left: 35%;
 }
+
 section.team .profile .overlay .text-center:hover {
   color: black;
   opacity: 1;
 }
+
 section.team .profile img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   height: 40vh;
 }
+
 section.team .profile p.contentLink {
   font-family: Catamaran;
   font-weight: 700;
@@ -278,12 +336,14 @@ section.team .profile p.contentLink {
   font-size: 4vh;
   text-align: center;
 }
+
 section.team .profile p.contentLink a:hover {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 section.team .profile p.contentDevelopers {
   font-family: Quicksand;
   font-weight: 400;
@@ -295,6 +355,7 @@ section.team .profile p.contentDevelopers {
 section.contactus {
   margin-bottom: 13vh;
 }
+
 section.contactus .title h1 {
   font-family: Catamaran;
   font-weight: 900;
@@ -303,11 +364,13 @@ section.contactus .title h1 {
   margin-top: 13vh;
   margin-bottom: 6vh;
 }
+
 section.contactus .backgroundGradient {
   background-image: linear-gradient(90deg, #B700F8, #E94028);
   padding: 5vh;
   border-radius: 3vh;
 }
+
 section.contactus .backgroundGradient p.contentWhite {
   font-family: Catamaran;
   font-weight: 700;
@@ -315,12 +378,14 @@ section.contactus .backgroundGradient p.contentWhite {
   font-size: 3vh;
   color: white;
 }
+
 section.contactus .backgroundGradient input {
   width: 100%;
   border: none;
   margin-bottom: 3vh;
   height: 6vh;
 }
+
 section.contactus .backgroundGradient textarea {
   resize: none;
   border: none;
@@ -328,6 +393,7 @@ section.contactus .backgroundGradient textarea {
   height: 20vh;
   margin-bottom: 3vh;
 }
+
 section.contactus .backgroundGradient button.contactUs {
   background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
@@ -339,15 +405,17 @@ section.contactus .backgroundGradient button.contactUs {
   font-weight: 900;
   font-size: 3vh;
   color: white;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   background-size: 300% 100%;
 }
+
 section.contactus .backgroundGradient button.contactUs:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
+
 section.contactus .image img {
   float: right;
   height: 80vh;
@@ -359,6 +427,7 @@ footer.logo {
   padding-top: 8vh;
   padding-bottom: 4vh;
 }
+
 footer.logo .logo h1.logo {
   font-family: Catamaran;
   font-weight: 900;
@@ -366,6 +435,7 @@ footer.logo .logo h1.logo {
   font-size: 9vh;
   color: white;
 }
+
 footer.logo .contactUsFooter p.footerHeading {
   font-family: Catamaran;
   font-weight: 700;
@@ -374,6 +444,7 @@ footer.logo .contactUsFooter p.footerHeading {
   margin-bottom: 1vh;
   color: white;
 }
+
 footer.logo .contactUsFooter p.footerContent {
   font-family: Quicksand;
   font-weight: 400;
@@ -382,16 +453,20 @@ footer.logo .contactUsFooter p.footerContent {
   color: white;
   margin-bottom: 1.5vh;
 }
+
 footer.logo .contactUsFooter p.footerContent a {
   color: white;
 }
+
 footer.logo .contactUsFooter p.footerContent a:hover {
   color: #dd80ff;
 }
+
 footer.logo .contactUsFooter img {
   height: 3.8vh;
   margin-right: 4.5vh;
 }
+
 footer.logo .copyright {
   background-color: white;
   height: 20%;
@@ -402,6 +477,7 @@ footer.copyright {
   padding-top: 2vh;
   padding-bottom: 2vh;
 }
+
 footer.copyright p.footerContent {
   font-family: Quicksand;
   font-weight: 400;
@@ -413,16 +489,19 @@ footer.copyright p.footerContent {
 .loginform .heading {
   margin-top: 6vh;
 }
+
 .loginform .heading h1 {
   font-family: Catamaran;
   font-weight: 900;
   margin: 0;
   font-size: 8vh;
 }
+
 .loginform input {
-  width: 38vh;
+  width: 42vh;
   border: 1px solid black;
 }
+
 .loginform .emailAddress p,
 .loginform .password p {
   font-family: Catamaran;
@@ -430,6 +509,7 @@ footer.copyright p.footerContent {
   margin: 0;
   font-size: 3.5vh;
 }
+
 .loginform .footer {
   position: fixed;
   bottom: 0;
@@ -437,6 +517,7 @@ footer.copyright p.footerContent {
   margin: 0;
   padding: 0;
 }
+
 .loginform button.contactUs {
   background-image: linear-gradient(90deg, #EC8800, #E94028);
   background-color: #EC8800;
@@ -448,20 +529,22 @@ footer.copyright p.footerContent {
   font-weight: 900;
   font-size: 3vh;
   color: white;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
   background-size: 300% 100%;
   margin-bottom: 20vh;
 }
+
 .loginform button.contactUs:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
 }
 
 .notfound .row.ps-5 {
   height: 70vh;
 }
+
 .notfound .footer {
   position: fixed;
   bottom: 0;
@@ -473,9 +556,334 @@ footer.copyright p.footerContent {
   color: white;
 }
 
-.row.p-5.loggedin {
+nav.profiles {
   background-color: black;
+}
+
+nav.profiles h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 5vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+
+nav.profiles nav.nav ul a {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 2.3vh;
+  margin-left: 5.5vh;
   color: white;
+  padding-right: 0;
+}
+
+.profileSection .settings p {
+  text-align: left;
+}
+
+.profileSection .settings p button {
+  background: none;
+  border: none;
+}
+
+.profileSection .settings p button i.bi-gear {
+  color: white;
+}
+
+.profileSection .settings p i.bi-plus-circle {
+  color: white;
+  margin-left: 2vh;
+}
+
+.profileSection .settings .modal .modal-header h5 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+}
+
+.profileSection .settings .modal .modal-body label {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 3vh;
+}
+
+.profileSection .settings .modal .modal-body input[type=text] {
+  border: none;
+  background: none;
+  color: white;
+  padding-left: 2vh;
+  font-size: 3vh;
+}
+
+.profileSection .settings .modal .modal-body input[type=text]:focus {
+  outline: none;
+}
+
+.profileSection .settings .modal .modal-body input[type=color] {
+  margin-left: 2vh;
+}
+
+.profile .profile-tile {
+  width: 200px;
+  height: 200px;
+  color: white;
+  font-size: 35px;
+  border-radius: 30vh;
+}
+
+.profile .profile-tile .profile-text h1 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 5vh;
+}
+
+nav.loggedIn {
+  background-color: black;
+}
+
+section.accountLoggedIn {
+  padding-bottom: 20vh;
+}
+
+section.accountLoggedIn .title h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  color: white;
+  font-size: 8vh;
+  margin-top: 8vh;
+  margin-bottom: 6vh;
+}
+
+section.accountLoggedIn .live iframe {
+  width: 100%;
+  height: 60vh;
+}
+
+section.accountLoggedIn .category h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  color: white;
+  font-size: 8vh;
+  margin-top: 13vh;
+  margin-bottom: 6vh;
+}
+
+section.accountLoggedIn .category ::-webkit-scrollbar {
+  width: 3vh;
+}
+
+section.accountLoggedIn .category ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background: black;
+  border-radius: 10px;
+}
+
+section.accountLoggedIn .category ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+  border-radius: 10px;
+}
+
+section.accountLoggedIn .category ::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+section.accountLoggedIn .category .trendingMovie {
+  position: relative;
+  width: 20vw;
+  background-size: cover;
+  margin: 10px;
+  height: 65vh;
+}
+
+section.accountLoggedIn .category .trendingMovie h1 {
+  font-size: 12vh;
+  position: absolute;
+  bottom: -10px;
+  margin-left: 0;
+}
+
+section.accountLoggedIn .category .modal .modal-header h2 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  text-shadow: 0px 1px 3px black;
+}
+
+section.accountLoggedIn .category .modal .modal-body p {
+  font-family: Quicksand;
+  font-weight: 400;
+  margin: 0;
+}
+
+section.accountLoggedIn .category .recommendations h4 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 5vh;
+}
+
+section.accountLoggedIn .category .recommendations .recoMovie {
+  width: 15vw;
+  background-color: black;
+  background-size: cover;
+  height: 35vh;
+}
+
+section.accountLoggedIn .category .recommendations .recoMovie .movieCard {
+  width: 15vw;
+  background-size: cover;
+  height: 35vh;
+}
+
+section.accountLoggedIn .category .movieList {
+  width: 15vw;
+  background-size: cover;
+  height: 35vh;
+  margin: 10px;
+}
+
+section.searchPage {
+  height: 90vh;
+}
+
+section.searchPage h1 {
+  font-family: Catamaran;
+  font-weight: 900;
+  margin: 0;
+  font-size: 8vh;
+  color: white;
+  margin-top: 5vh;
+}
+
+section.searchPage h2 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 5vh;
+  margin-top: 2vh;
+}
+
+section.searchPage h2 input {
+  height: 8vh;
+  background-color: black;
+  border: none;
+  color: white;
+}
+
+section.searchPage h2 input:focus {
+  outline: none;
+}
+
+section.searchPage h2 a {
+  color: white;
+}
+
+section.searchPage h2 a:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+section.searchPage .searchResults {
+  margin-top: 5vh;
+}
+
+section.searchPage .searchResults h4 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 4vh;
+  margin-bottom: 4vh;
+}
+
+section.searchPage .searchResults ::-webkit-scrollbar {
+  width: 3vh;
+}
+
+section.searchPage .searchResults ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background: black;
+  border-radius: 10px;
+}
+
+section.searchPage .searchResults ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+  border-radius: 10px;
+}
+
+section.searchPage .searchResults ::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+section.searchPage .searchResults .movieCards {
+  width: 15vw;
+  background-color: black;
+  background-size: cover;
+  height: 35vh;
+}
+
+section.searchPage .searchResults .movieTitle {
+  width: 15vw;
+  background-size: cover;
+  height: 35vh;
+}
+
+section.movie {
+  height: 200vh;
+}
+
+section.movie .trailer iframe {
+  width: 100%;
+  height: 75vh;
+}
+
+section.movie .trailer p {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  margin-top: 2vh;
+}
+
+section.movie .recommendations h4 {
+  font-family: Catamaran;
+  font-weight: 700;
+  margin: 0;
+  font-size: 5vh;
+  margin-top: 5vh;
+}
+
+section.movie .recommendations ::-webkit-scrollbar {
+  width: 3vh;
+}
+
+section.movie .recommendations ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background: black;
+  border-radius: 10px;
+}
+
+section.movie .recommendations ::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(90deg, #B700F8, #E94028);
+  border-radius: 10px;
+}
+
+section.movie .recommendations ::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+section.movie .recommendations .movieRecommend {
+  width: 15vw;
+  background-size: cover;
+  margin: 10px;
+  height: 35vh;
 }
 
 @media screen and (max-width: 575px) {
@@ -485,7 +893,6 @@ footer.copyright p.footerContent {
     background-position: top;
     background-size: 100vh;
   }
-
   nav {
     background-color: transparent;
   }
@@ -523,21 +930,18 @@ footer.copyright p.footerContent {
   nav nav.nav {
     display: none;
   }
-
   nav.colorChange h1.logoMain span {
     background-color: transparent;
   }
   nav.colorChange h1.logoMain a {
     color: white;
   }
-
   nav#loginForm h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   .loginform .heading h1.text-center {
     margin-bottom: 2vh;
     font-size: 7vh;
@@ -555,11 +959,24 @@ footer.copyright p.footerContent {
     margin-right: auto;
   }
   .loginform .emailAddress p,
-.loginform .password p {
+  .loginform .password p {
     text-align: center;
     font-size: 3vh;
   }
-
+  section.hero .logOutInd {
+    width: 33vw;
+    position: absolute;
+    right: 3vh;
+  }
+  section.hero .logOutInd h1 {
+    font-size: 2vh;
+  }
+  section.hero .logOutInd h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.hero .content {
     position: absolute;
     top: 47vh;
@@ -592,8 +1009,8 @@ footer.copyright p.footerContent {
     font-weight: 900;
     font-size: 3vh;
     color: white;
-    moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     background-size: 300% 100%;
     width: 13vh;
     font-size: 2.5vh;
@@ -605,13 +1022,12 @@ footer.copyright p.footerContent {
   }
   section.hero .content .buttonSub button:hover {
     background-position: 100% 0;
-    moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
   }
   section.hero .content .buttonSub button.signUp {
     margin-right: 0;
   }
-
   section.services {
     margin-top: 120vh;
     padding-top: 0;
@@ -649,12 +1065,11 @@ footer.copyright p.footerContent {
   section.services .row .listSub p {
     font-size: 2.7vh;
   }
-
   section.live {
     margin-top: 10vh;
   }
   section.live .backgroundGradient.size {
-    height: 258vh;
+    height: 170vh;
   }
   section.live .backgroundGradient h1 {
     text-align: center;
@@ -665,7 +1080,6 @@ footer.copyright p.footerContent {
   section.live .backgroundGradient button {
     margin-bottom: 5vh;
   }
-
   section.faqs h1 {
     text-align: center;
   }
@@ -709,7 +1123,6 @@ footer.copyright p.footerContent {
     padding: 0;
     margin-bottom: 3vh;
   }
-
   section.team .title h1 {
     text-align: center;
   }
@@ -728,7 +1141,6 @@ footer.copyright p.footerContent {
   section.team .profile p.contentLink a {
     color: black;
   }
-
   section.contactus .title h1 {
     text-align: center;
   }
@@ -741,7 +1153,7 @@ footer.copyright p.footerContent {
   section.contactus .backgroundGradient {
     margin-left: auto;
     margin-right: auto;
-    width: 48vh;
+    width: 42vh;
     padding: 3.5vh;
   }
   section.contactus .backgroundGradient p.contentWhite {
@@ -758,8 +1170,8 @@ footer.copyright p.footerContent {
     font-weight: 900;
     font-size: 3vh;
     color: white;
-    moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     background-size: 300% 100%;
     display: block;
     margin-left: auto;
@@ -767,13 +1179,12 @@ footer.copyright p.footerContent {
   }
   section.contactus .backgroundGradient button.contactUs:hover {
     background-position: 100% 0;
-    moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
   }
   section.contactus .image {
     display: none;
   }
-
   footer.logo {
     padding-top: 6vh;
   }
@@ -782,17 +1193,142 @@ footer.copyright p.footerContent {
     margin-bottom: 2vh;
   }
   footer.logo .contactUsFooter p.footerHeading {
-    font-size: 2.5vh;
+    font-size: 2.3vh;
     margin-bottom: 2vh;
   }
   footer.logo .contactUsFooter p.footerContent {
-    font-size: 1.8vh;
+    font-size: 1.5vh;
     margin-bottom: 1vh;
   }
   footer.logo .contactUsFooter.content {
     display: none;
   }
+  nav.profiles h1 {
+    font-size: 4vh;
+  }
+  nav.profiles h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav.profiles nav.nav {
+    display: block;
+  }
+  nav.profiles nav.nav ul a {
+    font-size: 1.9vh;
+  }
+  .profileSection .settings p {
+    margin-bottom: 0;
+  }
+  .profileSection .settings .modal .modal-body label {
+    font-size: 2vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=text] {
+    font-size: 2vh;
+    margin-left: 0vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=color] {
+    margin-left: 2vh;
+  }
+  .profile .profile-tile {
+    width: 150px;
+    height: 150px;
+  }
+  .profile .profile-tile .profile-text h1 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3vh;
+  }
+  nav.loggedIn h1.logoMain span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .title h1 {
+    font-size: 4vh;
+  }
+  section.accountLoggedIn .title span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .live iframe {
+    width: 100%;
+    height: 35vh;
+  }
+  section.accountLoggedIn .category h1 {
+    font-size: 4vh;
+  }
+  section.accountLoggedIn .category h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .category .trendingMovie {
+    width: 100vw;
+  }
+  section.accountLoggedIn .category .trendingMovie h1 {
+    font-size: 8vh;
+  }
+  section.accountLoggedIn .category .recommendations h4 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3vh;
+  }
+  section.accountLoggedIn .category .recommendations .recoMovie {
+    width: 50vw;
+    height: 40vh;
+  }
+  section.accountLoggedIn .category .recommendations .recoMovie .movieCard {
+    width: 55vw;
+    height: 35vh;
+  }
+  section.accountLoggedIn .category .movieList {
+    width: 35vw;
+  }
+  section.searchPage {
+    height: 100vh;
+  }
+  section.searchPage input {
+    width: 85%;
+    height: 8vh;
+    background-color: black;
+    border: none;
+    color: white;
+  }
+  section.searchPage a {
+    font-size: 4vh;
+  }
+  section.searchPage .searchResults .movieCards {
+    width: 55vw;
+    height: 40vh;
+  }
+  section.searchPage .searchResults .movieTitle {
+    width: 55vw;
+    height: 35vh;
+  }
+  section.movie {
+    height: 150vh;
+  }
+  section.movie .trailer iframe {
+    width: 100%;
+    height: 30vh;
+  }
+  section.movie .recommendations h4 {
+    font-size: 3vh;
+  }
+  section.movie .recommendations .movieRecommend {
+    width: 55vw;
+    height: 35vh;
+  }
 }
+
 @media screen and (min-width: 576px) and (max-width: 767px) {
   body {
     background-image: url("./images/hero-image-2.png");
@@ -800,7 +1336,6 @@ footer.copyright p.footerContent {
     background-position: right top;
     background-size: 55%;
   }
-
   nav h1.logoMain span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -810,7 +1345,6 @@ footer.copyright p.footerContent {
   nav nav.nav a {
     margin-left: 3vh;
   }
-
   nav.colorChange nav.nav a {
     margin-left: 3vh;
     padding-right: 0;
@@ -818,7 +1352,6 @@ footer.copyright p.footerContent {
   nav.colorChange nav.nav li {
     padding-right: 0;
   }
-
   .loginform {
     height: 100vh;
   }
@@ -836,13 +1369,26 @@ footer.copyright p.footerContent {
     border: 1px solid black;
   }
   .loginform .emailAddress p,
-.loginform .password p {
+  .loginform .password p {
     font-family: Catamaran;
     font-weight: 700;
     margin: 0;
     font-size: 4.5vh;
   }
-
+  section.hero .logOutInd {
+    width: 13vw;
+    position: absolute;
+    right: 8vh;
+  }
+  section.hero .logOutInd h1 {
+    font-size: 2vh;
+  }
+  section.hero .logOutInd h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.hero .content h1.hero {
     font-size: 7.5vh;
   }
@@ -852,17 +1398,15 @@ footer.copyright p.footerContent {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   section.services .image img {
     height: 35vh;
   }
   section.services .list,
-section.services .list2,
-section.services .listSub {
+  section.services .list2,
+  section.services .listSub {
     margin-top: 8vh;
     margin-bottom: 8vh;
   }
-
   section.faqs h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -872,7 +1416,6 @@ section.services .listSub {
   section.faqs .lgScreen h2 a {
     color: black;
   }
-
   section.team .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -882,7 +1425,6 @@ section.services .listSub {
   section.team .profile a {
     color: black;
   }
-
   section.contactus .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -892,11 +1434,70 @@ section.services .listSub {
   section.contactus .image img {
     height: 65vh;
   }
-
   footer.logo .logo h1.logo {
     margin-bottom: 2vh;
   }
+  nav.profiles h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav.profiles nav.nav {
+    display: block;
+  }
+  nav.profiles nav.nav ul a {
+    font-size: 1.9vh;
+  }
+  .profileSection .settings p {
+    margin-bottom: 0;
+  }
+  .profileSection .settings p button i.bi-gear {
+    font-size: 5vh;
+  }
+  .profileSection .settings p i.bi-plus-circle {
+    font-size: 5vh;
+  }
+  .profileSection .settings .modal .modal-body label {
+    font-size: 4.5vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=text] {
+    font-size: 4.5vh;
+    margin-left: 0vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=color] {
+    margin-left: 2vh;
+  }
+  .profile .profile-tile {
+    width: 100px;
+    height: 100px;
+  }
+  .profile .profile-tile .profile-text h1 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 5vh;
+  }
+  section.accountLoggedIn .title h1 {
+    font-size: 8vh;
+  }
+  section.accountLoggedIn .title h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .category h1 {
+    font-size: 8vh;
+  }
+  section.accountLoggedIn .category h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
   body {
     background-image: url("./images/tablet-hero.png");
@@ -904,7 +1505,6 @@ section.services .listSub {
     background-position: top;
     background-size: 100vh;
   }
-
   nav {
     background-color: transparent;
   }
@@ -942,21 +1542,18 @@ section.services .listSub {
   nav nav.nav {
     display: none;
   }
-
   nav.colorChange h1.logoMain span {
     background-color: transparent;
   }
   nav.colorChange h1.logoMain a {
     color: white;
   }
-
   nav#loginForm h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   .loginform .heading h1.text-center {
     margin-bottom: 2vh;
     font-size: 7vh;
@@ -975,11 +1572,24 @@ section.services .listSub {
     margin-right: auto;
   }
   .loginform .emailAddress p,
-.loginform .password p {
+  .loginform .password p {
     text-align: center;
     font-size: 3vh;
   }
-
+  section.hero .logOutInd {
+    width: 33vw;
+    position: absolute;
+    right: 3vh;
+  }
+  section.hero .logOutInd h1 {
+    font-size: 2vh;
+  }
+  section.hero .logOutInd h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.hero .content {
     position: absolute;
     top: 52vh;
@@ -1012,8 +1622,8 @@ section.services .listSub {
     font-weight: 900;
     font-size: 3vh;
     color: white;
-    moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     background-size: 300% 100%;
     width: 13vh;
     font-size: 2.5vh;
@@ -1026,7 +1636,6 @@ section.services .listSub {
   section.hero .content .buttonSub button.signUp {
     margin-right: 0;
   }
-
   section.services {
     margin-top: 120vh;
     padding-top: 0;
@@ -1064,7 +1673,6 @@ section.services .listSub {
   section.services .row .listSub p {
     font-size: 2.7vh;
   }
-
   section.live {
     margin-top: 10vh;
   }
@@ -1080,7 +1688,6 @@ section.services .listSub {
   section.live .backgroundGradient button {
     margin-bottom: 5vh;
   }
-
   section.faqs h1 {
     text-align: center;
   }
@@ -1124,7 +1731,6 @@ section.services .listSub {
     padding: 0;
     margin-bottom: 3vh;
   }
-
   section.team .title h1 {
     text-align: center;
   }
@@ -1143,7 +1749,6 @@ section.services .listSub {
   section.team .profile p.contentLink a {
     color: black;
   }
-
   section.contactus .title h1 {
     text-align: center;
   }
@@ -1173,8 +1778,8 @@ section.services .listSub {
     font-weight: 900;
     font-size: 3vh;
     color: white;
-    moz-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out;
+    moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
     background-size: 300% 100%;
     display: block;
     margin-left: auto;
@@ -1183,7 +1788,6 @@ section.services .listSub {
   section.contactus .image {
     display: none;
   }
-
   footer.logo {
     padding-top: 6vh;
   }
@@ -1202,7 +1806,138 @@ section.services .listSub {
   footer.logo .contactUsFooter.content {
     display: none;
   }
+  nav.profiles h1 {
+    font-size: 4vh;
+  }
+  nav.profiles h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav.profiles nav.nav {
+    display: block;
+  }
+  nav.profiles nav.nav ul a {
+    font-size: 1.9vh;
+  }
+  .profileSection .settings p {
+    margin-bottom: 0;
+  }
+  .profileSection .settings p button i.bi-gear {
+    font-size: 3vh;
+  }
+  .profileSection .settings p i.bi-plus-circle {
+    font-size: 3vh;
+  }
+  .profileSection .settings .modal .modal-body label {
+    font-size: 2vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=text] {
+    font-size: 2vh;
+    margin-left: 0vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=color] {
+    margin-left: 2vh;
+  }
+  .profile .profile-tile {
+    width: 200px;
+    height: 200px;
+  }
+  .profile .profile-tile .profile-text h1 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3vh;
+  }
+  nav.loggedIn h1.logoMain span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .title h1 {
+    font-size: 4vh;
+  }
+  section.accountLoggedIn .title span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .live iframe {
+    width: 100%;
+    height: 35vh;
+  }
+  section.accountLoggedIn .category h1 {
+    font-size: 4vh;
+  }
+  section.accountLoggedIn .category h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .category .trendingMovie {
+    width: 100vw;
+  }
+  section.accountLoggedIn .category .trendingMovie h1 {
+    font-size: 8vh;
+  }
+  section.accountLoggedIn .category .recommendations h4 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 3vh;
+  }
+  section.accountLoggedIn .category .recommendations .recoMovie {
+    width: 50vw;
+    height: 40vh;
+  }
+  section.accountLoggedIn .category .recommendations .recoMovie .movieCard {
+    width: 55vw;
+    height: 35vh;
+  }
+  section.accountLoggedIn .category .movieList {
+    width: 35vw;
+  }
+  section.searchPage {
+    height: 100vh;
+  }
+  section.searchPage input {
+    width: 85%;
+    height: 8vh;
+    background-color: black;
+    border: none;
+    color: white;
+  }
+  section.searchPage a {
+    font-size: 4vh;
+  }
+  section.searchPage .searchResults .movieCards {
+    width: 55vw;
+    height: 40vh;
+  }
+  section.searchPage .searchResults .movieTitle {
+    width: 55vw;
+    height: 35vh;
+  }
+  section.movie {
+    height: 150vh;
+  }
+  section.movie .trailer iframe {
+    width: 100%;
+    height: 40vh;
+  }
+  section.movie .recommendations h4 {
+    font-size: 3vh;
+  }
+  section.movie .recommendations .movieRecommend {
+    width: 55vw;
+    height: 35vh;
+  }
 }
+
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   body {
     background-image: url("./images/hero-image-2.png");
@@ -1210,7 +1945,6 @@ section.services .listSub {
     background-position: right top;
     background-size: 55%;
   }
-
   nav h1.logoMain span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1222,7 +1956,6 @@ section.services .listSub {
     margin-left: 3.5vh;
     font-size: 2vh;
   }
-
   nav.colorChange nav.nav a {
     margin-left: 3.5vh;
     padding-right: 0;
@@ -1230,7 +1963,6 @@ section.services .listSub {
   nav.colorChange nav.nav li {
     padding-right: 0;
   }
-
   .loginform {
     height: 100vh;
   }
@@ -1248,13 +1980,26 @@ section.services .listSub {
     height: 5vh;
   }
   .loginform .emailAddress p,
-.loginform .password p {
+  .loginform .password p {
     font-family: Catamaran;
     font-weight: 700;
     margin: 0;
     font-size: 3vh;
   }
-
+  section.hero .logOutInd {
+    width: 13vw;
+    position: absolute;
+    right: 3vh;
+  }
+  section.hero .logOutInd h1 {
+    font-size: 2vh;
+  }
+  section.hero .logOutInd h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   section.hero .content h1.hero {
     font-size: 6.5vh;
   }
@@ -1264,17 +2009,15 @@ section.services .listSub {
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   section.services .image img {
     height: 35vh;
   }
   section.services .list,
-section.services .list2,
-section.services .listSub {
+  section.services .list2,
+  section.services .listSub {
     margin-top: 8vh;
     margin-bottom: 8vh;
   }
-
   section.live .backgroundGradient.size {
     height: 100vh;
   }
@@ -1285,7 +2028,6 @@ section.services .listSub {
     font-size: 3.8vh;
     width: 39vh;
   }
-
   section.faqs h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1295,7 +2037,6 @@ section.services .listSub {
   section.faqs .lgScreen h2 a {
     color: black;
   }
-
   section.team .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1308,7 +2049,6 @@ section.services .listSub {
   section.team .profile img {
     height: 30vh;
   }
-
   section.contactus .title h1 span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
@@ -1318,7 +2058,6 @@ section.services .listSub {
   section.contactus .image img {
     height: 55vh;
   }
-
   footer.logo {
     padding-top: 3vh;
     padding-bottom: 3vh;
@@ -1326,7 +2065,67 @@ section.services .listSub {
   footer.logo .logo h1.logo {
     margin-bottom: 2vh;
   }
+  nav.profiles h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  nav.profiles nav.nav {
+    display: block;
+  }
+  nav.profiles nav.nav ul a {
+    font-size: 1.9vh;
+  }
+  .profileSection .settings p {
+    margin-bottom: 0;
+  }
+  .profileSection .settings p button i.bi-gear {
+    font-size: 3vh;
+  }
+  .profileSection .settings p i.bi-plus-circle {
+    font-size: 3vh;
+  }
+  .profileSection .settings .modal .modal-body label {
+    font-size: 4.5vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=text] {
+    font-size: 4.5vh;
+    margin-left: 0vh;
+  }
+  .profileSection .settings .modal .modal-body input[type=color] {
+    margin-left: 2vh;
+  }
+  .profile .profile-tile {
+    width: 200px;
+    height: 200px;
+  }
+  .profile .profile-tile .profile-text h1 {
+    font-family: Catamaran;
+    font-weight: 700;
+    margin: 0;
+    font-size: 4vh;
+  }
+  section.accountLoggedIn .title h1 {
+    font-size: 5vh;
+  }
+  section.accountLoggedIn .title h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  section.accountLoggedIn .category h1 {
+    font-size: 5vh;
+  }
+  section.accountLoggedIn .category h1 span {
+    background-image: linear-gradient(90deg, #B700F8, #E94028);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
+
 @media screen and (min-width: 1200px) {
   body {
     background-image: url("./images/hero-image-2.png");
@@ -1334,22 +2133,18 @@ section.services .listSub {
     background-position: right top;
     background-size: 108vh;
   }
-
   span {
     background-image: linear-gradient(90deg, #B700F8, #E94028);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-
   a {
     color: black;
   }
-
   section.services .image .right img {
     float: right;
   }
-
   section.faqs p {
     font-family: Quicksand;
     font-weight: 400;
