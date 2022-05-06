@@ -1,14 +1,12 @@
 import React from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Footer from './Footer';
 import NavbarLogin from './NavbarLogin';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const entryInfo = (localStorage.getItem("entryDetails")) ? JSON.parse(localStorage.getItem("entryDetails")) : [];
 
 const SignUpForm = () => {
-
-    let navigate = useNavigate()
 
     const [errorMessage, setErrorMessage] = useState("Please input password")
     const [errorColor, setErrorColor] = useState("red")
@@ -17,6 +15,14 @@ const SignUpForm = () => {
     const [emailValidity, setEmailValidity] = useState(false)
     const [passValidity, setPassValidity] = useState(false)
     const [entryList, setEntryList] = useState(entryInfo);
+    const [doneSignUp, setDoneSignUp] = useState(false)
+
+    useEffect(() => {
+
+        localStorage.setItem("entryDetails", JSON.stringify(entryList));
+        console.log(entryList)
+
+    }, [entryList])
 
 
     let emailRef = useRef();
@@ -65,18 +71,15 @@ const SignUpForm = () => {
         event.preventDefault()
 
         if (emailValidity === true && passValidity === true) {
-            alert("Thank you for registering, you can now log in.")
-
 
             const entryObject = {
                 email: emailRef.current.value,
                 password: passwordRef.current.value
             }
-
-            setEntryList([...entryList, entryObject]);
             localStorage.setItem("entryDetails", JSON.stringify(entryList));
-            console.log(entryList)
-            navigate("/loginform")
+            setEntryList([...entryList, entryObject]);
+            setDoneSignUp(true)
+
         }
 
         else {
@@ -85,52 +88,88 @@ const SignUpForm = () => {
     }
 
 
-    return (
-        <div className="bg-white loginform">
-            <NavbarLogin />
-            <div className='container'>
-                <div className="row">
-                    <div className='col-12 mt-3 heading'>
-                        <h1 className='text-center mt-5'><span>Sign up</span></h1>
-                        <p className='text-center'> Watch the latest movies with us</p>
-                    </div>
-                </div>
-                <div className="row justify-content-center p-3">
-                    <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
-                        <input type="text" ref={emailRef} onChange={emailChecker} placeholder="Email Address" />
-                    </div>
-                    <div className='text-center' style={{ color: `${emailErrorColor}` }}>{emailErrorMessage}</div>
-                </div>
-                <div className="row justify-content-center p-3">
-                    <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
-                        <input type="password" ref={passwordRef} onChange={passChecker} placeholder="Password" />
-                    </div>
-                </div>
 
-                <div className="row justify-content-center p-3">
-                    <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
-                        <input type="password" ref={confirmPasswordRef} onChange={passChecker} placeholder="Please Confirm Password" />
+    if (!doneSignUp) {
+        return (
+            <div className="bg-white loginform">
+                <NavbarLogin />
+                <div className='container'>
+                    <div className="row">
+                        <div className='col-12 mt-3 heading'>
+                            <h1 className='text-center mt-5'><span>Sign up</span></h1>
+                            <p className='text-center'> Watch the latest movies with us</p>
+                        </div>
                     </div>
-                    <div className='text-center' style={{ color: `${errorColor}` }}>{errorMessage}</div>
-                </div>
-
-                <div className="row justify-content-center">
-                    <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center text-black pt-3">
-                        <p>Already have an account? <Link to="/loginform"><span>Log in here</span></Link></p>
+                    <div className="row justify-content-center p-3">
+                        <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
+                            <input type="text" ref={emailRef} onChange={emailChecker} placeholder="Email Address" />
+                        </div>
+                        <div className='text-center' style={{ color: `${emailErrorColor}` }}>{emailErrorMessage}</div>
                     </div>
-                </div>
-
-                <div className="row justify-content-center">
-                    <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center pt-3">
-                        <button className="btn contactUs" onClick={handleClick}>Submit</button>
+                    <div className="row justify-content-center p-3">
+                        <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
+                            <input type="password" ref={passwordRef} onChange={passChecker} placeholder="Password" />
+                        </div>
                     </div>
+
+                    <div className="row justify-content-center p-3">
+                        <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
+                            <input type="password" ref={confirmPasswordRef} onChange={passChecker} placeholder="Please Confirm Password" />
+                        </div>
+                        <div className='text-center' style={{ color: `${errorColor}` }}>{errorMessage}</div>
+                    </div>
+
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center text-black pt-3">
+                            <p>Already have an account? <Link to="/loginform"><span>Log in here</span></Link></p>
+                        </div>
+                    </div>
+
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center pt-3">
+                            <button className="btn contactUs" onClick={handleClick}>Submit</button>
+                        </div>
+                    </div>
+
+
                 </div>
+                <Footer />
+            </div >
+        )
+    }
+
+    else {
+        return (
+            <div className="bg-white loginform">
+                <NavbarLogin />
+                <div className='container'>
+                    <div className="row">
+                        <div className='col-12 mt-3 heading'>
+                            <h1 className='text-center mt-5'><span>Sign up</span></h1>
+                            <p className='text-center'> Watch the latest movies with us</p>
+                        </div>
+                    </div>
+
+                    <div className="row mx-auto justify-content-center">
+                        <div className='col-8 mt-3 heading'>
+                            <h2 className='text-center mt-5'><span>Thank you for registering. You have successfully signed-up. You may now log-in</span></h2>
+                        </div>
+                    </div>
 
 
-            </div>
-            <Footer />
-        </div >
-    )
+
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-12 col-lg-12 col-xl-6 text-center pt-3">
+                            <Link to="/loginform"><button className="btn contactUs">Log in</button></Link>
+                        </div>
+                    </div>
+
+
+                </div>
+                <Footer />
+            </div >
+        )
+    }
 }
 
 export default SignUpForm

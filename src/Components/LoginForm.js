@@ -9,8 +9,7 @@ const entryInfo = (localStorage.getItem("entryDetails")) ? JSON.parse(localStora
 
 const LoginForm = () => {
 
-  const [loginValidity, setLoginValidity] = useState(false);
-  const [passValidity, setPassValidity] = useState(false);
+
   const [errorMessage, setErrorMessage] = useState();
 
 
@@ -27,30 +26,18 @@ const LoginForm = () => {
     return pass.password === passwordRef.current.value
   }
 
-  const loginFn = () => {
-    if (loginValidity && passValidity) {
-      navigate("/loginprofiles")
-    }
-  }
 
   const handleClick = (event) => {
 
     event.preventDefault();
     if (passwordRef.current.value === "admin" && emailRef.current.value === "admin@admin.com") {
-      setLoginValidity(true)
-      setPassValidity(true)
-      loginFn()
+      navigate("/loginprofiles")
     }
 
-    else if (entryInfo.findIndex(finderFn) > -1) {
-      setLoginValidity(true)
-      loginFn()
+    else if (entryInfo.findIndex(finderFn) > -1 && entryInfo.findIndex(finderPassFn) > -1) {
+      navigate("/loginprofiles")
     }
 
-    else if (entryInfo.findIndex(finderPassFn) > -1) {
-      setPassValidity(true)
-      loginFn()
-    }
 
     else {
       setErrorMessage("Please check email and/or password")
@@ -73,7 +60,7 @@ const LoginForm = () => {
         </div>
         <div className="row justify-content-center p-3">
           <div className="col-12 col-sm-5 col-md-12 col-lg-5 col-xl-3">
-            <input type="text" ref={emailRef} placeholder="Email Address"/>
+            <input type="text" ref={emailRef} placeholder="Email Address" />
           </div>
         </div>
         <div className="row justify-content-center p-3">
